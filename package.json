@@ -1,0 +1,17 @@
+{
+  "name": "mapbox",
+  "version": "1.1.0",
+  "description": "Mapbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "test .",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@google/maps": "^0.3.1",
+    "@mapbox/mapbox-gl-draw": "^0.18.1",
+    "sqlite3": "^3.1.8"
+  },
+  "author": "Edgardo",
+  "license": "ISC"
+}

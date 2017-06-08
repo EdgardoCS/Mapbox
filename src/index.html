@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title> mapbox-gl-js</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!--main.js-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+  <!--polygon-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
+  <!--GoogleMaps-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <style>
+    .mapboxgl-popup {
+      max-width: 400px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <style>
+    #minimenu {
+      display: block;
+      position: absolute;
+      margin: 0px auto;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      font-size: 12px;
+      text-align: center;
+      color: #ecf0f1;
+      background: #34495e;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #menu {
+      background: #fff;
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      right: 10px;
+      border-radius: 3px;
+      width: 120px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      font-family: 'Open Sans', sans-serif;
+    }
+    #menu a {
+      font-size: 13px;
+      color: #404040;
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+    #menu a:last-child {
+      border: none;
+    }
+    #menu a:hover {
+      background-color: #f8f8f8;
+      color: #404040;
+    }
+    #menu a.active {
+      background-color: #3887be;
+      color: #ffffff;
+    }
+    #menu a.active:hover {
+      background: #3074a4;
+    }
+  </style>
+
+  <div id='map'></div>
+  <div id='minimenu'>
+    <input id='streets' type='radio' name='rtoggle' value='streets'>
+    <label for='streets'>Urbano</label>
+    <input id='bright' type='radio' name='rtoggle' value='bright'>
+    <label for='bright'>Dia</label>
+    <input id='dark' type='radio' name='rtoggle' value='dark'>
+    <label for='dark'>Noche</label>
+    <input id='satellite' type='radio' name='rtoggle' value='satellite'>
+    <label for='satellite'>Vista Satelital</label>
+  </div>
+
+  <nav id="menu"></nav>
+
+
+  <script type="text/javascript">
+  </script>
+  <script src="../js/main.js">
+  </script>
+  <!--
+  <script type="text/javascript">
+  </script>
+  <script src="../js/polygon.js">
+  </script>
+-->
+  <!--
+  <script type="text/javascript">
+  </script>
+  <script src="../js/database.js">
+  </script>
+-->
+
+<script type="text/javascript">
+</script>
+<script src="../js/database3.js">
+</script>
+
+
+</body>
+
+</html>
