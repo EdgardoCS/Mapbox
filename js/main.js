@@ -4,8 +4,11 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 12,
     center: [-71.63116246461868,-33.04887799524245]
+    //
 });
 map.addControl(new mapboxgl.NavigationControl());
+
+/*
 var layerList = document.getElementById('minimenu');
 var inputs = layerList.getElementsByTagName('input');
 
@@ -15,5 +18,6 @@ function switchLayer(layer) {
 }
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].onclick = switchLayer;
-    
+
 }
+*/

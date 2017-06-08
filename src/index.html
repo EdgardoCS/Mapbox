@@ -37,7 +37,7 @@
 </head>
 
 <body>
-
+<!--
   <style>
     #minimenu {
       display: block;
@@ -53,18 +53,21 @@
       background: #34495e;
       font-family: 'Open Sans', sans-serif;
     }
-
+  </style>
+-->
+  <style>
     #menu {
       background: #fff;
       position: absolute;
       z-index: 1;
       top: 10px;
-      right: 10px;
+      left: 10px;
       border-radius: 3px;
       width: 120px;
       border: 1px solid rgba(0, 0, 0, 0.4);
       font-family: 'Open Sans', sans-serif;
     }
+
     #menu a {
       font-size: 13px;
       color: #404040;
@@ -76,23 +79,28 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.25);
       text-align: center;
     }
+
     #menu a:last-child {
       border: none;
     }
+
     #menu a:hover {
       background-color: #f8f8f8;
       color: #404040;
     }
+
     #menu a.active {
       background-color: #3887be;
       color: #ffffff;
     }
+
     #menu a.active:hover {
       background: #3074a4;
     }
   </style>
 
   <div id='map'></div>
+  <!--
   <div id='minimenu'>
     <input id='streets' type='radio' name='rtoggle' value='streets'>
     <label for='streets'>Urbano</label>
@@ -103,7 +111,7 @@
     <input id='satellite' type='radio' name='rtoggle' value='satellite'>
     <label for='satellite'>Vista Satelital</label>
   </div>
-
+-->
   <nav id="menu"></nav>
 
 
@@ -111,12 +119,12 @@
   </script>
   <script src="../js/main.js">
   </script>
-  <!--
+
   <script type="text/javascript">
   </script>
   <script src="../js/polygon.js">
   </script>
--->
+
   <!--
   <script type="text/javascript">
   </script>
@@ -124,10 +132,10 @@
   </script>
 -->
 
-<script type="text/javascript">
-</script>
-<script src="../js/database3.js">
-</script>
+  <script type="text/javascript">
+  </script>
+  <script src="../js/database3.js">
+  </script>
 
 
 </body>

@@ -1,4 +1,5 @@
-var draw = require('../js/geojson2.js');
+exports.db = function() {
+var draw_inm = require('../js/geojson_inm.js');
 var sqlite3 = require('sqlite3').verbose();
 
 var Nombre;
@@ -18,9 +19,10 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
       setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
       arreglo[i]=setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
     }
-    draw.togeojson(arreglo);
+    draw_inm.togeojson(arreglo);
   }
 });
+};
 setFeatures = function(Rut, Nombre, Direccion, Longitude,Latitude) {
   var pointFeatures;
 

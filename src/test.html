@@ -2,288 +2,144 @@
 <html>
 
 <head>
-    <meta charset='utf-8' />
-    <title></title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <meta charset='utf-8' />
+  <title> mapbox-gl-js</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!--main.js-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+  <!--polygon-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
+  <!--GoogleMaps-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <style>
+    .mapboxgl-popup {
+      max-width: 400px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+  </style>
 </head>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-}
-#map {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    width: 100%;
-    overflow: visible;
-}
-#ex1Slider .slider-selection {
-    background: #BABABA;
-}
-#menu {
-    background: #fff;
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 10px;
-    border-radius: 3px;
-    width: 120px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'Open Sans', sans-serif;
-}
-#menu a {
-    font-size: 13px;
-    color: #404040;
-    display: block;
-    margin: 0;
-    padding: 0;
-    padding: 10px;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    text-align: center;
-}
-#menu a:last-child {
-    border: none;
-}
-#menu a:hover {
-    background-color: #f8f8f8;
-    color: #404040;
-}
-#menu a.active {
-    background-color: #3887be;
-    color: #ffffff;
-}
-#menu a.active:hover {
-    background: #3074a4;
-}
-#sidebar {
-    position: absolute;
-    width: 220px;
-    height: 250px;
-    margin: 0;
-    background-color: white;
-    right: 10px;
-    z-index: 3;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-}
-.mapboxgl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-.marker-title {
-    font-weight: 700;
-}
-</style>
 
 <body>
-    <div id="container">
-        <div id="sidebar">
-            <div class="sidebar-wrapper">
-                <div class="panel panel-default" id="features">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Designer Toolbar</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-8 col-md-8">
-                                <b>Map Pitch</b>
-                                <input type="text" id="pitch" class="slider" data-slider-min="0" data-slider-value="0" data-slider-max="50" data-slider-step="5">
-                                <br>
-                                <br>
-                                <b>Heat Blur</b>
-                                <input type="text" id="blur" class="slider" data-slider-min="0" data-slider-value="1" data-slider-max="2" data-slider-step="0.1">
-                                <br>
-                                <br>
-                                <b>Heat Radius</b>
-                                <input type="text" id="radius" class="slider" data-slider-min="1" data-slider-value="20" data-slider-max="100" data-slider-step="1">
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav id="menu"></nav>
-    <div id="map"></div>
-    <script>
-    // GLOBALS //
-    mapboxgl.accessToken = 'pk.eyJ1IjoicnNiYXVtYW5uIiwiYSI6IjdiOWEzZGIyMGNkOGY3NWQ4ZTBhN2Y5ZGU2Mzg2NDY2In0.jycgv7qwF8MMIWt4cT0RaQ';
-    var layerlist = []
-    var layers = [
-        [0, 'green'],
-        [5, 'yellow'],
-        [20, 'orange'],
-        [100, 'red']
-    ];
-    // Initialize the Map
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-hybrid-v8',
-        center: [-99.23755081, 29.4465551723],
-        zoom: 15,
-    });
-    map.on('load', function() {
-        // Add a new source from our GeoJSON data and set the
-        // 'cluster' option to true.
-        map.addSource("test1", {
-            type: "geojson",
-            data: 'http://127.0.0.1:8888/test2_dump.geojson',
-            cluster: true,
-            clusterMaxZoom: 21, // Max zoom to cluster points on
-            clusterRadius: 15 // Use small cluster radius for the heatmap look
-        });
-        //Add the non-clustered layer
-        map.addLayer({
-            "id": "non-cluster-markers",
-            "type": "circle",
-            "source": "test1",
-            "paint": {
-                "circle-color": 'rgba(0,255,0,0.5)',
-                "circle-radius": 20,
-                "circle-blur": 1
-            },
-            "filter": ["!=", "cluster", true]
-        }, 'UnitName');
-        layerlist.push('non-cluster-markers')
-        //Add each clustered layer
-        layers.forEach(function(layer, i) {
-            map.addLayer({
-                "id": "cluster-" + i,
-                "type": "circle",
-                "source": "test1",
-                "paint": {
-                    "circle-color": layer[1],
-                    "circle-radius": 25,
-                    "circle-blur": 0.6 // blur the circles to get a heatmap look
-                },
-                "filter": i === layers.length - 1 ? [">=", "point_count", layer[0]] : ["all", [">=", "point_count", layer[0]],
-                    ["<", "point_count", layers[i + 1][0]]
-                ]
-            }, 'UnitName');
-            layerlist.push("cluster-" + i)
-        });
-        //create the toggle buttons for on/off each layer
-        layerlist.forEach(function(layer) {
-            addLayer(layer, layer);
-        });
-    });
-    function addLayer(name, id) {
-        var link = document.createElement('a');
-        link.href = '#';
-        link.className = 'active';
-        link.textContent = name;
-        link.onclick = function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            var visibility = map.getLayoutProperty(id, 'visibility');
-            if (visibility === 'visible') {
-                map.setLayoutProperty(id, 'visibility', 'none');
-                this.className = '';
-            } else {
-                this.className = 'active';
-                map.setLayoutProperty(id, 'visibility', 'visible');
-            }
-        };
-        var layers = document.getElementById('menu');
-        layers.appendChild(link);
+  <style>
+    #menu {
+      background: #fff;
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      left: 10px;
+      border-radius: 3px;
+      width: 120px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      font-family: 'Open Sans', sans-serif;
     }
-    function render() {
-        map.setPitch(parseFloat($('#pitch').slider('getValue')))
-        for (i = 0; i < layerlist.length; i++) {
-            radius = parseFloat($('#radius').slider('getValue'))
-            blur = parseFloat($('#blur').slider('getValue'))
-            map.setPaintProperty(layerlist[i], "circle-radius", radius)
-            map.setPaintProperty(layerlist[i], "circle-blur", blur)
-        }
+
+    #menu a {
+      font-size: 13px;
+      color: #404040;
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      text-align: center;
     }
-    var popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false
-    });
-    mouseOver(map, layerlist);
-    addPopup(map, layerlist, popup);
-    function mouseOver(mapid, layer_list) {
-        mapid.off('mousemove'); //Remove any previous mouseover event binds to the map
-        mapid.on('mousemove', function(e) {
-            minpoint = new Array(e.point['x'] - 5, e.point['y'] - 5)
-            maxpoint = new Array(e.point['x'] + 5, e.point['y'] + 5)
-            var features = mapid.queryRenderedFeatures([minpoint, maxpoint], {
-                layers: layer_list
-            });
-            // Change the cursor style as a UI indicator.
-            mapid.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-        });
+
+    #menu a:last-child {
+      border: none;
     }
-    function addPopup(mapid, layer_list, popup) {
-        mapid.on('click', function(e) {
-            minpoint = new Array(e.point['x'] - 5, e.point['y'] - 5)
-            maxpoint = new Array(e.point['x'] + 5, e.point['y'] + 5)
-            var features = mapid.queryRenderedFeatures([minpoint, maxpoint], {
-                layers: layer_list
-            });
-            // Remove the popup if there are no features to display
-            if (!features.length) {
-                popup.remove();
-                return;
-            }
-            var feature = features[0];
-            for (o in feature) {
-                //To do - find list of geojson properties than can be displayed in the selected feature layer
-                console.log(feature[o])
-            }
-            popup.setLngLat(e.lngLat)
-                 //extend this to auto-display the selected feature layer's geojson data properies summarized
-                .setHTML('<div id="popup" class="popup" style="z-index: 10;"> <h5> Detail: </h5>' +
-                    '<ul class="list-group">' +
-                    '<li class="list-group-item"> Density: ' + feature.properties.point_count + " </li>" +
-                    '<li class="list-group-item"> CycleOID: ' + feature.properties.cycle_oid + " </li>" +
-                    '</ul> </div>')
-                .addTo(mapid);
-        });
+
+    #menu a:hover {
+      background-color: #f8f8f8;
+      color: #404040;
     }
-    $(document).ready(function() {
-        $('#radius').slider({
-            formatter: function(value) {
-                return 'Value: ' + value;
-            }
-        });
-        $('#radius').slider().on('slideStop', function(ev) {
-            $('#radius').slider('setValue', ev.value);
-            render();
-        });
-        $('#blur').slider({
-            formatter: function(value) {
-                return 'Value: ' + value;
-            }
-        });
-        $('#blur').slider().on('slideStop', function(ev) {
-            $('#blur').slider('setValue', ev.value);
-            render();
-        });
-        $('#pitch').slider({
-            formatter: function(value) {
-                return 'Value: ' + value;
-            }
-        });
-        $('#pitch').slider().on('slide', function(ev) {
-            $('#pitch').slider('setValue', ev.value);
-            render();
-        });
-    });
-    </script>
+
+    #menu a.active {
+      background-color: #3887be;
+      color: #ffffff;
+    }
+
+    #menu a.active:hover {
+      background: #3074a4;
+    }
+  </style>
+
+  <style>
+    #minimenu {
+      background: #fff;
+      position: absolute;
+      z-index: 1;
+      top: 11px;
+      left: 130px;
+      border-radius: 3px;
+      width: 120px;
+      /*border: 1px solid rgba(0, 0, 0, 0.4); */
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #minimenu b {
+      font-size: 13px;
+      color: #404040;
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    #minimenu b:last-child {
+      border: none;
+    }
+
+    #minimenu b:hover {
+      background-color: #f8f8f8;
+      color: #404040;
+    }
+
+    #minimenu b.active {
+      background-color: #3887be;
+      color: #ffffff;
+    }
+
+    #minimenu b.active:hover {
+      background: #3074a4;
+    }
+  </style>
+
+  <div id='map'></div>
+  <nav id="menu"></nav>
+  <nav id="minimenu"></nav>
+
+
+  <script type="text/javascript">
+  </script>
+  <script src="../js/main.js">
+  </script>
+
+  <script type="text/javascript">
+  </script>
+  <script src="../js/test.js">
+  </script>
+
+
 </body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/bootstrap-slider.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.sidr/1.2.1/jquery.sidr.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.sidr/1.2.1/stylesheets/jquery.sidr.light.css">
-<link rel='stylesheet' type="text/css" href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/css/bootstrap-slider.min.css" />
 
 </html>
