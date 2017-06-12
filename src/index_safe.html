@@ -15,17 +15,14 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript"></script>
 
-  <!--
   <link rel=stylesheet type="text/css" href="../css/buttoninm.css">
-  <link rel=stylesheet type="text/css" href="../css/button.css">
-  <link rel=stylesheet type="text/css" href="../css/dropdown.css">
-  <link rel=stylesheet type="text/css" href="../css/buttoninm.css">
--->
+
   <style>
     body {
       margin: 0;
       padding: 0;
     }
+
     #map {
       position: absolute;
       top: 0;
@@ -33,27 +30,20 @@
       width: 100%;
     }
   </style>
-
+  <style>
+    .mapboxgl-popup {
+      max-width: 400px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+  </style>
 </head>
 
 <body>
 
   <div id='map'></div>
-<!--
--->
-  <div class='map-overlay top'>
-    <div class='map-overlay-inner'>
-      <fieldset>
-        <label>Select layer</label>
-        <select id='layer' name='layer'>
-                  <option value=''></option>
-                  <option value='Inmovilizado'>Inmovilizado</option>
-                  <option value='Recordatorio'>Recordatorio</option>
-              </select>
-      </fieldset>
-      <nav id="menu"></nav>
-    </div>
-  </div>
+
+  <nav id="menu"></nav>
+
 
   <script type="text/javascript">
   </script>
@@ -62,7 +52,12 @@
 
   <script type="text/javascript">
   </script>
-  <script src="../js/buton.js">
+  <script src="../js/polygon.js">
+  </script>
+
+  <script type="text/javascript">
+  </script>
+  <script src="../js/database3.js">
   </script>
 
 </body>
