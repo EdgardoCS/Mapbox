@@ -1,38 +1,93 @@
-var show = require('../js/queryDb.js');
-var LayerId1 = ['Inmovilizado'];
-var LayerId2 = ['Recordatorio'];
-var Inmovilizado = 0;
-var Recordatorio = 0;
+var draw1 = require('../js/geojson1.js');
+var sqlite3 = require('sqlite3').verbose();
 
-var id1 = LayerId1;
-var id2 = LayerId2;
+var Nombre;
+var Rut;
+var Direccion;
+var Latitude;
+var Longitude;
+var arreglo1 = [];
+var query;
+var id;
+var db = new sqlite3.Database('./db/mydb.db');
 
-var link1 = document.createElement('a1');
-link1.href = '#';
-link1.className = 'active';
-link1.textContent = id1;
-link1.onclick = function(e) {
+exports.toquery = function(option) {
+  for (i = 0; i < 2; i++) {
+    var casius = option[i];
 
-  show.db();
-  var clickedLayer1 = this.textContent;
-console.log("click");
+    if (casius == 1) {
+      query = ["SELECT * FROM Users3"]
+      id = casius;
+    }
+    if (query[1] == undefined) {
+      //console.log(query[1]);
+      console.log("imhere1");
+      console.log(id);
+      db.all(query[0], function(err, row) {
+        if (row == null) {
+          console.log("Error: Celda Vacía");
+        } else {
+          for (i = 0; i < row.length; i++) {
+
+            setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
+            arreglo1[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+          }
+          console.log(arreglo);
+          draw1.togeojson1(arreglo, id);
+        }
+      });
+      db.close();
+    }
+    if (casius == 1.1) {
+      var RUT = "3147628-3"
+      query = ["SELECT * FROM Users3 WHERE Rut=?", [RUT]]
+      id = casius;
+    }
+    if (query.length == 2) {
+      console.log("imhere2");
+      console.log(id);
+      db.all(query[0], query[1], function(err, row) {
+        if (row == null) {
+          console.log("Error: Celda Vacía");
+        } else {
+          for (i = 0; i < row.length; i++) {
+
+            setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
+            arreglo1[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+          }
+          draw1.togeojson1(arreglo1, id);
+          console.log(arreglo);
+        }
+      });
+      db.close();
+    };
+
+  }
 };
 /*
-var layers1 = document.getElementById('menuIn');
-layers1.appendChild(link1);
+ */
+setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
+  var pointFeatures;
 
-
-var link2 = document.createElement('a2');
-link2.href = '#';
-link2.className = 'active';
-link2.textContent = id2;
-link2.onclick = function(e) {
-
-  var Recordatorio = 1;
-  show.db(Recordatorio);
-  var clickedLayer2 = this.textContent;
-
+  pointFeatures = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [Latitude, Longitude]
+    },
+    "properties": {
+      "title": "Adulto Mayor",
+      "description": "<strong>Adulto Mayor</strong><p>" + [Rut] + "<br>" + [Nombre] + "<br>" + [Direccion],
+      "address": [Direccion]
+    }
+  }
+  return pointFeatures;
 };
-var layers2 = document.getElementById('menuRc');
-layers2.appendChild(link1);
+
+/*
+if (option==1){
+  var RUT="3147628-3"
+  query=["SELECT * FROM Users3 WHERE Rut=?",[RUT]]
+  query1=["SELECT * FROM Users3",["3147628-3"]]
+}
 */

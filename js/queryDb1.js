@@ -1,42 +1,43 @@
-var draw1 = require('../js/geojson1.js');
-var sqlite3 = require('sqlite3').verbose();
+var led = require('../js/queryDb2.js')
 
-var Nombre;
-var Rut;
-var Direccion;
-var Latitude;
-var Longitude;
-var arreglo1=[];
+var condicion;
+var query;
+var id;
 
-var db = new sqlite3.Database('./db/mydb.db');
-
-
-db.all("SELECT * FROM Users3", function(err, row) {
-  if (row == null) {
-    console.log("Error: Celda Vacía");
-  } else {
-    for (i = 0; i < row.length; i++) {
-      setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
-      arreglo1[i]=setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+exports.toquery = function(option) {
+  for (j = 0; j < option.length; j++) {
+    condicion = option[j];
+    if (condicion == 1) {
+      id = 1;
+      query = ["SELECT * FROM Users3"]
+      led.zeppelin(query, id);
     }
-    draw1.togeojson1(arreglo1);
-  }
-});
-db.close();
+
+    if (condicion == 1.1) {
+      id = 1.1;
+      var RUT = "3147628-3";
+      query = ["SELECT * FROM Users3 WHERE Rut=?", [RUT]]
+      led.zeppelin(query, id);
+    }
+
+  }; //***********FOR*************//
+}; //*************EXPORTS********//
+
 /*
-*/
-setFeatures = function(Rut, Nombre, Direccion, Longitude,Latitude) {
+ */
+
+setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
   var pointFeatures;
 
   pointFeatures = {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [Latitude,Longitude]
+      "coordinates": [Latitude, Longitude]
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong><p>"+ [Rut]+"<br>"+[Nombre]+"<br>"+[Direccion],
+      "description": "<strong>Adulto Mayor</strong><p>" + [Rut] + "<br>" + [Nombre] + "<br>" + [Direccion],
       "address": [Direccion]
     }
   }

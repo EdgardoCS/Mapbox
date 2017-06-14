@@ -1,41 +1,56 @@
-var draw2 = require('../js/geojson2.js');
+var draw = require('../js/geojson1.js');
 var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('./db/mydb.db');
 
 var Nombre;
 var Rut;
 var Direccion;
 var Latitude;
 var Longitude;
-var arreglo2=[];
-
-var db = new sqlite3.Database('./db/mydb.db');
-
-db.all("SELECT * FROM Inmovilizado", function(err, row) {
-  if (row == null) {
-    console.log("Error: Celda Vacía");
-  } else {
-    for (i = 0; i < row.length; i++) {
-
-      setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
-      arreglo2[i]=setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
-    }
-    draw2.togeojson2(arreglo2);
-  }
-});
 /*
-*/
-setFeatures = function(Rut, Nombre, Direccion, Longitude,Latitude) {
+ */
+
+exports.zeppelin = function(query, id) {
+  db.all(query[0], query[1], function(err, row) {
+
+    if (row != null) {
+
+      var arreglo = [];
+      if (row.length == 1) {
+
+        for (i = 0; i < row.length; i++) {
+
+          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
+          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+        }
+        draw.togeojson1(arreglo, id);
+      }
+      else {
+        for (i = 0; i < row.length; i++) {
+
+          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
+          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+        }
+        draw.togeojson1(arreglo, id);
+      }
+    } else {
+      console.log("Error: Celda Vacía");
+    }
+  });
+};
+
+setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
   var pointFeatures;
 
   pointFeatures = {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [Latitude,Longitude]
+      "coordinates": [Latitude, Longitude]
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong><p>"+ [Rut]+"<br>"+[Nombre]+"<br>"+[Direccion],
+      "description": "<strong>Adulto Mayor</strong><p>" + [Rut] + "<br>" + [Nombre] + "<br>" + [Direccion],
       "address": [Direccion]
     }
   }
