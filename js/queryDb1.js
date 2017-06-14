@@ -16,7 +16,8 @@ exports.toquery = function(option) {
     if (condicion == 1.1) {
       id = 1.1;
       var RUT = "3147628-3";
-      query = ["SELECT * FROM Users3 WHERE Rut=?", [RUT]]
+      //query = ["SELECT * FROM Users3 WHERE Rut=?", [RUT]]
+      query = ["SELECT * FROM Inmovilizado"]
       led.zeppelin(query, id);
     }
 

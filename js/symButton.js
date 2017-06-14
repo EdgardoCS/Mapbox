@@ -6,27 +6,27 @@ exports.purple = function(arreglo) {
     map.addSource(arreglo[1][1].source, arreglo[1][0]);
     map.addLayer(arreglo[0][1])
     map.addLayer(arreglo[1][1])
-    console.log(arreglo[0][1].source);
-    console.log(arreglo[0][0]);
-    console.log(arreglo[1][1].source);
-    console.log(arreglo[1][0]);
-  });
-};
 
-/*
-  //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\
-  map.on('click', 'Inmovilizado', function(e) {
-    new mapboxgl.Popup()
+    console.log(arreglo[0][1]['id']);
+    console.log(arreglo[1][1]['id']);
+    console.log(arreglo.length);
+    /*
+    */
+    //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\
+    for (i=0;i<arreglo.length;i++){
+    map.on('click', arreglo[i][1]['id'], function(e) {
+      new mapboxgl.Popup()
       .setLngLat(e.features[0].geometry.coordinates)
       .setHTML(e.features[0].properties.description)
       .addTo(map);
+    });
+    map.on('mouseenter', arreglo[i][1]['id'], function() {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', arreglo[i][1]['id'], function() {
+      map.getCanvas().style.cursor = '';
+    });
+  }
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++\\
   });
-  map.on('mouseenter', 'Inmovilizado', function() {
-    map.getCanvas().style.cursor = 'pointer';
-  });
-  map.on('mouseleave', 'Inmovilizado', function() {
-    map.getCanvas().style.cursor = '';
-  });
-  //+++++++++++++++++++++++++++++++++++++++++++++++++++++\\
-});
-*/
+};
