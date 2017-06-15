@@ -50,7 +50,8 @@ setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong><p>" + [Rut] + "<br>" + [Nombre] + "<br>" + [Direccion],
+      "description": "<strong>Adulto Mayor</strong><p>" + [Nombre],
+      //"description": "<strong>Adulto Mayor</strong><p>" + [Rut] + "<br>" + [Nombre] + "<br>" + [Direccion],
       "address": [Direccion]
     }
   }

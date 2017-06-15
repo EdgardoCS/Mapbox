@@ -12,11 +12,6 @@ if(largo==1){
     map.addLayer(arreglo[0][1]);
     map.addLayer(arreglo[1][1]);
 }
-    //console.log(arreglo[0][1]['id']);
-    //console.log(arreglo[1][1]['id']);
-    //console.log(arreglo.length);
-    /*
-    */
     //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\
     for (i=0;i<arreglo.length;i++){
     map.on('click', arreglo[i][1]['id'], function(e) {

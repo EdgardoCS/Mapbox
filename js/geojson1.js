@@ -39,7 +39,7 @@ exports.togeojson1 = function(arreglo, id) {
     }
   });
   json1.tohandle([gea, agregar]);
-  arctic.monkeys(gea2);
+  arctic.monkeys([gea2,largo]);
 };
 makeGeo1 = function(features) {
   var geo = {
