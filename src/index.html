@@ -11,12 +11,14 @@
   <!--polygon-->
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
+  <!--turf-->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
   <!--GoogleMaps-->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript"></script>
 
-  <!--
   <link rel=stylesheet type="text/css" href="../css/button.css">
+  <!--
   <link rel=stylesheet type="text/css" href="../css/buttoninm.css">
 -->
   <style>
@@ -59,6 +61,12 @@
   </div>
 -->
 
+<div class='calculation-box'>
+    <p>Dibuje el area de seleecion</p>
+    <div id='calculate' class='button button'>Mostrar</div>
+    <div id='calculated-area'></div>
+</div>
+
   <script type="text/javascript">
   </script>
   <script src="../js/main.js">
@@ -68,21 +76,18 @@
   </script>
   <script src="../js/buton.js">
   </script>
+  <script type="text/javascript">
+  </script>
+
+  <script src="../js/polygon.js">
+  </script>
+  <script type="text/javascript">
+  </script>
 
   <!--
   <script type="text/javascript">
   </script>
-  <script src="../js/polygon.js">
-  </script>
-
-  <script type="text/javascript">
-  </script>
   <script src="../js/queryDb2.js">
-  </script>
-
-  <script type="text/javascript">
-  </script>
-  <script src="../js/queryDb1.js">
   </script>
 -->
 </body>

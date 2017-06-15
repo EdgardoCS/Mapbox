@@ -1,3 +1,4 @@
+
 exports.purple = function(arreglo,largo) {
   map.on('load', function() {
 
