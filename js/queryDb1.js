@@ -4,12 +4,13 @@ var condicion;
 var query;
 var id;
 
-exports.toquery = function(option) {
+exports.toquery = function(option,largo) {
   for (j = 0; j < option.length; j++) {
     condicion = option[j];
     if (condicion == 1) {
       id = 1;
-      query = ["SELECT * FROM Users3"]
+      query = ["SELECT * FROM Inmovilizado"]
+
       led.zeppelin(query, id);
     }
 
@@ -17,8 +18,8 @@ exports.toquery = function(option) {
       id = 1.1;
       var RUT = "3147628-3";
       //query = ["SELECT * FROM Users3 WHERE Rut=?", [RUT]]
-      query = ["SELECT * FROM Inmovilizado"]
-      led.zeppelin(query, id);
+      query = ["SELECT * FROM Recordatorio"]
+      led.zeppelin(query, id,largo);
     }
 
   }; //***********FOR*************//

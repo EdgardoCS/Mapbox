@@ -1,15 +1,19 @@
-exports.purple = function(arreglo) {
-
+exports.purple = function(arreglo,largo) {
   map.on('load', function() {
 
+if(largo==1){
+    map.addSource(arreglo[0][1].source, arreglo[0][0]);
+    map.addLayer(arreglo[0][1]);
+  }
+  else{
     map.addSource(arreglo[0][1].source, arreglo[0][0]);
     map.addSource(arreglo[1][1].source, arreglo[1][0]);
-    map.addLayer(arreglo[0][1])
-    map.addLayer(arreglo[1][1])
-
-    console.log(arreglo[0][1]['id']);
-    console.log(arreglo[1][1]['id']);
-    console.log(arreglo.length);
+    map.addLayer(arreglo[0][1]);
+    map.addLayer(arreglo[1][1]);
+}
+    //console.log(arreglo[0][1]['id']);
+    //console.log(arreglo[1][1]['id']);
+    //console.log(arreglo.length);
     /*
     */
     //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\

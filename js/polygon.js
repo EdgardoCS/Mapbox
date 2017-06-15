@@ -8,3 +8,13 @@ var draw = new MapboxDraw({
     }
 });
 map.addControl(draw);
+console.log("polygono");
+var data=draw.getAll();
+
+if (data.features.length>0){
+console.log(data);
+console.log("seleccion");
+}
+/*
+var area = turf.area(data)
+*/

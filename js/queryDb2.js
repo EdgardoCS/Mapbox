@@ -10,7 +10,7 @@ var Longitude;
 /*
  */
 
-exports.zeppelin = function(query, id) {
+exports.zeppelin = function(query, id,largo) {
   db.all(query[0], query[1], function(err, row) {
 
     if (row != null) {
@@ -23,7 +23,7 @@ exports.zeppelin = function(query, id) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        draw.togeojson1(arreglo, id);
+        draw.togeojson1(arreglo, id,largo);
       }
       else {
         for (i = 0; i < row.length; i++) {
@@ -31,7 +31,7 @@ exports.zeppelin = function(query, id) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        draw.togeojson1(arreglo, id);
+        draw.togeojson1(arreglo, id,largo);
       }
     } else {
       console.log("Error: Celda Vacía");
