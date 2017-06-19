@@ -1,12 +1,6 @@
 exports.purple = function(arreglo, largo) {
-  console.log("1");
-  console.log(arreglo);
-  //console.log(arreglo[1].id);
   //map.on('click',function(e) {
-  
-    console.log("2");
-    console.log(arreglo)
-    if (largo == 1) {
+      if (largo == 1) {
 
       map.addSource(arreglo[0][1].source, arreglo[0][0]);
       map.addLayer(arreglo[0][1]);
