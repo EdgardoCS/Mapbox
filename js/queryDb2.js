@@ -11,6 +11,7 @@ var Longitude;
  */
 
 exports.zeppelin = function(query, id,largo) {
+
   db.all(query[0], query[1], function(err, row) {
 
     if (row != null) {
@@ -23,6 +24,7 @@ exports.zeppelin = function(query, id,largo) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
+
         draw.togeojson1(arreglo, id,largo);
       }
       else {
@@ -31,6 +33,7 @@ exports.zeppelin = function(query, id,largo) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
+
         draw.togeojson1(arreglo, id,largo);
       }
     } else {
@@ -39,7 +42,9 @@ exports.zeppelin = function(query, id,largo) {
   });
 };
 
+
 setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
+
   var pointFeatures;
 
   pointFeatures = {
@@ -50,7 +55,8 @@ setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong><p>" + [Nombre],
+      "description": Nombre,
+      //"description": "<strong>Adulto Mayor</strong><p>" + [Nombre],
       //"description": "<strong>Adulto Mayor</strong><p>" + [Rut] + "<br>" + [Nombre] + "<br>" + [Direccion],
       "address": [Direccion]
     }

@@ -1,53 +1,60 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8' />
-    <title></title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-</head>
-<body>
+  <meta charset='utf-8' />
+  <title> mapbox-gl-js</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!--main.js-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+  <!--polygon-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
+  <!--turf-->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+  <!--GoogleMaps-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript"></script>
 
-<style type='text/css'>
-    #info {
-        display: block;
-        position: relative;
-        margin: 0px auto;
-        width: 50%;
-        padding: 10px;
-        border: none;
-        border-radius: 3px;
-        font-size: 12px;
-        text-align: center;
-        color: #222;
-        background: #fff;
+  <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel=stylesheet type="text/css" href="../css/button.css">
+  <link rel=stylesheet type="text/css" href="../css/search.css">
+  <!--
+  <link rel=stylesheet type="text/css" href="../css/dropdown.css">
+-->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
     }
-</style>
-<div id='map'></div>
-<pre id='info'></pre>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZWRnYXJkb3MiLCJhIjoiY2oydXNhM2t4MDAwZTJ2bGF6dWEzZmY1bSJ9.hqndt_ot8gOGH8p8C1qygg';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9',
-    zoom: 12,
-    center: [-71.63116246461868,-33.04887799524245]
-});
 
-map.on('mousemove', function (e) {
-    document.getElementById('info').innerHTML =
-        // e.point is the x, y coordinates of the mousemove event relative
-        // to the top-left corner of the map
-        JSON.stringify(e.point) + '<br />' +
-            // e.lngLat is the longitude, latitude geographical position of the event
-        JSON.stringify(e.lngLat);
-});
-</script>
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <style>
+    .mapboxgl-popup {
+      max-width: 400px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
 
+<body>
+  <div id='map'></div>
+  <div class="box">
+    <div class="container-1">
+      <input type="search" id="search" placeholder="Buscar..." />
+      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
+    </div>
+  </div>
 </body>
+
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+
 </html>

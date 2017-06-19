@@ -17,8 +17,8 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript"></script>
 
-  <link rel=stylesheet type="text/css" href="../css/button.css">
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel=stylesheet type="text/css" href="../css/button.css">
   <link rel=stylesheet type="text/css" href="../css/search.css">
   <!--
   <link rel=stylesheet type="text/css" href="../css/buttoninm.css">
@@ -48,36 +48,25 @@
 
   <div id='map'></div>
 
-    <div class="box">
-      <div class="container-1">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Buscar..." />
-      </div>
+  <div class="box">
+    <div class="container-1">
+      <input type="search" id="search" placeholder="Buscar..." />
+      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
     </div>
+  </div>
+  </body>
 
-<div class='calculation-box'>
-    <p>Dibuje el area de selección</p>
-    <div id='calculate' class='button button'>Mostrar</div>
-    <div id='calculated-area'></div>
-</div>
+  <div class='draw-box'>
+    <p>Dibuje el área de selección</p>
+    <div id='draw' class='button button'>Mostrar</div>
+  </div>
 
-  <script type="text/javascript">
-  </script>
-  <script src="../js/main.js">
-  </script>
-
-  <script type="text/javascript">
-  </script>
-  <script src="../js/buton.js">
-  </script>
-  <script type="text/javascript">
-  </script>
-
-  <script src="../js/polygon.js">
-  </script>
-  <script type="text/javascript">
-  </script>
-
+  <script src=  "../js/main.js"     ></script>
+  <script src=  "../js/polygon.js"  ></script>
+  <script src=  "../js/buton.js"    ></script>
+  <!--
+  <script src=  "../js/search.js"   ></script>
+-->
 </body>
 
 </html>

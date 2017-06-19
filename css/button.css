@@ -1,8 +1,8 @@
-.calculation-box {
+.draw-box {
   height: 50px;
   width: 90px;
   position: absolute;
-  top: 45px;
+  top: 35px;
   left: 5px;
   background: #2b303b;
   border: none;
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-#calculate {
+#draw {
   min-height: 10px;
   background-color: #65737e;
   color: #fff;

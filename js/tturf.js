@@ -1,7 +1,6 @@
-var calcButton = document.getElementById('calculate');
+var calcButton = document.getElementById('draw');
 var fiveofive = [];
-
-exports.monkeys = function(gea2) {
+exports.monkeys = function(gea2,largo) {
   fiveofive.push(gea2);
   if (fiveofive.length == largo) {
   calcButton.onclick = function() {
