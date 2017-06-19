@@ -10,7 +10,7 @@ var Longitude;
 /*
  */
 
-exports.zeppelin = function(query, id, largo) {
+exports.zeppelin = function(query, id,largo) {
 
   db.all(query[0], query[1], function(err, row) {
 
@@ -18,22 +18,27 @@ exports.zeppelin = function(query, id, largo) {
 
       var arreglo = [];
       if (row.length == 1) {
+
         for (i = 0; i < row.length; i++) {
 
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        draw.togeojson1(arreglo, id, largo);
+console.log(arreglo);
+console.log("igual a 1");
+        //draw.togeojson1(arreglo, id,largo);
       }
-      if (row.length > 1) {
+      if (row.length>1) {
         for (i = 0; i < row.length; i++) {
 
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        draw.togeojson1(arreglo, id, largo);
+        draw.togeojson1(arreglo, id,largo);
+
+        console.log("mayor a 1");
       }
-      if (row.length < 1) {
+      if (row.length<1){
         console.log("Rut No Encontrado");
       }
     } else {
@@ -41,6 +46,7 @@ exports.zeppelin = function(query, id, largo) {
     }
   });
 };
+
 
 setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
 

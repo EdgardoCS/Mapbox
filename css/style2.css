@@ -1,6 +1,6 @@
 .check-box {
-  width: 95px;
-  height: 170px;
+  width: 120px;
+  height: 100px;
   position: absolute;
   top: 105px;
   left: 5px;
@@ -16,12 +16,12 @@
 }
 
 input[type=checkbox] {
-  visibility: hidden;
+visibility: hidden;
 }
 
 
 .roundedOne {
-  top: -58px;
+  top:auto;
   width: 18px;
   height: 18px;
   background: #fcfff4;
@@ -40,7 +40,10 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-
+.roundedOne title {
+    display: inline-block;
+    margin-left: 20px;
+    }
 .roundedOne label {
   cursor: pointer;
   position: absolute;
@@ -99,7 +102,7 @@ input[type=checkbox] {
 }
 
 .roundedTwo {
-  top: -58px;
+  top: auto;
   width: 18px;
   height: 18px;
   background: #fcfff4;
@@ -118,7 +121,10 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-
+.roundedTwo title {
+    display: inline-block;
+    margin-left: 20px;
+    }
 .roundedTwo label {
   cursor: pointer;
   position: absolute;
@@ -195,6 +201,6 @@ input[type=checkbox] {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   opacity: 1;
-   margin-top: -28px;
-   margin-left: 73px;
+   margin-top: -25px;
+   margin-left: 110px;
 }

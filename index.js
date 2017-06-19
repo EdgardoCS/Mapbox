@@ -21,7 +21,7 @@ app.on('ready', function() {
         fullscreen: false
     });
     //mainWindow.maximize()
-    mainWindow.loadURL('file://' + __dirname + '/src/test.html');
+    mainWindow.loadURL('file://' + __dirname + '/src/index.html');
     mainWindow.openDevTools();
 
     mainWindow.on('closed', function() {
