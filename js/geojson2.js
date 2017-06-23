@@ -36,20 +36,24 @@ exports.togeojson1 = function(arreglo, id,largo) {
 
   var agregar = ({
     "id": tipo,
+    "type": "symbol",
     "source": fuente,
-    "type": "circle",
-    "interactive": true,
-    'layout': {
-      'visibility': 'visible'
-    },
-    "paint": {
+    "layout": {
+          "icon-image": "{icon}-11",
+          "text-field": "{title}",
+          "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+          "text-offset": [0, 0.6],
+          "text-anchor": "top"
+      },
+    /*"paint": {
       "circle-radius": 5,
       "circle-color": color
 
-    }
+    }*/
   });
   json1.tohandle([gea, agregar],largo);
   arctic.monkeys(gea2, largo);
+  console.log(agregar);
 };
 makeGeo1 = function(features) {
   var geo = {
