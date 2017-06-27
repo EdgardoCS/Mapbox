@@ -6,9 +6,9 @@ var map = new mapboxgl.Map({
   //style: 'mapbox://styles/edgardos/cj478jwkc0qu82smufvk6k016',
   style: 'mapbox://styles/edgardos/cj49z39rt38gj2slf27g1cdp9',
 
-  zoom: 12,
+  zoom: 14.5,
   pitch: 90,
   bearing: -170,
-  center: [-71.631, -33.048]
+  center: [-71.625,-33.047]
 });
 map.addControl(new mapboxgl.NavigationControl());

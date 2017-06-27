@@ -23,7 +23,7 @@ exports.zeppelin = function(query, id, largo) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        draw.togeojson1(arreglo, id, largo);
+        //draw.togeojson1(arreglo, id, largo);.
       }
       if (row.length > 1) {
         for (i = 0; i < row.length; i++) {

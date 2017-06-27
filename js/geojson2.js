@@ -1,4 +1,4 @@
-var json1 = require('../js/handle.js');
+var json1 = require('../js/handle2.js');
 var arctic = require('../js/tturf.js');
 
 exports.togeojson1 = function(arreglo, id,largo) {
@@ -36,24 +36,20 @@ exports.togeojson1 = function(arreglo, id,largo) {
 
   var agregar = ({
     "id": tipo,
-    "type": "symbol",
     "source": fuente,
-    "layout": {
-          "icon-image": "{icon}-11",
-          "text-field": "{title}",
-          "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-          "text-offset": [0, 0.6],
-          "text-anchor": "top"
-      },
-    /*"paint": {
+    "type": "circle",
+    "interactive": true,
+    'layout': {
+      'visibility': 'visible'
+    },
+    "paint": {
       "circle-radius": 5,
       "circle-color": color
 
-    }*/
+    }
   });
   json1.tohandle([gea, agregar],largo);
   arctic.monkeys(gea2, largo);
-  console.log(agregar);
 };
 makeGeo1 = function(features) {
   var geo = {

@@ -16,6 +16,8 @@
   <!--GoogleMaps-->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript"></script>
+  <!--XLSX-->
+  <script lang="javascript" src="../node_modules/xlsx/dist/xlsx.full.min.js"></script>
 
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel=stylesheet type="text/css" href="../css/map.css">
@@ -45,17 +47,17 @@
     </div>
     <!--
   -->
-  <div class="box">
-    <div class="container-1">
-      <input type="search" id="search" placeholder="Buscar..." />
-      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
+    <div class="box">
+      <div class="container-1">
+        <input type="search" id="search" placeholder="Buscar..." />
+        <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
+      </div>
     </div>
-  </div>
 
-  <div class='draw-box'>
-    <p>Dibuje el área de selección</p>
-    <div id='draw' class='button button'>Mostrar</div>
-  </div>
+    <div class='draw-box'>
+      <p>Dibuje el área de selección</p>
+      <div id='draw' class='button button'>Mostrar</div>
+    </div>
   </body>
 
   <script src="../js/main.js"></script>
@@ -64,6 +66,7 @@
   <script src="../js/buton2.js"></script>
   <!--
   <script src=  "../js/buton.js"    ></script>
+  <script src="../js/Qexcel.js"></script>
 -->
   </body>
 

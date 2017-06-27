@@ -7,40 +7,44 @@ var Rut;
 var Direccion;
 var Latitude;
 var Longitude;
-/*
- */
+var arreglo=[];
 
 exports.zeppelin = function(query, id, largo) {
+  for (i = 0; i < query.length; i++) {
 
-  db.all(query[0], query[1], function(err, row) {
+    db.all(query[i][0], query[i][1], function(err, row) {
+      if (row != null) {
 
-    if (row != null) {
+        var arreglo1 = [];
+        if (row.length == 1) {
+          for (i = 0; i < row.length; i++) {
 
-      var arreglo = [];
-      if (row.length == 1) {
-        for (i = 0; i < row.length; i++) {
-
-          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
-          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+            setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
+            arreglo1[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+            arreglo.push(arreglo1[i]);
+          }
+          if (arreglo.length == largo) {
+            draw.togeojson1(arreglo, id, largo);
+          }
         }
-        draw.togeojson1(arreglo, id, largo);
-      }
-      if (row.length > 1) {
-        for (i = 0; i < row.length; i++) {
+        if (row.length > 1) {
+          for (i = 0; i < row.length; i++) {
 
-          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
-          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+            setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
+            arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+          }
+          draw.togeojson1(arreglo, id, largo);
         }
-        draw.togeojson1(arreglo, id, largo);
+        if (row.length < 1) {
+         console.log("Rut No Encontrado");
+        }
+      } else {
+        console.log("Error: Celda Vacía");
       }
-      if (row.length < 1) {
-        console.log("Rut No Encontrado");
-      }
-    } else {
-      console.log("Error: Celda Vacía");
-    }
-  });
+    });
+  }
 };
+
 
 setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
 
@@ -57,8 +61,9 @@ setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
       "description": "<strong>Adulto Mayor</strong></p>" + Nombre,
       //"description": "<strong>Adulto Mayor</strong></p>" + Nombre+ "<br>" + Direccion,
       "address": [Direccion],
-      "icon":"monument"
     }
   }
   return pointFeatures;
 };
+/*
+ */
