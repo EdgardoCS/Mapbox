@@ -1,22 +1,43 @@
+var yellow = require('../js/slide.js');
+
 var calcButton = document.getElementById('draw');
 var fiveofive = [];
-exports.monkeys = function(gea2,largo) {
+var inner = [];
+exports.monkeys = function(gea2, largo) {
 
   fiveofive.push(gea2);
   if (fiveofive.length == largo) {
+    var modal = document.getElementById('myModal');
+    var span = document.getElementsByClassName("close")[0];
 
-  calcButton.onclick = function() {
+    calcButton.onclick = function() {
 
       var data = draw.getAll();
       if (data.features.length > 0) {
         for (i = 0; i < fiveofive.length; i++) {
           var ptsWithin = turf.within(fiveofive[i], data);
-          console.log(ptsWithin);
+          modal.style.display = "block";
+
+          for (i = 0; i < ptsWithin.features.length; i++) {
+            var speakers = ptsWithin.features[i].properties.description +"&nbsp"+ ptsWithin.features[i].properties.address +"<br>" +"<hr>";
+            inner.push (speakers);
+          }
+            document.getElementById('viewValue').innerHTML = inner
+
         }
       } else {
         alert("Use la herramienta de dibujo");
       }
-
+      span.onclick = function() {
+        modal.style.display = "none";
+        inner= [];
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          inner= [];
+        }
+      }
     }
 
   }

@@ -24,50 +24,66 @@
   <link rel=stylesheet type="text/css" href="../css/style2.css">
   <link rel=stylesheet type="text/css" href="../css/button.css">
   <link rel=stylesheet type="text/css" href="../css/search.css">
+  <link rel=stylesheet type="text/css" href="../css/modal.css">
 
+</head>
 
-  <body>
-
-    <div id='map'></div>
-    <!--
-  -->
-    <div class="check-box">
-      <p>Seleccione Vista</p>
-      <button onclick="view()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-
-      <hr>
-      <div class="roundedOne">
-        <input type="checkbox" value=1 id="roundedOne" name="check">
-        <label for="roundedOne"><title>Inmovilizado</title></label>
-      </div>
-      <div class="roundedTwo">
-        <input type="checkbox" value=1.1 id="roundedTwo" name="check">
-        <label for="roundedTwo"><title>Recordatorio</title></label>
-      </div>
-    </div>
-    <!--
-  -->
-    <div class="box">
-      <div class="container-1">
-        <input type="search" id="search" placeholder="Buscar..." />
-        <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
-      </div>
-    </div>
-
-    <div class='draw-box'>
-      <p>Dibuje el área de selección</p>
-      <div id='draw' class='button button'>Mostrar</div>
-    </div>
-  </body>
-
-  <script src="../js/main.js"></script>
-  <script src="../js/polygon.js"></script>
-  <script src="../js/search.js"></script>
-  <script src="../js/buton2.js"></script>
+<body>
   <!--
+-->
+  <div id='map'></div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Resultados Selección</h2>
+      </div>
+      <div class="modal-body">
+      <p id ='viewValue'></p> 
+      </div>
+      <div class="modal-footer">
+        <h3>CESFAM MENA</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="check-box">
+    <p>Seleccione Vista</p>
+    <button onclick="view()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+    <hr>
+    <div class="roundedOne">
+      <input type="checkbox" value=1 id="roundedOne" name="check">
+      <label for="roundedOne"><title>Inmovilizado</title></label>
+    </div>
+    <div class="roundedTwo">
+      <input type="checkbox" value=1.1 id="roundedTwo" name="check">
+      <label for="roundedTwo"><title>Recordatorio</title></label>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="container-1">
+      <input type="search" id="search" placeholder="Buscar..." />
+      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
+    </div>
+  </div>
+
+  <div class='draw-box'>
+    <p>Dibuje el área de selección</p>
+    <div id='draw' class='button button'>Mostrar</div>
+  </div>
+</body>
+
+<script src="../js/main.js"></script>
+<script src="../js/polygon.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/buton2.js"></script>
+<!--
   <script src=  "../js/buton.js"    ></script>
   <script src="../js/Qexcel.js"></script>
 -->
-  </body>
+</body>
 
 </html>
