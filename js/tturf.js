@@ -1,12 +1,10 @@
-var yellow = require('../js/slide.js');
-
 var calcButton = document.getElementById('draw');
 var fiveofive = [];
 var inner = [];
-exports.monkeys = function(gea2, largo) {
+exports.monkeys = function(gea2, rooster) {
 
   fiveofive.push(gea2);
-  if (fiveofive.length == largo) {
+  if (fiveofive.length == rooster[0].length) {
     var modal = document.getElementById('myModal');
     var span = document.getElementsByClassName("close")[0];
 

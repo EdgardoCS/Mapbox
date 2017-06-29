@@ -10,8 +10,8 @@ var Longitude;
 /*
  */
 
-exports.zeppelin = function(query, id, largo) {
-
+exports.zeppelin = function(query, id, rooster) {
+  
   db.all(query[0], query[1], function(err, row) {
 
     if (row != null) {
@@ -23,7 +23,7 @@ exports.zeppelin = function(query, id, largo) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        //draw.togeojson1(arreglo, id, largo);.
+        draw.togeojson1(arreglo, id, rooster);
       }
       if (row.length > 1) {
         for (i = 0; i < row.length; i++) {
@@ -31,7 +31,7 @@ exports.zeppelin = function(query, id, largo) {
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
         }
-        draw.togeojson1(arreglo, id, largo);
+        draw.togeojson1(arreglo, id, rooster);
       }
       if (row.length < 1) {
         console.log("Rut No Encontrado");

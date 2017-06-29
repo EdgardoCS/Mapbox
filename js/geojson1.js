@@ -1,7 +1,7 @@
 var json1 = require('../js/handle.js');
 var arctic = require('../js/tturf.js');
 
-exports.togeojson1 = function(arreglo, id,largo) {
+exports.togeojson1 = function(arreglo, id,rooster) {
   var gea = makeGeo1(arreglo);
   var gea2 = makeGeo2(arreglo);
   var tipo;
@@ -11,8 +11,8 @@ exports.togeojson1 = function(arreglo, id,largo) {
   var color1 = "#F4511E"
   var color2 = "#00ACC1"
   var tipo0 = "Busqueda"
-  var tipo1 = "Recordatorio"
-  var tipo2 = "Usuario"
+  var tipo1 = "Inmovilizado"
+  var tipo2 = "Recordatorio"
   var fuente0 = "markers0"
   var fuente1 = "markers1"
   var fuente2 = "markers2"
@@ -48,8 +48,8 @@ exports.togeojson1 = function(arreglo, id,largo) {
 
     }
   });
-  json1.tohandle([gea, agregar],largo);
-  arctic.monkeys(gea2, largo);
+  json1.tohandle([gea, agregar],rooster);
+  arctic.monkeys(gea2, rooster);
 };
 makeGeo1 = function(features) {
   var geo = {
