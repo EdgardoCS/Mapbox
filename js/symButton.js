@@ -16,7 +16,7 @@ exports.purple = function(arreglo, rooster) {
     map.removeLayer(arreglo[0][1].id);
     map.removeSource(arreglo[0][1].source);
   }
-  /*
+
   //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\
   for (i = 0; i < arreglo.length; i++) {
     map.on('click', arreglo[i][1]['id'], function(e) {
@@ -32,6 +32,6 @@ exports.purple = function(arreglo, rooster) {
       map.getCanvas().style.cursor = '';
     });
   }
-  */
+  
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++\\
 };
