@@ -17,10 +17,11 @@ exports.monkeys = function(gea2, rooster) {
           modal.style.display = "block";
 
           for (i = 0; i < ptsWithin.features.length; i++) {
-            var speakers = ptsWithin.features[i].properties.description +"&nbsp"+ ptsWithin.features[i].properties.address +"<br>" +"<hr>";
-            inner.push (speakers);
+            var speakers = ptsWithin.features[i].properties.description + "&nbsp" + ptsWithin.features[i].properties.address + "<br>" + "<hr>";
+            inner.push(speakers);
           }
-            document.getElementById('viewValue').innerHTML = inner
+          document.getElementById('viewValue').innerHTML = inner
+          inner = [];
 
         }
       } else {
@@ -28,15 +29,18 @@ exports.monkeys = function(gea2, rooster) {
       }
       span.onclick = function() {
         modal.style.display = "none";
-        inner= [];
+        inner = [];
       }
       window.onclick = function(event) {
         if (event.target == modal) {
           modal.style.display = "none";
-          inner= [];
+          inner = [];
         }
       }
     }
 
+  }
+  if (fiveofive.length > rooster[0].length) {
+    fiveofive.splice(0, 2);
   }
 }
