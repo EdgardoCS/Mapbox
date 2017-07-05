@@ -10,11 +10,11 @@ exports.toquery = function(rooster) {
     condicion = rooster[0][j];
 
     if (condicion == 1) {
-      id = 1;
+      id = "opcion_postrado";
       query = ["SELECT * FROM Inmovilizado"]
       led.zeppelin(query, id, rooster);
     } else if (condicion == 1.1) {
-      id = 1.1;
+      id = "opcion_recordatorio";
       query = ["SELECT * FROM Recordatorio"]
       led.zeppelin(query, id, rooster);
     }
@@ -23,11 +23,11 @@ exports.toquery = function(rooster) {
     condicion = rooster[1][j];
 
     if (condicion == 1) {
-      id = 1;
+      id = "opcion_postrado";
       query = ["SELECT * FROM Inmovilizado"]
       led.zeppelin(query, id, rooster);
     } else if (condicion == 1.1) {
-      id = 1.1;
+      id = "opcion_recordatorio";
       query = ["SELECT * FROM Recordatorio"]
       led.zeppelin(query, id, rooster);
     }

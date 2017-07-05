@@ -19,7 +19,7 @@ exports.purple = function(arreglo, rooster) {
     map.removeSource(arreglo[0][1].source);
   }
 //console.log(map.getLayer(arreglo[0][1]['id']));
-
+/*
   //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\
   for (i = 0; i < rooster[0].length; i++) {
     map.on('click', arreglo[i][1]['id'], function(e) {
@@ -34,9 +34,9 @@ exports.purple = function(arreglo, rooster) {
     map.on('mouseleave', arreglo[i][1]['id'], function() {
       map.getCanvas().style.cursor = '';
     });
-    /*
-*/
+
 }
+*/
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++\\
 
 
