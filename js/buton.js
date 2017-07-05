@@ -37,7 +37,7 @@ document.getElementById('roundedTwo').addEventListener('change', function(e) {
 
 var isrunning = 0;
 
-function view() {
+function viewPaciente() {
   isrunning = 1;
   var rooster = [opcion, negative];
 

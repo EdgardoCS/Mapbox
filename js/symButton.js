@@ -18,7 +18,7 @@ exports.purple = function(arreglo, rooster) {
     map.removeLayer(arreglo[0][1].id);
     map.removeSource(arreglo[0][1].source);
   }
-console.log(map.getLayer(arreglo[0][1]['id']));
+//console.log(map.getLayer(arreglo[0][1]['id']));
 
   //+++++++++++++GET INFO FROM POINT+++++++++++++++++++++\\
   for (i = 0; i < rooster[0].length; i++) {

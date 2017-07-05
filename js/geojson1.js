@@ -9,7 +9,7 @@ exports.togeojson1 = function(arreglo, id,rooster) {
   var color;
   var color0 = "#cc143f"
   var color1 = "#F4511E"
-  var color2 = "#00ACC1"
+  var color2 = "#a0149d"
   var tipo0 = "Busqueda"
   var tipo1 = "Inmovilizado"
   var tipo2 = "Recordatorio"

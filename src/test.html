@@ -21,18 +21,21 @@
 
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel=stylesheet type="text/css" href="../css/map.css">
-  <link rel=stylesheet type="text/css" href="../css/style2.css">
-  <link rel=stylesheet type="text/css" href="../css/button.css">
-  <link rel=stylesheet type="text/css" href="../css/search.css">
-  <link rel=stylesheet type="text/css" href="../css/modal.css">
+  <!--
+-->
+<link rel=stylesheet type="text/css" href="../css/drawbox.css">
+<link rel=stylesheet type="text/css" href="../css/search.css">
+<link rel=stylesheet type="text/css" href="../css/desplegable.css">
+<link rel=stylesheet type="text/css" href="../css/checkbox1.css">
+<link rel=stylesheet type="text/css" href="../css/checkbox2.css">
+<link rel=stylesheet type="text/css" href="../css/checkbox3.css">
 
 </head>
 
 <body>
+  <div id='map'></div>
   <!--
 -->
-  <div id='map'></div>
-
   <div id="myModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -48,36 +51,25 @@
     </div>
   </div>
 
-  <div class="check-box">
-    <p>Seleccione Patologia</p>
-    <button onclick="view()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-    <hr>
-    <div class="roundedOne">
-      <input type="checkbox" value=1 id="roundedOne" name="check">
-      <label for="roundedOne"><title>Inmovilizado</title></label>
-    </div>
-    <div class="roundedTwo">
-      <input type="checkbox" value=1.1 id="roundedTwo" name="check">
-      <label for="roundedTwo"><title>Recordatorio</title></label>
-    </div>
-  </div>
 
   <div class="box">
-    <div class="container-1">
-      <input type="search" id="search" placeholder="Buscar..." />
-      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
-    </div>
-  </div>
+  <div class="container-1">
+  <input type="search" id="search" placeholder="Buscar..." />
+  <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>.
+</div>
+</div>
 
-  <div class='draw-box'>
-    <p>Dibuje el área de selección</p>
-    <div id='draw' class='button button'>Mostrar</div>
-  </div>
+<div class='draw-box'>
+<p>Dibuje el área de selección</p>
+<div id='draw' class='button button'>Mostrar</div>
+</div>
 </body>
 
-<div class="check-box">
+<!--
+-->
+<div class="check-box1">
   <p>Seleccione Patologia</p>
-  <button onclick="view()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+  <button onclick="viewPaciente()" class="icon"><i class="fa fa-eye" id="view"></i></button>
   <hr>
   <div class="roundedOne">
     <input type="checkbox" value=1 id="roundedOne" name="check">
@@ -87,12 +79,41 @@
     <input type="checkbox" value=1.1 id="roundedTwo" name="check">
     <label for="roundedTwo"><title>Recordatorio</title></label>
   </div>
+</div>
+
+<div class="check-boxHill">
+  <p>Territorio MENA</p>
+  <button onclick="viewHill()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+  <hr>
+  <div class="roundedHill">
+    <input type="checkbox" id="roundedHill" name="check">
+    <label for="roundedHill"><title>Cerros</title></label>
+  </div>
+</div>
+
+<div class="check-boxSector">
+  <p>Seleccione Sector</p>
+  <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+  <hr>
+  <div class="rounded18">
+    <input type="checkbox" value=1 id="rounded18" name="check">
+    <label for="rounded18"><title>Sector18</title></label>
+  </div>
+  <div class="rounded27">
+    <input type="checkbox" value=1.1 id="rounded27" name="check">
+    <label for="rounded27"><title>Sector27</title></label>
+  </div>
+</div>
+
 
 <script src="../js/main.js"></script>
+<script src="../js/butonHill.js"></script>
+<!--
+<script src="../js/buton.js"></script>
+<script src="../js/polygon.js"></script>
 <script src="../js/sector18.js"></script>
 <script src="../js/sector27.js"></script>
-<script src="../js/cerros.js"></script>
-<!--
+<script src="../js/search.js"></script>
 <script src="../js/buton2.js"></script>
 <script src="../js/Qexcel.js"></script>
 -->
