@@ -26,12 +26,12 @@ document.getElementById('rounded27').addEventListener('change', function(e) {
 
 function viewSector() {
   var isSectorSelected = [addSector18, addSector27];
-    if (map.getLayer("sector18")){
+  if (map.getLayer("sector18")) {
     map.removeLayer("sector18");
-    }
-    if (map.getLayer("sector27")) {
-      map.removeLayer("sector27");
-    }
+  }
+  if (map.getLayer("sector27")) {
+    map.removeLayer("sector27");
+  }
   for (i = 0; i < 1; i++) {
     if (isSectorSelected[0] == true) {
       map.addLayer(sector18);
