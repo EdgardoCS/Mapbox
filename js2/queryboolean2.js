@@ -5,6 +5,8 @@ var db = new sqlite3.Database('./db/mydb.db');
 var Nombre;
 var Rut;
 var Direccion;
+var Sector;
+var Jefe_Equipo_Cabecera;
 var Latitude;
 var Longitude;
 /*
@@ -20,16 +22,16 @@ exports.zeppelin = function(query, id) {
       if (row.length == 1) {
         for (i = 0; i < row.length; i++) {
 
-          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
-          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
+          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
         }
         draw.togeojson1(arreglo, id);
       }
       if (row.length > 1) {
         for (i = 0; i < row.length; i++) {
 
-          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);
-          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Latitude, row[i].Longitude);;
+          setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
+          arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
         }
         draw.togeojson1(arreglo, id);
       }
@@ -42,7 +44,7 @@ exports.zeppelin = function(query, id) {
   });
 };
 
-setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
+setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude) {
 
   var pointFeatures;
 
@@ -54,8 +56,8 @@ setFeatures = function(Rut, Nombre, Direccion, Longitude, Latitude) {
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong></p>" + Nombre ,
-      "address": [Direccion]
+      "description": "<strong>Adulto Mayor</strong></p>" +"Nombre: "+ Nombre + " "+ "Sector: "+Sector+ " " + "Jefe Equipo: "+ Jefe_Equipo_Cabecera ,
+      "address": "Direccion: "+[Direccion]
     }
   }
   return pointFeatures;

@@ -17,20 +17,7 @@ document.getElementById('roundedOne').addEventListener('change', function(e) {
     removePostrado = false;
   }
 });
-/*
-document.getElementById('roundedTwo').addEventListener('change', function(e) {
-  if (e.target.checked == false) {
 
-    addRecordatorio = false;
-    removeRecordatorio = true;
-  }
-  if (e.target.checked == true) {
-
-    addRecordatorio = true;
-    removeRecordatorio = false;
-  }
-  });
-*/
 var add = [];
 var remove = [];
 
