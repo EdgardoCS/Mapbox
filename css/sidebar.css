@@ -1,0 +1,53 @@
+.sidecontainer {
+  display: table;
+  height: 1030px;
+  width: 15%;
+}
+
+.sidebar {
+  width: 100%;
+  display: table-cell;
+  vertical-align: top;
+  background-color: #555555;
+  position: relative;
+  color: white;
+}
+
+.main {
+  height: auto;
+  border-bottom: 2px solid #F44336;
+  /*
+*/
+}
+
+.main2 {
+  height: auto;
+  border-bottom: 2px solid #F44336;
+}
+
+.main3 {
+  height: auto;
+  border-bottom: 2px solid #F44336;
+}
+
+.main4 {
+  height: auto;
+  /*
+  border-bottom: 2px solid #F44336;
+*/
+}
+
+#sidebarBottom {
+  width: 100%;
+  height: 40px;
+  background-color: #F44336;
+  position: absolute;
+  bottom: 0;
+}
+
+#sidebarBottom a {
+  text-indent: 45%;
+  font-size: 33px;
+  padding: 10px 0;
+  color: white;
+}

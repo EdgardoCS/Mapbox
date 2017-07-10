@@ -1,3 +1,4 @@
+/*
 .check-boxSSector {
   width: 120px;
   height: 250px;
@@ -14,6 +15,7 @@
   color: #fff;
   margin: 8px 0;
 }
+*/
 
 input[type=checkbox] {
   visibility: hidden;
@@ -517,12 +519,12 @@ input[type=checkbox] {
   opacity: 1;
 }
 
-.check-boxSSector button.icon {
+.main4 button.icon {
   position: absolute;
   height: 30px;
   width: 30px;
   background: #ffffff;
-  color: #0082f9;
+    color: #F44336;
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -536,6 +538,6 @@ input[type=checkbox] {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   opacity: 1;
-  margin-top: -25px;
-  margin-left: 110px;
+  margin-top: -40px;
+  right: 10px;
 }

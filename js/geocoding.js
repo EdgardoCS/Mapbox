@@ -20,6 +20,7 @@ exports.togeocoding = function(Rut, Nombre, Direccion, db) {
         Latitude = response.json.results[0].geometry.location.lat;
         Longitude = response.json.results[0].geometry.location.lng;
         LatLang.todatabase2(Rut,Longitude, Latitude, db);
+        
       } else {
         console.log(err);
       }

@@ -1,3 +1,4 @@
+/*
 .check-boxSector {
   width: 120px;
   height: 90px;
@@ -14,14 +15,14 @@
   color: #fff;
   margin: 8px 0;
 }
+*/
 
 input[type=checkbox] {
-visibility: hidden;
+  visibility: hidden;
 }
 
-
 .rounded18 {
-  top:auto;
+  top: auto;
   width: 18px;
   height: 18px;
   background: #fcfff4;
@@ -40,10 +41,12 @@ visibility: hidden;
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
 }
+
 .rounded18 title {
-    display: inline-block;
-    margin-left: 20px;
-    }
+  display: inline-block;
+  margin-left: 20px;
+}
+
 .rounded18 label {
   cursor: pointer;
   position: absolute;
@@ -121,10 +124,12 @@ visibility: hidden;
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
   position: relative;
 }
+
 .rounded27 title {
-    display: inline-block;
-    margin-left: 20px;
-    }
+  display: inline-block;
+  margin-left: 20px;
+}
+
 .rounded27 label {
   cursor: pointer;
   position: absolute;
@@ -182,12 +187,12 @@ visibility: hidden;
   opacity: 1;
 }
 
-.check-boxSector button.icon {
+.main3 button.icon {
   position: absolute;
   height: 30px;
   width: 30px;
   background: #ffffff;
-  color: #0082f9;
+    color: #F44336;
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -201,6 +206,6 @@ visibility: hidden;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   opacity: 1;
-   margin-top: -25px;
-   margin-left: 110px;
+  margin-top: -40px;
+  right: 10px;
 }
