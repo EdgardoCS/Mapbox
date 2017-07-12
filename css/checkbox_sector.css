@@ -21,7 +21,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-.rounded18 {
+.roundedS18 {
   top: auto;
   width: 18px;
   height: 18px;
@@ -42,12 +42,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded18 title {
+.roundedS18 title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded18 label {
+.roundedS18 label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -68,7 +68,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded18 label:after {
+.roundedS18 label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -92,19 +92,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded18 label:hover::after {
+.roundedS18 label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded18 input[type=checkbox]:checked+label:after {
+.roundedS18 input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.rounded27 {
+.roundedS27 {
   top: auto;
   width: 18px;
   height: 18px;
@@ -125,12 +125,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded27 title {
+.roundedS27 title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded27 label {
+.roundedS27 label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -151,7 +151,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded27 label:after {
+.roundedS27 label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -175,13 +175,13 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded27 label:hover::after {
+.roundedS27 label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded27 input[type=checkbox]:checked+label:after {
+.roundedS27 input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;

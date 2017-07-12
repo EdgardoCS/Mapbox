@@ -20,134 +20,117 @@
   <script lang="javascript" src="../node_modules/xlsx/dist/xlsx.full.min.js"></script>
 
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
   <link rel=stylesheet type="text/css" href="../css/map.css">
   <!--
-  <link rel=stylesheet type="text/css" href="../css/drawbox.css">
--->
-
-    <link rel=stylesheet type="text/css" href="../css/map.css">
-    <link rel=stylesheet type="text/css" href="../css/desplegable.css">
-    <link rel=stylesheet type="text/css" href="../css/topbar.css">
-    <link rel=stylesheet type="text/css" href="../css/sidebar.css">
-    <link rel=stylesheet type="text/css" href="../css/search.css">
-    <link rel=stylesheet type="text/css" href="../css/checkbox1.css">
-    <link rel=stylesheet type="text/css" href="../css/checkbox2.css">
-    <link rel=stylesheet type="text/css" href="../css/checkbox3.css">
-    <link rel=stylesheet type="text/css" href="../css/checkbox4.css">
+  -->
+  <link rel=stylesheet type="text/css" href="../css/checkbox_unidades.css">
 </head>
 
 <body>
   <div id='map'></div>
 
-  <div style="margin-left:50%"></div>
-
-  <div class="icon-bar">
-    <a class="active1" href="#"><i class="fa fa-home"></i></a>
-    <a href="#"><i class="fa fa-globe"></i></a>
-    <a href="#"><i class="fa fa-address-book"></i></a>
-    <a href="#"><i class="fa fa-envelope"></i></a>
-    <a href="#"><i class="fa fa-id-badge" id="draw"></i></a>
-    <div class="container-search">
-      <input type="search" id="search" placeholder="Buscar..." />
-      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
+  <div class="check-boxUnidad">
+    <p>Seleccione Sector</p>
+    <button onclick="viewUnidadVecinal()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+    <hr>
+    <div class="roundedU21">
+      <input type="checkbox" id="roundedU21" name="check">
+      <label for="roundedU21"><title>U.vecinal21</title></label>
     </div>
-  </div>
-
-  <div class="sidecontainer">
-    <div class="sidebar">
-      <div class="photo">
-        <img src="../pictures/logoG.jpg" alt="samus" style="width:100%;height:50%px;">
-      </div>
-      <div class="main">
-        <p>Seleccione Patologia</p>
-        <button onclick="viewPaciente()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-
-        <div class="roundedOne">
-          <input type="checkbox" id="roundedOne" name="check">
-          <label for="roundedOne"><title>Postrado</title></label>
-        </div>
-      </div>
-      <div class="main2">
-        <p>Territorio MENA</p>
-        <button onclick="viewHill()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-
-        <div class="roundedHill">
-          <input type="checkbox" id="roundedHill" name="check">
-          <label for="roundedHill"><title>Cerros</title></label>
-        </div>
-      </div>
-      <div class="main3">
-        <p>Seleccione Sector</p>
-        <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-
-        <div class="rounded18">
-          <input type="checkbox" value=1 id="rounded18" name="check">
-          <label for="rounded18"><title>Sector18</title></label>
-        </div>
-        <div class="rounded27">
-          <input type="checkbox" value=1.1 id="rounded27" name="check">
-          <label for="rounded27"><title>Sector27</title></label>
-        </div>
-      </div>
-      <div class="main4">
-        <p>Seleccione SubSector</p>
-        <button onclick="viewSubSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-
-        <div class="rounded18A">
-          <input type="checkbox" id="rounded18A" name="check">
-          <label for="rounded18A"><title>Sector18A</title></label>
-        </div>
-        <div class="rounded18B">
-          <input type="checkbox" id="rounded18B" name="check">
-          <label for="rounded18B"><title>Sector18B</title></label>
-        </div>
-        <div class="rounded18C">
-          <input type="checkbox" id="rounded18C" name="check">
-          <label for="rounded18C"><title>Sector18C</title></label>
-        </div>
-        <div class="rounded27A">
-          <input type="checkbox" id="rounded27A" name="check">
-          <label for="rounded27A"><title>Sector27A</title></label>
-        </div>
-        <div class="rounded27B">
-          <input type="checkbox" id="rounded27B" name="check">
-          <label for="rounded27B"><title>Sector27B</title></label>
-        </div>
-        <div class="rounded27C">
-          <input type="checkbox" id="rounded27C" name="check">
-          <label for="rounded27C"><title>Sector27C</title></label>
-        </div>
-      </div>
-      <div id="sidebarBottom">
-        <a href="#"><i class="fa fa-power-off"></i></a>
-      </div>
+    <div class="roundedU22">
+      <input type="checkbox"  id="roundedU22" name="check">
+      <label for="roundedU22"><title>U.vecinal22</title></label>
     </div>
-  </div>
-
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Resultados Selección</h2>
-      </div>
-      <div class="modal-body">
-        <p id='viewValue'></p>
-      </div>
-      <div class="modal-footer">
-        <h3>CESFAM MENA</h3>
-      </div>
+    <div class="roundedU23">
+      <input type="checkbox" id="roundedU23" name="check">
+      <label for="roundedU23"><title>U.vecinal23</title></label>
     </div>
+    <div class="roundedU24">
+      <input type="checkbox" id="roundedU24" name="check">
+      <label for="roundedU24"><title>U.vecinal24</title></label>
+    </div>
+    <div class="roundedU25">
+      <input type="checkbox" id="roundedU25" name="check">
+      <label for="roundedU25"><title>U.vecinal25</title></label>
+    </div>
+    <div class="roundedU26">
+      <input type="checkbox"  id="roundedU26" name="check">
+      <label for="roundedU26"><title>U.vecinal26</title></label>
+    </div>
+    <div class="roundedU27">
+      <input type="checkbox"  id="roundedU27" name="check">
+      <label for="roundedU27"><title>U.vecinal27</title></label>
+    </div>
+    <div class="roundedU66">
+      <input type="checkbox"  id="roundedU66" name="check">
+      <label for="roundedU66"><title>U.vecinal66</title></label>
+    </div>
+    <div class="roundedU67">
+      <input type="checkbox"  id="roundedU67" name="check">
+      <label for="roundedU67"><title>U.vecinal67</title></label>
+    </div>
+    <div class="roundedU68">
+      <input type="checkbox"  id="roundedU68" name="check">
+      <label for="roundedU68"><title>U.vecinal68</title></label>
+    </div>
+    <div class="roundedU69">
+      <input type="checkbox"  id="roundedU69" name="check">
+      <label for="roundedU69"><title>U.vecinal69</title></label>
+    </div>
+    <div class="roundedU70">
+      <input type="checkbox"  id="roundedU70" name="check">
+      <label for="roundedU70"><title>U.vecinal70</title></label>
+    </div>
+    <div class="roundedU71">
+      <input type="checkbox"  id="roundedU71" name="check">
+      <label for="roundedU71"><title>U.vecinal71</title></label>
+    </div>
+    <div class="roundedU72">
+      <input type="checkbox"  id="roundedU72" name="check">
+      <label for="roundedU72"><title>U.vecinal72</title></label>
+    </div>
+    <div class="roundedU76">
+      <input type="checkbox" id="roundedU76" name="check">
+      <label for="roundedU76"><title>U.vecinal76</title></label>
+    </div>
+    <div class="roundedU77">
+      <input type="checkbox" id="roundedU77" name="check">
+      <label for="roundedU77"><title>U.vecinal77</title></label>
+    </div>
+    <div class="roundedU78">
+      <input type="checkbox"  id="roundedU78" name="check">
+      <label for="roundedU78"><title>U.vecinal78</title></label>
+    </div>
+    <div class="roundedU125">
+      <input type="checkbox"  id="roundedU125" name="check">
+      <label for="roundedU125"><title>U.vecinal125</title></label>
+    </div>
+    <div class="roundedU126">
+      <input type="checkbox"  id="roundedU126" name="check">
+      <label for="roundedU126"><title>U.vecinal126</title></label>
+    </div>
+    <div class="roundedU142">
+      <input type="checkbox"  id="roundedU142" name="check">
+      <label for="roundedU142"><title>U.vecinal142</title></label>
+    </div>
+    <div class="roundedU166">
+      <input type="checkbox"  id="roundedU166" name="check">
+      <label for="roundedU166"><title>U.vecinal166</title></label>
+    </div>
+    <div class="roundedU194">
+      <input type="checkbox"  id="roundedU194" name="check">
+      <label for="roundedU194"><title>U.vecinal194</title></label>
+    </div>
+    <div class="roundedU195">
+      <input type="checkbox"  id="roundedU195" name="check">
+      <label for="roundedU195"><title>U.vecinal195</title></label>
+    </div>
+
   </div>
-
-
   <script src="../js3/main.js"></script>
-  <script src="../js3/butonboolean.js"></script>
-  <script src="../js3/butonHill.js"></script>
-  <script src="../js3/butonSector.js"></script>
-  <script src="../js3/butonsubSector.js"></script>
-  <script src="../js3/searchboolean.js"></script>
-  <script src="../js3/polygon.js"></script>
-
+  <script src="../js3/butonUnidadVecinal.js"></script>
   <!--
 -->
 </body>

@@ -56,7 +56,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong></p>" +"Nombre: "+ Nombre + " "+ "Sector: "+Sector+ " " + "Jefe Equipo: "+ Jefe_Equipo_Cabecera ,
+      "description": "<strong>Adulto Mayor</strong></p>" +"Nombre: "+ Nombre + " "+ "Sector: "+Sector+ " " + "Jefe Equipo: "+ Jefe_Equipo_Cabecera +"<a href=https://www.youtube.com/watch?v=xFWVFu2ASbE> Hyperlink </a>",
       "address": "Direccion: "+[Direccion]
     }
   }
