@@ -1,10 +1,9 @@
-var deep = require('../js/symButton.js')
+var deep = require('../js/layers_handle.js')
 var arreglo = [];
 
-exports.tohandle = function(handle, rooster) {
+exports.tohandle = function(handle) {
 
   arreglo.unshift(handle);
   arreglo.splice(1, 1)
-  deep.purple(arreglo, rooster);
-
+  deep.purple(arreglo);
 };

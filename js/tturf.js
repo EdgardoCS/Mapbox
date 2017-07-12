@@ -1,10 +1,12 @@
 var calcButton = document.getElementById('draw');
 var fiveofive = [];
 var inner = [];
-exports.monkeys = function(gea2, rooster) {
+
+exports.monkeys = function(gea2) {
 
   fiveofive.push(gea2);
-  if (fiveofive.length == rooster[0].length) {
+  if (fiveofive.length == 1) {
+
     var modal = document.getElementById('myModal');
     var span = document.getElementsByClassName("close")[0];
 
@@ -22,7 +24,6 @@ exports.monkeys = function(gea2, rooster) {
           }
           document.getElementById('viewValue').innerHTML = inner
           inner = [];
-
         }
       } else {
         alert("Use la herramienta de dibujo");
@@ -38,9 +39,8 @@ exports.monkeys = function(gea2, rooster) {
         }
       }
     }
-
   }
-  if (fiveofive.length > rooster[0].length) {
+  if (fiveofive.length > 1) {
     fiveofive.splice(0, 2);
   }
 }

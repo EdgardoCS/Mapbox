@@ -5,10 +5,5 @@
 node_modules/
 db/
 xlsx/
-js/buton2.js
-js/delButton.js
-js/geojson2.js
-js/handle2.js
-js/queryDb3.js
-js/slide.js
-js/symButton2.js
+js2/
+js3/

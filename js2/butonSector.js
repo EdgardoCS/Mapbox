@@ -26,7 +26,7 @@ document.getElementById('rounded27').addEventListener('change', function(e) {
 
 function viewSector() {
   if (addSector18 == true) {
-    map.addLayer(sector18);
+    map.addLayer(sector18);;
   }
   if (removeSector18 == true) {
     if (map.getLayer("sector18")) {
@@ -34,7 +34,7 @@ function viewSector() {
     }
   }
   if (addSector27 == true) {
-    map.addLayer(sector27);
+    map.addLayer(sector27);;
   }
   if (removeSector27 == true) {
     if (map.getLayer("sector27")) {

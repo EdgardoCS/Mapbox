@@ -25,20 +25,19 @@ document.getElementById('rounded27').addEventListener('change', function(e) {
 });
 
 function viewSector() {
-  if (addSector18 == true) {
-    map.addLayer(sector18);;
+  var isSectorSelected = [addSector18, addSector27];
+  if (map.getLayer("sector18")) {
+    map.removeLayer("sector18");
   }
-  if (removeSector18 == true) {
-    if (map.getLayer("sector18")) {
-      map.removeLayer("sector18");
+  if (map.getLayer("sector27")) {
+    map.removeLayer("sector27");
+  }
+  for (i = 0; i < 1; i++) {
+    if (isSectorSelected[0] == true) {
+      map.addLayer(sector18);
     }
-  }
-  if (addSector27 == true) {
-    map.addLayer(sector27);;
-  }
-  if (removeSector27 == true) {
-    if (map.getLayer("sector27")) {
-      map.removeLayer("sector27");
+    if (isSectorSelected[1] == true) {
+      map.addLayer(sector27);
     }
   }
 }
@@ -329,7 +328,7 @@ var sector18 = {
   },
   "layout": {},
   "paint": {
-    "fill-color": "#15d8b8",
+    "fill-color": "#d8d114",
     "fill-opacity": 0.5,
     "fill-outline-color": "#D20C0C"
   }
@@ -592,7 +591,7 @@ var sector27 = {
   },
   "layout": {},
   "paint": {
-    "fill-color": "#d8d114",
+    "fill-color": "#15d8b8",
     "fill-opacity": 0.5,
     "fill-outline-color": "#D20C0C"
   }
