@@ -16,8 +16,6 @@
 .main {
   height: auto;
   border-bottom: 2px solid #F44336;
-  /*
-*/
 }
 
 .main2 {
@@ -32,9 +30,11 @@
 
 .main4 {
   height: auto;
-  /*
   border-bottom: 2px solid #F44336;
-*/
+}
+
+.main5 {
+  height: auto;
 }
 
 #sidebarBottom {

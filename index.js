@@ -22,7 +22,7 @@ app.on('ready', function() {
     });
     mainWindow.openDevTools();
     //mainWindow.maximize()
-    mainWindow.loadURL('file://' + __dirname + '/src/index2.html');
+    mainWindow.loadURL('file://' + __dirname + '/src/index.html');
 
     mainWindow.on('closed', function() {
         mainWindow = null;
