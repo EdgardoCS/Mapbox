@@ -1,4 +1,4 @@
-var draw = require('../js/geojson.js');
+var boomtown = require('../js/geojson_add.js');
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('./db/mydb.db');
 
@@ -12,29 +12,32 @@ var Longitude;
 /*
  */
 
-exports.zeppelin = function(query, id) {
+exports.zeppelin = function(query, id, add) {
 
   db.all(query[0], query[1], function(err, row) {
 
     if (row != null) {
-
       var arreglo = [];
+
       if (row.length == 1) {
         for (i = 0; i < row.length; i++) {
 
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
         }
-        draw.togeojson1(arreglo, id);
+        boomtown.rats(arreglo, id, add);
       }
+
       if (row.length > 1) {
         for (i = 0; i < row.length; i++) {
 
           setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
           arreglo[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude);
         }
-        draw.togeojson1(arreglo, id);
+
+        boomtown.rats(arreglo, id, add);
       }
+
       if (row.length < 1) {
         console.log("Rut No Encontrado");
       }
@@ -42,6 +45,7 @@ exports.zeppelin = function(query, id) {
       console.log("Error: Celda Vacía");
     }
   });
+
 };
 
 setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude) {
@@ -56,8 +60,8 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "<strong>Adulto Mayor</strong></p>" +"Nombre: "+ Nombre + " "+ "Sector: "+Sector+ " " + "Jefe Equipo: "+ Jefe_Equipo_Cabecera +"<a href=https://www.youtube.com/watch?v=xFWVFu2ASbE> Hyperlink </a>",
-      "address": "Direccion: "+[Direccion]
+      "description": "<strong>Adulto Mayor</strong></p>" + "Nombre: " + Nombre + " " + "Sector: " + Sector + " " + "Jefe Equipo: " + Jefe_Equipo_Cabecera,
+      "address": "Direccion: " + [Direccion]
     }
   }
   return pointFeatures;

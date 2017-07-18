@@ -7,5 +7,6 @@ db/
 xlsx/
 js2/
 js3/
+js4/
 src/*
 !src/index.html

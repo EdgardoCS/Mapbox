@@ -9,7 +9,10 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
   <!--turf-->
+<!--
   <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+-->
+<script src='../node_modules/@turf/turf/turf.min.js'></script>
   <!--GoogleMaps-->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript"></script>
@@ -60,11 +63,16 @@
         </div>
 
         <div class="main">
-          <p>Seleccione Patologia</p>
-          <button onclick="viewPaciente()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+          <p>Seleccione Programa</p>
+          <button onclick="viewPrograma()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+
           <div class="roundedOne">
             <input type="checkbox" id="roundedOne" name="check">
             <label for="roundedOne"><title>Postrado</title></label>
+          </div>
+          <div class="roundedTwo">
+            <input type="checkbox" id="roundedTwo" name="check">
+            <label for="roundedTwo"><title>Recordatorio</title></label>
           </div>
         </div>
 
@@ -120,7 +128,7 @@
         </div>
 
         <div class="main5">
-          <p>Limpiar Vistas</p>
+          <p>Limpiar Territorio</p>
           <button onclick="viewclearAll()" class="icon"><i class="fa fa-times" id="clearAll"></i></button>
         </div>
 

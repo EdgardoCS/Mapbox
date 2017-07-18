@@ -1,7 +1,8 @@
-var json1 = require('../js/handle.js');
-var arctic = require('../js/tturf.js');
+var lets = require('../js/symButton.js');
+var televators = [];
+//var arctic = require('../js3/tturfboolean.js');
 
-exports.togeojson1 = function(arreglo, id) {
+exports.rats = function(arreglo, id, add) {
   var gea = makeGeo1(arreglo);
   var gea2 = makeGeo2(arreglo);
   var tipo;
@@ -28,6 +29,11 @@ exports.togeojson1 = function(arreglo, id) {
     fuente = fuente1;
     color = color1;
   }
+  if (id == "opcion_recordatorio") {
+    tipo = tipo2;
+    fuente = fuente2;
+    color = color2;
+  }
 
   var agregar = ({
     "id": tipo,
@@ -43,8 +49,11 @@ exports.togeojson1 = function(arreglo, id) {
 
     }
   });
-  json1.tohandle([gea, agregar]);
-  arctic.monkeys(gea2);
+  televators = [gea,agregar]
+//  console.log(televators);
+  lets.dance(televators, add);
+
+  //arctic.monkeys(gea2);
 };
 makeGeo1 = function(features) {
   var geo = {

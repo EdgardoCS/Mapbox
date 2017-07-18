@@ -10,6 +10,9 @@
   "dependencies": {
     "@google/maps": "^0.3.1",
     "@mapbox/mapbox-gl-draw": "^0.18.1",
+    "@turf/center-of-mass": "^4.5.2",
+    "@turf/meta": "^4.5.2",
+    "@turf/turf": "^4.5.2",
     "simple-excel-js": "^1.0.0",
     "sqlite3": "^3.1.8",
     "xlsx": "^0.10.6"

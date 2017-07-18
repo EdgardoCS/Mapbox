@@ -1,4 +1,4 @@
-var calcButton = document.getElementById('draw');
+var calcButton = document.getElementById('mapDraw');
 var fiveofive = [];
 var inner = [];
 
@@ -12,7 +12,7 @@ exports.monkeys = function(gea2) {
 
     calcButton.onclick = function() {
 
-      var data = draw.getAll();
+      var data = mapDraw.getAll();
       if (data.features.length > 0) {
         for (i = 0; i < fiveofive.length; i++) {
           var ptsWithin = turf.within(fiveofive[i], data);

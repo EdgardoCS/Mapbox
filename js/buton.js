@@ -1,30 +1,39 @@
-var jbuton = require('../js/query_option.js')
+var who = require('../js/query_add.js')
+var baba = require('../js/query_remove.js')
 
-var addPostrado;
-var addRecordatorio;
-var removePostrado;
-var removeRecordatorio;
+var addPostrado= false;
+var addRecordatorio = false;
+var removePostrado= false;
+var removeRecordatorio = false;
 
 document.getElementById('roundedOne').addEventListener('change', function(e) {
   if (e.target.checked == false) {
-
     addPostrado = false;
     removePostrado = true;
   }
-  if (e.target.checked == true) {
-
+else {
     addPostrado = true;
     removePostrado = false;
   }
 });
 
-var add = [];
-var remove = [];
-
-function viewPaciente() {
-  if (addPostrado == true) {
-    jbuton.toqueryboolean(addPostrado);
-  } else if (removePostrado == true) {
-    jbuton.toqueryboolean(removePostrado);
+document.getElementById('roundedTwo').addEventListener('change', function(e) {
+  if (e.target.checked == false) {
+    addRecordatorio = false;
+    removeRecordatorio = true;
   }
+  else {
+    addRecordatorio = true;
+    removeRecordatorio = false;
+  }
+});
+
+
+function viewPrograma() {
+
+  var add = [addPostrado,addRecordatorio];
+  var remove = [removePostrado,removeRecordatorio];
+
+who.areyou(add);
+baba.Oriley(remove);
 }

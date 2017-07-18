@@ -1,4 +1,4 @@
-var led = require('../js/query_db.js')
+var led = require('../js/queryDB_add.js')
 
 function search() {
   searchButton = document.getElementById('search').value;
