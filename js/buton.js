@@ -1,17 +1,16 @@
 var who = require('../js/query_add.js')
-var baba = require('../js/query_remove.js')
+var aqueous = require('../js/symButton.js');
 
-var addPostrado= false;
+var addPostrado = false;
 var addRecordatorio = false;
-var removePostrado= false;
+var removePostrado = false;
 var removeRecordatorio = false;
 
 document.getElementById('roundedOne').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addPostrado = false;
     removePostrado = true;
-  }
-else {
+  } else {
     addPostrado = true;
     removePostrado = false;
   }
@@ -21,8 +20,7 @@ document.getElementById('roundedTwo').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addRecordatorio = false;
     removeRecordatorio = true;
-  }
-  else {
+  } else {
     addRecordatorio = true;
     removeRecordatorio = false;
   }
@@ -31,9 +29,9 @@ document.getElementById('roundedTwo').addEventListener('change', function(e) {
 
 function viewPrograma() {
 
-  var add = [addPostrado,addRecordatorio];
-  var remove = [removePostrado,removeRecordatorio];
+  var add = [addPostrado, addRecordatorio];
+  var remove = [removePostrado, removeRecordatorio];
 
-who.areyou(add);
-baba.Oriley(remove);
+  who.areyou(add);
+  aqueous.transmission(remove);
 }

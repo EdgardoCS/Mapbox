@@ -5,5 +5,6 @@ function search() {
   var RUT = (searchButton);
   query = ["SELECT * FROM Inmovilizado WHERE Rut=?", [RUT]]
   var id = "unico";
-  led.zeppelin(query, id);
+  var add = [];
+  led.zeppelin(query, id, add);
 }
