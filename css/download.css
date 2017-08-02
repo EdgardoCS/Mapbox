@@ -1,0 +1,27 @@
+#exportBus, #exportCab, #exportDanger {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  z-index: 100;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue';
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  height: 20px;
+  width: 20px;
+}
+
+#exportBus:hover, #exportCab:hover, #exportDanger:hover {
+  background-color: #ddd;
+}
+
+#exportCab {
+  top: 50px;
+}
+#exportDanger {
+  top: 90px;
+}
