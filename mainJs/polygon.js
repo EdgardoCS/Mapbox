@@ -2,12 +2,12 @@ const mapDraw = new MapboxDraw({
   displayControlsDefault: false,
   controls: {
     polygon: true,
+    point: true,
     trash: true
   },
   styles: [{
       "id": "gl-draw-polygon-fill",
       "type": "fill",
-      //  "filter": ["all", ["==", "$type", "Polygon"], ["!=", "mode", "static"]],
       "paint": {
         "fill-color": "#0BD1C3",
         "fill-outline-color": "#D20C0C",
@@ -23,10 +23,10 @@ const mapDraw = new MapboxDraw({
         "circle-color": "#ff0202"
       }
     } //**********************************//
+    ,
     {
       "id": "gl-draw-polygon-stroke-active",
       "type": "line",
-      //  "filter": ["all", ["==", "$type", "Polygon"], ["!=", "mode", "static"]],
       "layout": {
         "line-cap": "round",
         "line-join": "round"

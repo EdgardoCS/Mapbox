@@ -1,4 +1,4 @@
-var led = require('../js/queryDB_add.js')
+var led = require('../mainJs/queryDB_add.js')
 
 var query;
 var id;

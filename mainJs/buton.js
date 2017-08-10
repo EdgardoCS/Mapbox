@@ -1,5 +1,5 @@
-var who = require('../js/query_add.js')
-var aqueous = require('../js/symButton.js');
+var who = require('../mainJs/query_add.js')
+var aqueous = require('../mainJs/symButton.js');
 
 var addPostrado = false;
 var addRecordatorio = false;

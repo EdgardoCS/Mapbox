@@ -1,5 +1,5 @@
-var lets = require('../js/symButton.js');
-var arctic = require('../js/tturf.js');
+var lets = require('../mainJs/symButton.js');
+var arctic = require('../mainJs/tturf.js');
 var televators = [];
 
 exports.rats = function(arreglo, id, add) {

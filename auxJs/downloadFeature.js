@@ -76,28 +76,3 @@ document.getElementById('exportDanger').onclick = function(e) {
 
   }
 };
-document.getElementById('exportDisability').onclick = function(e) {
-  var data = mapDraw.getAll();
-
-  for (i = 0; i < data.features.length; i++) {
-
-    if (data.features.length > 0) {
-      data.features[i].properties['icon'] = "disability";
-      if (i < indexInferior) {
-        data.features[i].properties['title'] = "id00" + i;
-      }
-      if (i >= indexInferior && i < indexSuperior) {
-        data.features[i].properties['title'] = "id0" + i;
-      }
-      if (i >= indexSuperior){
-        data.features[i].properties['title'] = "id" + i;
-      }
-      var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
-      document.getElementById('exportDisability').setAttribute('href', 'data:' + convertedData);
-      document.getElementById('exportDisability').setAttribute('download', 'data.geojson');
-    } else {
-      alert("No existen puntos dibujados");
-    }
-
-  }
-};

@@ -9,4 +9,5 @@ js2/
 js3/
 js4/
 src/*
-!src/index.html
+!src/mainIndex.html
+!src/auxIndex.html

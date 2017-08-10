@@ -1,0 +1,51 @@
+<head>
+  <meta charset='utf-8' />
+  <title> Mapbox-Georreferenciacion / Herramienta de Edicion</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!--main.js-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+  <!--polygon-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
+  <!--turf-->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+
+  <!-- *************************** CSS*********************************** -->
+  <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel=stylesheet type="text/css" href="../css/map.css">
+  <link rel=stylesheet type="text/css" href="../css/auxTopbar.css">
+  <link rel=stylesheet type="text/css" href="../css/edit.css">
+  <link rel=stylesheet type="text/css" href="../css/download.css">
+
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <body>
+    <div id='map'></div>
+    <div style="margin-left:50%"></div>
+    <div class="icon-bar">
+      <a class="active1" href="#"><i class="fa fa-home"></i></a>
+      <a href="#"><i class="fa fa-upload" onclick="loadFeature()"></i></a>
+    </div>
+
+    <a href="#" id='exportBus'><i class="fa fa-bus"></i></a>
+    <a href='#' id='exportCab'><i class="fa fa-taxi"></i></a>
+    <a href='#' id='exportDanger'><i class="fa fa-info  "></i></a>
+
+    <script src="../mainJs/main.js"></script>
+    <script src="../mainJs/polygon.js"></script>
+    <script src="../auxJs/uploadLayer.js"></script>
+
+
+    <!--
+    <script src="../auxJs/downloadFeature.js"></script>
+-->
+    <!-- **************************************************************** -->
+
+  </body>
+
+  </html>
