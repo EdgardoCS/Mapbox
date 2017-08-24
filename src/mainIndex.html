@@ -13,6 +13,9 @@
   <!--
   <script src='../node_modules/@turf/turf/turf.min.js'></script>
 -->
+  <!--smalltalk-->
+  <link rel="stylesheet" href="../node_modules/smalltalk/dist/smalltalk.min.css">
+  <script src="../node_modules/smalltalk/dist/smalltalk.poly.min.js"></script>
   <!--GoogleMaps-->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript"></script>
@@ -43,7 +46,7 @@
     <!-- ********************* HTML BUTTONS ******************************** -->
     <div style="margin-left:50%"></div>
 
-    <div id="myModal" class="modal">
+    <div id="turfModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
           <span class="close">&times;</span>
@@ -62,7 +65,7 @@
       <a class="active1" href="#"><i class="fa fa-home"></i></a>
       <a href="#"><i class="fa fa-globe" onclick="newWindow()"></i></a>
       <a href="#"><i class="fa fa-address-book"></i></a>
-      <a href="#"><i class="fa fa-envelope"></i></a>
+      <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
       <a href="#"><i class="fa fa-id-badge" id="mapDraw"></i></a>
       <div class="container-search">
         <input type="search" id="search" placeholder="Buscar..." />
@@ -167,6 +170,7 @@
     <script src="../mainJs/search.js"></script>
     <script src="../mainJs/polygon.js"></script>
     <script src="../mainJs/newWindow.js"></script>
+
 
   </body>
 

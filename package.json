@@ -13,9 +13,12 @@
     "@turf/center-of-mass": "^4.5.2",
     "@turf/meta": "^4.5.2",
     "@turf/turf": "^4.5.2",
+    "remote": "^0.2.6",
     "simple-excel-js": "^1.0.0",
+    "smalltalk": "^2.4.1",
     "sqlite3": "^3.1.8",
-    "xlsx": "^0.10.6"
+    "xlsx": "^0.10.6",
+    "zeromq": "^4.5.0"
   },
   "author": "Edgardo",
   "license": "ISC"

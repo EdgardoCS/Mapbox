@@ -20,7 +20,7 @@ app.on('ready', function() {
         autoHideMenuBar: true,
         fullscreen: false
     });
-    //mainWindow.openDevTools();
+    mainWindow.openDevTools();
     //mainWindow.maximize()
     mainWindow.loadURL('file://' + __dirname + '/src/mainIndex.html');
 

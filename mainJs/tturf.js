@@ -7,7 +7,7 @@ exports.monkeys = function(gea2) {
   fiveofive.push(gea2);
   if (fiveofive.length == 1) {
 
-    var modal = document.getElementById('myModal');
+    var modal = document.getElementById('turfModal');
     var span = document.getElementsByClassName("close")[0];
 
     calcButton.onclick = function() {

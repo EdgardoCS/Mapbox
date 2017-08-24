@@ -1,5 +1,6 @@
 var lets = require('../mainJs/symButton.js');
 var arctic = require('../mainJs/tturf.js');
+var ursa = require('../mainJs/sms.js');
 var televators = [];
 
 exports.rats = function(arreglo, id, add) {
@@ -52,6 +53,7 @@ exports.rats = function(arreglo, id, add) {
   televators = [gea, agregar]
   lets.dance(televators, add);
   arctic.monkeys(gea2);
+  ursa.mayor(gea2);
 };
 makeGeo1 = function(features) {
   var geo = {

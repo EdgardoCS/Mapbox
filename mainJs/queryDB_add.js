@@ -62,6 +62,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
       "title": "Adulto Mayor",
       "description": "<strong>Adulto Mayor</strong></p>" + "Nombre: " + Nombre + " " + "Sector: " + Sector + " " + "Jefe Equipo: " + Jefe_Equipo_Cabecera + "<a href=\"http://geropolis.uv.cl/\">Geropolis</a>",
       "address": "Direccion: " + [Direccion],
+      "rut": Rut,
     }
   }
   return pointFeatures;
