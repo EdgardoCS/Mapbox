@@ -1,6 +1,6 @@
 var lets = require('../mainJs/symButton.js');
 var arctic = require('../mainJs/tturf.js');
-var ursa = require('../mainJs/sms.js');
+var ursa = require('../mainJs/smsBuild.js');
 var televators = [];
 
 exports.rats = function(arreglo, id, add) {

@@ -1,3 +1,4 @@
+var hillbilly = require('../mainJs/smsSend.js');
 var smsButton = document.getElementById('mapSMS');
 var smsArray = [];
 var innerArray = [];
@@ -32,17 +33,17 @@ exports.mayor = function(gea2) {
   if (smsArray.length > 1) {
     smsArray.splice(0, 2);
   }
-}
-
+};
 function promptWindow() {
-  smalltalk.prompt('Escriba su mensaje a continuación', 'Recuerde no utilizar más de 160 caracteres',).then(function(value) {
+  smalltalk.prompt('Escriba su mensaje a continuación', 'Recuerde no utilizar más de 160 caracteres', '').then(function(value) {
     text = value;
     var result = innerArray.map(function(el) {
       var o = Object.assign({}, el);
       o.sms = text;
       return o;
-    })
-    console.log(result);
+    });
+    hillbilly.man(result);
+
   }, function() {
     console.log('close');
   })
