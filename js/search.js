@@ -9,10 +9,11 @@ function search() {
       var searchArray = [];
       if (celda = 1) {
         for (i = 0; i < celda; i++) {
-          searchArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa);
+          searchArray[i] = setSearchFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa);
         }
-        searchLayer = makeLayer(searchArray);
-        searchSource = makeGeo(searchArray);
+        searchLayer = makeSearchLayer(searchArray);
+        searchSource = makeSearchGeo(searchArray);
+
         var busqueda = [searchSource, searchLayer];
         map.addSource(busqueda[1].source, busqueda[0]);
         map.addLayer(busqueda[1]);
@@ -26,7 +27,7 @@ function search() {
   });
 }
 
-setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude, Programa) {
+setSearchFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude, Programa) {
   var pointFeatures;
 
   pointFeatures = {
@@ -46,7 +47,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
   return pointFeatures;
 };
 
-makeLayer = function(features) {
+makeSearchLayer = function(features) {
 
   var geoLayer = {
     "id": "Busqueda",
@@ -62,7 +63,7 @@ makeLayer = function(features) {
   }
   return geoLayer;
 };
-makeGeo = function(features) {
+makeSearchGeo = function(features) {
   var geo = {
     "type": "geojson",
     "data": {

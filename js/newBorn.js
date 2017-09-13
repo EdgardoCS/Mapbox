@@ -33,6 +33,7 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
   inmovilizadoSource = makeGeo(inmovilizadoArray);
   var inmovilizado = [inmovilizadoSource, inmovilizadoLayer];
   next.newFor(inmovilizado);
+  
 });
 
 db.all("SELECT * FROM Recordatorio", function(err, row) {
