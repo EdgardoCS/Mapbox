@@ -22,7 +22,7 @@ const mapDraw = new MapboxDraw({
         "circle-radius": 5,
         "circle-color": "#ff0202"
       }
-    } //**********************************//
+    }, //**********************************//
     {
       "id": "gl-draw-polygon-stroke-active",
       "type": "line",

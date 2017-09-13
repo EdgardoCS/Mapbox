@@ -1,13 +1,15 @@
 exports.dance = function(televators, add) {
 
   if (televators[1].source == "markers0") {
-    map.addSource(televators[1].source, televators[0]);
-    map.addLayer(televators[1]);
+
+    //map.addSource(televators[1].source, televators[0]);
+    //map.addLayer(televators[1]);
   }
 
   if (add[0] == true) {
-    map.addSource(televators[1].source, televators[0]);
-    map.addLayer(televators[1]);
+    console.log(televators[1].source);
+    console.log(televators[0]);
+    console.log(televators[1]);
 
   }
 

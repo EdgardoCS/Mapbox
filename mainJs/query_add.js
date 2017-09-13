@@ -7,7 +7,7 @@ exports.areyou = function(add) {
 
   if (addPostrado == true) {
     id = "opcion_postrado";
-    query = ["SELECT * FROM Inmovilizado"]
+    query = ["SELECT * FROM Actualizado"]
     led.zeppelin(query, id, add);
   }
   if (addRecordatorio == true) {

@@ -1,37 +1,37 @@
 var app = require('electron').app;
 var BrowserWindow = require('electron').BrowserWindow;
 const {
-    crashReporter
+  crashReporter
 } = require('electron');
 
 var mainWindow = null;
 
 app.on('window-all-closed', function() {
-    if (process.platform != 'darwin')
-        app.quit();
+  if (process.platform != 'darwin')
+    app.quit();
 });
 
 app.on('ready', function() {
-    mainWindow = new BrowserWindow({
-        width: 1600,
-        height: 800,
-        minWidth: 420,
-        minHeight: 480,
-        autoHideMenuBar: true,
-        fullscreen: false
-    });
-    mainWindow.openDevTools();
-    //mainWindow.maximize()
-    mainWindow.loadURL('file://' + __dirname + '/src/mainIndex.html');
+  mainWindow = new BrowserWindow({
+    width: 1800,
+    height: 600,
+    minWidth: 420,
+    minHeight: 480,
+    autoHideMenuBar: true,
+    fullscreen: false
+  });
+  mainWindow.openDevTools();
+  //mainWindow.maximize()
+  mainWindow.loadURL('file://' + __dirname + '/src/mainIndex.html');
 
-    mainWindow.on('closed', function() {
-        mainWindow = null;
-    });
+  mainWindow.on('closed', function() {
+    mainWindow = null;
+  });
 });
 
 crashReporter.start({
-    productName: 'Geropolis DesktopApp',
-    companyName: 'Universidad de Valparaiso',
-    submitURL: 'https://0.0.0.0:4242',
-    autoSubmit: false
+  productName: 'Geropolis DesktopApp',
+  companyName: 'Universidad de Valparaiso',
+  submitURL: 'https://0.0.0.0:4242',
+  autoSubmit: false
 });

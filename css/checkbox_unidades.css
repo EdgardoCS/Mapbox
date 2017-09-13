@@ -4,7 +4,7 @@
   position: absolute;
   top: 5px;
   left: 5px;
-  background: #2b303b;
+  background: #00AEEF;
   border: none;
   padding: 10px;
   -webkit-border-radius: 5px;
@@ -1936,7 +1936,7 @@ input[type=checkbox] {
   height: 30px;
   width: 30px;
   background: #ffffff;
-    color: #F44336;
+    color: #154456;
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
