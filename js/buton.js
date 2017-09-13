@@ -42,7 +42,7 @@ function viewPrograma() {
 
   var add = [addPostrado, addRecordatorio, addAM];
   var remove = [removePostrado, removeRecordatorio, removeAM];
+
   nextTo.symButonADD(add);
   prev.ToTurf(add);
-  //  prev.symButonREMOVE(remove);
 }

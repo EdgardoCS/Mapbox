@@ -7,35 +7,26 @@ var innerArray = [];
 
 
 exports.build = function(objects) {
-  console.log(objects)
-  /*
-    smsLength = smsArray.length;
-    if (smsLength == 1) {
-      smsButton.onclick = function() {
+  smsButton.onclick = function() {
 
-        var dataArray = mapDraw.getAll();
-        if (dataArray.features.length > 0) {
-          innerArray = [];
+    var dataArray = mapDraw.getAll();
+    if (dataArray.features.length > 0) {
+      innerArray = [];
 
-          for (i = 0; i < smsLength; i++) {
-            var ptsWithin = turf.within(smsArray[i].data, dataArray);
-            console.log(ptsWithin);
-            for (i = 0; i < ptsWithin.features.length; i++) {
-              speakersArray = ptsWithin.features[i].properties.rut;
-
-              var key = "id";
-              innerArray.push({
-                [key]: speakersArray
-              });
-            }
-          }
-        } else {
-          alert("Use la herramienta de dibujo");
-        }
-        promptWindow(speakersArray);
+      var ptsWithin = turf.within(objects[1][0].data, dataArray);
+      console.log(ptsWithin);
+      for (i = 0; i < ptsWithin.features.length; i++) {
+        speakersArray = ptsWithin.features[i].properties.rut;
+        var key = "id";
+        innerArray.push({
+          [key]: speakersArray
+        });
       }
+    } else {
+      alert("Use la herramienta de dibujo");
     }
-    */
+    promptWindow(speakersArray);
+  }
 }
 
 function promptWindow() {
@@ -47,9 +38,7 @@ function promptWindow() {
       return o;
     });
     hillbilly.man(result);
-
   }, function() {
     console.log('close');
   });
-
 };

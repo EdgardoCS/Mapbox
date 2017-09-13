@@ -1,5 +1,6 @@
 exports.symButon = function(objects) {
   exports.symButonADD = function(add) {
+
     if (map.getLayer("Inmovilizado")) {
       map.removeSource("inmovilizadoMarkers")
       map.removeLayer("Inmovilizado");
@@ -24,6 +25,6 @@ exports.symButon = function(objects) {
       map.addSource(objects[2][1].source, objects[2][0]);
       map.addLayer(objects[2][1]);
     }
-
+    
   }
 }

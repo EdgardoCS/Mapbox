@@ -8,5 +8,4 @@ var map = new mapboxgl.Map({
   bearing: -150,
   center: [-71.625,-33.047]
 });
-
 map.addControl(new mapboxgl.NavigationControl());

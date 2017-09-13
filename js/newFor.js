@@ -16,5 +16,6 @@ exports.newFor = function(array) {
   if (objects.length == 3) {
     end.symButon(objects);
     selection.toturf(objects);
+    sms.build(objects); 
   }
 };

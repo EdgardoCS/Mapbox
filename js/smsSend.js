@@ -21,7 +21,6 @@ exports.man = function(result) {
   var stringObject = JSON.stringify(jsonArray);
   sock.send(stringObject);
   console.log('data sended');
-  console.log(stringObject);
 }
 
 setPersonas = function(id, sms) {

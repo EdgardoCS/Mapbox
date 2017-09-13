@@ -1,8 +1,11 @@
 var calcButton = document.getElementById('mapDraw');
 var fiveofive = [];
 var inner = [];
-var flag = 0;
+var inmTotal = 0;
+var recTotal = 0;
+var amTotal = 0;
 var mostrar = [];
+
 exports.toturf = function(objects) {
   exports.ToTurf = function(add) {
     var modal = document.getElementById('turfModal');
@@ -19,15 +22,24 @@ exports.toturf = function(objects) {
 
           if (add[i] == true) {
             mostrar.unshift(ptsWithin);
+
             for (j = 0; j < ptsWithin.features.length; j++) {
-              //**cantidad de personas seleccionadas**//
-              console.log(mostrar[0].features[j].properties.programa)
-              //**************************************//
+
+              if (mostrar[0].features[j].properties.programa == "Inmovilizado") {
+                inmTotal = inmTotal + 1;
+              }
+              if (mostrar[0].features[j].properties.programa == "Recordatorio") {
+                recTotal = recTotal + 1;
+              }
+              if (mostrar[0].features[j].properties.programa == "Adulto Mayor") {
+                amTotal = amTotal + 1;
+              }
+
               modal.style.display = "block";
-              var speakers = mostrar[0].features[j].properties.programa + "<hr>";
-              console.log(speakers);
+              var speakers = mostrar[0].features[j].properties.description + "<hr>";
               inner.unshift(speakers);
-              document.getElementById('viewValue').innerHTML = inner //speakers
+              document.getElementById('viewValue').innerHTML = inner.join('')
+              document.getElementById("viewQuantities").innerHTML = "Inmovilizado: " + inmTotal + " Recordatorio: " + recTotal + " Actualizado: " + amTotal;
             }
             mostrar = [];
           }

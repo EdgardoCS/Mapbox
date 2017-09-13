@@ -78,7 +78,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "Nombre: " + Nombre + " " + ",Sector: " + Sector + " " + ",Jefe Equipo: " + Jefe_Equipo_Cabecera,
+      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ Sector: " + Sector,
       "address": "Direccion: " + [Direccion],
       "rut": Rut,
       "programa": Programa,
@@ -88,26 +88,26 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
 };
 
 makeLayer = function(features) {
-  var tipo;
+  var id;
   var color;
   var fuente;
   if (features[0].properties.programa == "Inmovilizado") {
     color = "#F4511E"
-    tipo = "Inmovilizado"
+    id = "Inmovilizado"
     fuente = "inmovilizadoMarkers"
   }
   if (features[0].properties.programa == "Recordatorio") {
     color = "#A0149D"
-    tipo = "Recordatorio"
+    id = "Recordatorio"
     fuente = "recordatorioMarkers"
   }
   if (features[0].properties.programa == "Adulto Mayor") {
     color = "#87ad2e"
-    tipo = "AdultoMayor"
+    id = "AdultoMayor"
     fuente = "adultoMarkers"
   }
   var geoLayer = {
-    "id": tipo,
+    "id": id,
     "type": "circle",
     "source": fuente,
     "layout": {
