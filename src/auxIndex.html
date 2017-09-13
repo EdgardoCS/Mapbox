@@ -1,6 +1,6 @@
 <head>
   <meta charset='utf-8' />
-  <title> Mapbox-Georreferenciacion / Herramienta de Edicion</title>
+  <title> Herramienta de edición</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!--main.js-->
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
@@ -10,13 +10,22 @@
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
   <!--turf-->
   <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+  <!--smalltalk-->
+  <link rel="stylesheet" href="../node_modules/smalltalk/dist/smalltalk.min.css">
+  <script src="../node_modules/smalltalk/dist/smalltalk.poly.min.js"></script>
+  <!--GoogleMaps-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript"></script>
+  <!--XLSX-->
+  <script lang="javascript" src="../node_modules/xlsx/dist/xlsx.full.min.js"></script>
 
   <!-- *************************** CSS*********************************** -->
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel=stylesheet type="text/css" href="../css/map.css">
-  <link rel=stylesheet type="text/css" href="../css/auxTopbar.css">
-  <link rel=stylesheet type="text/css" href="../css/edit.css">
-  <link rel=stylesheet type="text/css" href="../css/download.css">
+  <link rel=stylesheet type="text/css" href="../cssAux/map.css">
+  <link rel=stylesheet type="text/css" href="../cssAux/checkbox_clear.css">
+  <link rel=stylesheet type="text/css" href="../cssAux/mainTopbar.css">
+  <link rel=stylesheet type="text/css" href="../cssAux/sidebar.css">
+  <link rel=stylesheet type="text/css" href="../cssAux/search.css">
 
   <style>
     body {
@@ -26,26 +35,40 @@
 
   <body>
     <div id='map'></div>
+    <!-- ********************* HTML BUTTONS ******************************** -->
     <div style="margin-left:50%"></div>
+
     <div class="icon-bar">
       <a class="active1" href="#"><i class="fa fa-home"></i></a>
-      <a href="#"><i class="fa fa-upload" onclick="loadFeature()"></i></a>
+      <a href="#"><i class="fa fa-globe" onclick="newWindow()"></i></a>
+      <div class="container-search">
+        <input type="search" id="search" placeholder="Buscar..." />
+        <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
+      </div>
     </div>
 
-    <a href="#" id='exportBus'><i class="fa fa-bus"></i></a>
-    <a href='#' id='exportCab'><i class="fa fa-taxi"></i></a>
-    <a href='#' id='exportDanger'><i class="fa fa-info  "></i></a>
+    <div class="sidecontainer">
+      <div class="sidebar">
+        <div class="photo">
+          <img src="../pictures/logoG.jpg" alt="samus" style="width:100%;height:50%px;">
+        </div>
+        <div class="main6">
+          <p>Limpiar Busqueda</p>
+          <button onclick="viewclearSearch()" class="icon"><i class="fa fa-times" id="clearSearch"></i></button>
+        </div>
 
+        <div id="sidebarBottom">
+          <a href="#"><i class="fa fa-power-off"></i></a>
+        </div>
 
-    <script src="../mainJs/main.js"></script>
-    <script src="../mainJs/polygon.js"></script>
-    <script src="../auxJs/openFile.js"></script>
+      </div>
+    </div>
 
-    <!--
-    <script src="../auxJs/uploadLayer.js"></script>
-    <script src="../auxJs/downloadFeature.js"></script>
--->
-    <!-- **************************************************************** -->
+    <!-- ********************* JS SCRIPTS ******************************** -->
+    <script src="../js/main.js"></script>
+    <script src="../js/butonClear.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/polygon.js"></script>
 
   </body>
 

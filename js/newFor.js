@@ -4,7 +4,6 @@ var selection = require('../js/tturf.js');
 
 var objects = [];
 exports.newFor = function(array) {
-  console.log(array); 
   if (array[1].id == "Inmovilizado") {
     objects.splice(0, 0, array);
   }
@@ -18,6 +17,5 @@ exports.newFor = function(array) {
     end.symButon(objects);
     selection.toturf(objects);
     sms.build(objects);
-    console.log(objects);
   }
 };
