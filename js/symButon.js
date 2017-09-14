@@ -1,4 +1,14 @@
+var largoInm;
+var largoRec;
+var largoAct;
+
 exports.symButon = function(objects) {
+  /*
+  console.log(objects);
+  largoInm = objects[0][0].data.features.length;
+  largoRec = objects[1][0].data.features.length;
+  largoAct = objects[2][0].data.features.length;
+*/
   exports.symButonADD = function(add) {
 
     if (map.getLayer("Inmovilizado")) {
@@ -25,6 +35,6 @@ exports.symButon = function(objects) {
       map.addSource(objects[2][1].source, objects[2][0]);
       map.addLayer(objects[2][1]);
     }
-    
+
   }
 }

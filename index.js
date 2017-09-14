@@ -13,8 +13,8 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
-    width: 1800,
-    height: 600,
+    width: 1920,
+    height: 800,
     minWidth: 420,
     minHeight: 480,
     autoHideMenuBar: true,

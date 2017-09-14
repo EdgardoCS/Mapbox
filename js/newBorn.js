@@ -23,9 +23,15 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
   celda = row.length;
   if (row != null) {
     var inmovilizadoArray = [];
+    var inmovilizadoLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa);
+        inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa, row[i].Fallecido);
+
+        if (inmovilizadoArray[i].properties.fallecido != "si") {
+          inmovilizadoArray.slice(i);
+          inmovilizadoLive.push(inmovilizadoArray[i])
+        }
       }
     }
   }
@@ -33,21 +39,27 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
   inmovilizadoSource = makeGeo(inmovilizadoArray);
   var inmovilizado = [inmovilizadoSource, inmovilizadoLayer];
   next.newFor(inmovilizado);
-  
+
 });
 
 db.all("SELECT * FROM Recordatorio", function(err, row) {
   celda = row.length;
   if (row != null) {
     var recordatorioArray = [];
+    var recordatorioLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        recordatorioArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa);
+        recordatorioArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa, row[i].Fallecido);
+
+        if (recordatorioArray[i].properties.fallecido != "si") {
+          recordatorioArray.slice(i);
+          recordatorioLive.push(recordatorioArray[i])
+        }
       }
     }
   }
-  recordatorioLayer = makeLayer(recordatorioArray);
-  recordatorioSource = makeGeo(recordatorioArray);
+  recordatorioLayer = makeLayer(recordatorioLive);
+  recordatorioSource = makeGeo(recordatorioLive);
   var recordatorio = [recordatorioSource, recordatorioLayer];
   next.newFor(recordatorio);
 
@@ -56,19 +68,25 @@ db.all("SELECT * FROM Actualizado", function(err, row) {
   celda = row.length;
   if (row != null) {
     var amArray = [];
+    var amLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa);
+        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa, row[i].Fallecido);
+
+        if (amArray[i].properties.fallecido != "si") {
+          amArray.slice(i);
+          amLive.push(amArray[i])
+        }
       }
     }
   }
-  adultoLayer = makeLayer(amArray);
-  adultoSource = makeGeo(amArray);
+  adultoLayer = makeLayer(amLive);
+  adultoSource = makeGeo(amLive);
   var adulto = [adultoSource, adultoLayer];
   next.newFor(adulto);
 });
 
-setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude, Programa) {
+setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude, Programa, Fallecido) {
   var pointFeatures;
 
   pointFeatures = {
@@ -83,6 +101,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Lon
       "address": "Direccion: " + [Direccion],
       "rut": Rut,
       "programa": Programa,
+      "fallecido": Fallecido,
     }
   }
   return pointFeatures;
