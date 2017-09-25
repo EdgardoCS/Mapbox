@@ -2,14 +2,14 @@ function search() {
   searchButton = document.getElementById('search').value;
   var RUT = (searchButton);
 
-  db.all("SELECT * FROM Actualizado WHERE Rut=?", [RUT], function(err, row) {
+  db.all("SELECT * FROM Users WHERE Rut=?", [RUT], function(err, row) {
     celda = row.length;
     if (row != null) {
 
       var searchArray = [];
       if (celda = 1) {
         for (i = 0; i < celda; i++) {
-          searchArray[i] = setSearchFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa);
+          searchArray[i] = setSearchFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
         }
         searchLayer = makeSearchLayer(searchArray);
         searchSource = makeSearchGeo(searchArray);
@@ -27,21 +27,22 @@ function search() {
   });
 }
 
-setSearchFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude, Programa) {
+setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones) {
   var pointFeatures;
 
   pointFeatures = {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [Latitude, Longitude]
+      "coordinates": [Latitud, Longitud]
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ Sector: " + Sector,
+      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ SubSector: " + SubSector,
       "address": "Direccion: " + [Direccion],
       "rut": Rut,
       "programa": Programa,
+      "Estado": Estado,
     }
   }
   return pointFeatures;

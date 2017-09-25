@@ -6,11 +6,14 @@ var Nombre;
 var Rut;
 var Direccion;
 var Sector;
-var Jefe_Equipo_Cabecera;
-var Latitude;
-var Longitude;
+var SubSector;
+var Longitud;
+var Latitud;
 var Programa;
-var nuevo = [];
+var Jefe_Equipo;
+var Estado;
+var Observaciones;
+
 var inmovilizadoLayer;
 var inmovilizadoSource;
 var recordatorioLayer;
@@ -26,9 +29,9 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
     var inmovilizadoLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa, row[i].Fallecido);
+        inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
 
-        if (inmovilizadoArray[i].properties.fallecido != "si") {
+        if (inmovilizadoArray[i].properties.status != "Fallecida") {
           inmovilizadoArray.slice(i);
           inmovilizadoLive.push(inmovilizadoArray[i])
         }
@@ -49,9 +52,9 @@ db.all("SELECT * FROM Recordatorio", function(err, row) {
     var recordatorioLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        recordatorioArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa, row[i].Fallecido);
+        recordatorioArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
 
-        if (recordatorioArray[i].properties.fallecido != "si") {
+        if (recordatorioArray[i].properties.status != "Fallecida") {
           recordatorioArray.slice(i);
           recordatorioLive.push(recordatorioArray[i])
         }
@@ -64,16 +67,15 @@ db.all("SELECT * FROM Recordatorio", function(err, row) {
   next.newFor(recordatorio);
 
 });
-db.all("SELECT * FROM Actualizado", function(err, row) {
+db.all("SELECT * FROM Users", function(err, row) {
   celda = row.length;
   if (row != null) {
     var amArray = [];
     var amLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].Jefe_Equipo_Cabecera, row[i].Latitude, row[i].Longitude, row[i].Programa, row[i].Fallecido);
-
-        if (amArray[i].properties.fallecido != "si") {
+        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
+        if (amArray[i].properties.status != "Fallecida") {
           amArray.slice(i);
           amLive.push(amArray[i])
         }
@@ -86,22 +88,23 @@ db.all("SELECT * FROM Actualizado", function(err, row) {
   next.newFor(adulto);
 });
 
-setFeatures = function(Rut, Nombre, Direccion, Sector, Jefe_Equipo_Cabecera, Longitude, Latitude, Programa, Fallecido) {
+setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones) {
   var pointFeatures;
 
   pointFeatures = {
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [Latitude, Longitude]
+      "coordinates": [Latitud, Longitud]
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ Sector: " + Sector,
+      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ SubSector: " + SubSector,
       "address": "Direccion: " + [Direccion],
       "rut": Rut,
       "programa": Programa,
-      "fallecido": Fallecido,
+      "status": Estado,
+      "observations": Observaciones,
     }
   }
   return pointFeatures;

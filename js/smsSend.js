@@ -12,7 +12,7 @@ exports.man = function(result) {
   var jsonArray = setHeader(text, sendArray);
 
   sock.connect('tcp://10.140.25.209:3000')
-  console.log('Sending to port 3000');
+  console.log('Enviando a puerto 3000');
 
   sock.on('message', function(msg) {
     console.log('respuesta recibida: ', msg.toString());
@@ -20,7 +20,7 @@ exports.man = function(result) {
 
   var stringObject = JSON.stringify(jsonArray);
   sock.send(stringObject);
-  console.log('data sended');
+  console.log('mensaje enviado');
 }
 
 setPersonas = function(id, sms) {

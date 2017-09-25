@@ -13,8 +13,7 @@ exports.build = function(objects) {
     if (dataArray.features.length > 0) {
       innerArray = [];
 
-      var ptsWithin = turf.within(objects[1][0].data, dataArray);
-      console.log(ptsWithin);
+      var ptsWithin = turf.within(objects[2][0].data, dataArray);
       for (i = 0; i < ptsWithin.features.length; i++) {
         speakersArray = ptsWithin.features[i].properties.rut;
         var key = "id";
@@ -32,12 +31,18 @@ exports.build = function(objects) {
 function promptWindow() {
   smalltalk.prompt('Escriba su mensaje a continuación', 'Recuerde no utilizar más de 160 caracteres', '').then(function(value) {
     text = value;
-    var result = innerArray.map(function(el) {
-      var o = Object.assign({}, el);
-      o.sms = text;
-      return o;
-    });
-    hillbilly.man(result);
+    textLargo = text.length;
+    if (textLargo <= 160) {
+      var result = innerArray.map(function(el) {
+        var o = Object.assign({}, el);
+        o.sms = text;
+        return o;
+      });
+      hillbilly.man(result);
+    } else {
+      smalltalk.alert('Error: Mensaje no enviado', 'Mensaje excede cantidad de caracteres permitido!').then(function() {
+      });
+    }
   }, function() {
     console.log('close');
   });

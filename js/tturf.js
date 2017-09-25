@@ -39,7 +39,7 @@ exports.toturf = function(objects) {
               var speakers = mostrar[0].features[j].properties.description + "<hr>";
               inner.unshift(speakers);
               document.getElementById('viewValue').innerHTML = inner.join('')
-              document.getElementById("viewQuantities").innerHTML = "Inmovilizado: " + inmTotal + " Recordatorio: " + recTotal + " Actualizado: " + amTotal;
+              document.getElementById("viewQuantities").innerHTML = "Inmovilizado: " + inmTotal + " Recordatorio: " + recTotal + " Usuarios: " + amTotal;
             }
             mostrar = [];
           }
