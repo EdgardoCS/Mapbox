@@ -9,8 +9,8 @@ function viewclearAll() {
 }
 
 function viewclearSearch() {
-  SearchArray = ["AdultoMayor"];
-  SearchSource = ["adultoMarkers"];
+  SearchArray = ["Busqueda"];
+  SearchSource = ["busquedaMarkers"];
   if (map.getLayer(SearchArray[0])) {
     map.removeLayer(SearchArray[0])
   }

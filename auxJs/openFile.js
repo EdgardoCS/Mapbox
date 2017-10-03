@@ -1,6 +1,5 @@
 const remote = require('electron').remote;
 
-
 var fs = require('fs');
 
 function openFile() {

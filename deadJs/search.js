@@ -1,8 +1,11 @@
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('./db/mydb.db');
+
 function search() {
   searchButton = document.getElementById('search').value;
   var RUT = (searchButton);
 
-  db.all("SELECT * FROM Users WHERE Rut=?", [RUT], function(err, row) {
+  db.all("SELECT * FROM Test WHERE Rut=?", [RUT], function(err, row) {
     celda = row.length;
     if (row != null) {
 
@@ -15,21 +18,23 @@ function search() {
         searchSource = makeSearchGeo(searchArray);
 
         var busqueda = [searchSource, searchLayer];
+        
         map.addSource(busqueda[1].source, busqueda[0]);
         map.addLayer(busqueda[1]);
-
-        map.on('click', 'Busqueda', function(e) {
-          new mapboxgl.Popup()
-            .setLngLat(e.features[0].geometry.coordinates)
-            .setHTML(e.features[0].properties.description)
-            .addTo(map);
-        });
-        map.on('mouseenter', 'Busqueda', function() {
-          map.getCanvas().style.cursor = 'pointer';
-        });
-        map.on('mouseleave', 'Busqueda', function() {
-          map.getCanvas().style.cursor = '';
-        });
+        /*
+                map.on('click', 'Busqueda', function(e) {
+                  new mapboxgl.Popup()
+                    .setLngLat(e.features[0].geometry.coordinates)
+                    .setHTML(e.features[0].properties.description)
+                    .addTo(map);
+                });
+                map.on('mouseenter', 'Busqueda', function() {
+                  map.getCanvas().style.cursor = 'pointer';
+                });
+                map.on('mouseleave', 'Busqueda', function() {
+                  map.getCanvas().style.cursor = '';
+                });
+        */
       }
       if (row.length < 1) {
         console.log("Rut No Encontrado");
@@ -63,7 +68,7 @@ setSearchFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud
 
 makeSearchLayer = function(features) {
   var id = "Busqueda";
-  var color = "#6d6760" ;
+  var color = "#6d6760";
   var fuente = "busquedaMarkers";
 
   /*
