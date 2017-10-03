@@ -1,9 +1,6 @@
 var calcButton = document.getElementById('mapDraw');
 var fiveofive = [];
 var inner = [];
-var inmTotal = 0;
-var recTotal = 0;
-var amTotal = 0;
 var mostrar = [];
 
 exports.toturf = function(objects) {
@@ -13,6 +10,11 @@ exports.toturf = function(objects) {
 
     var objetoLargo = objects.length;
     calcButton.onclick = function() {
+
+      var inmTotal = 0;
+      var recTotal = 0;
+      var amTotal = 0;
+
       var data = mapDraw.getAll();
       if (data.features.length > 0) {
 
@@ -25,13 +27,13 @@ exports.toturf = function(objects) {
 
             for (j = 0; j < ptsWithin.features.length; j++) {
 
-              if (mostrar[0].features[j].properties.programa == "Inmovilizado") {
+              if (mostrar[0].features[j].properties.program == "Inmovilizado") {
                 inmTotal = inmTotal + 1;
               }
-              if (mostrar[0].features[j].properties.programa == "Recordatorio") {
+              if (mostrar[0].features[j].properties.program == "Recordatorio") {
                 recTotal = recTotal + 1;
               }
-              if (mostrar[0].features[j].properties.programa == "Adulto Mayor") {
+              if (mostrar[0].features[j].properties.program == "Adulto Mayor") {
                 amTotal = amTotal + 1;
               }
 

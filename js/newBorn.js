@@ -35,11 +35,12 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
           inmovilizadoArray.slice(i);
           inmovilizadoLive.push(inmovilizadoArray[i])
         }
+
       }
     }
   }
-  inmovilizadoLayer = makeLayer(inmovilizadoArray);
-  inmovilizadoSource = makeGeo(inmovilizadoArray);
+  inmovilizadoLayer = makeLayer(inmovilizadoLive);
+  inmovilizadoSource = makeGeo(inmovilizadoLive);
   var inmovilizado = [inmovilizadoSource, inmovilizadoLayer];
   next.newFor(inmovilizado);
 
@@ -58,6 +59,7 @@ db.all("SELECT * FROM Recordatorio", function(err, row) {
           recordatorioArray.slice(i);
           recordatorioLive.push(recordatorioArray[i])
         }
+
       }
     }
   }
@@ -75,10 +77,12 @@ db.all("SELECT * FROM Users", function(err, row) {
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
         amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
+
         if (amArray[i].properties.status != "Fallecida") {
           amArray.slice(i);
           amLive.push(amArray[i])
         }
+
       }
     }
   }
@@ -99,11 +103,11 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Lati
     },
     "properties": {
       "title": "Adulto Mayor",
-      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ SubSector: " + SubSector,
-      "address": "Direccion: " + [Direccion],
       "rut": Rut,
-      "programa": Programa,
+      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ Direccion: " + Direccion,
+      "address": "Direccion: " + [Direccion],
       "status": Estado,
+      "program": Programa,
       "observations": Observaciones,
     }
   }
@@ -114,17 +118,17 @@ makeLayer = function(features) {
   var id;
   var color;
   var fuente;
-  if (features[0].properties.programa == "Inmovilizado") {
+  if (features[0].properties.program == "Inmovilizado") {
     color = "#F4511E"
     id = "Inmovilizado"
     fuente = "inmovilizadoMarkers"
   }
-  if (features[0].properties.programa == "Recordatorio") {
+  if (features[0].properties.program == "Recordatorio") {
     color = "#A0149D"
     id = "Recordatorio"
     fuente = "recordatorioMarkers"
   }
-  if (features[0].properties.programa == "Adulto Mayor") {
+  if (features[0].properties.program == "Adulto Mayor") {
     color = "#87ad2e"
     id = "AdultoMayor"
     fuente = "adultoMarkers"

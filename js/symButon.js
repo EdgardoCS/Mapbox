@@ -3,7 +3,6 @@ var largoRec;
 var largoAct;
 
 exports.symButon = function(objects) {
-  console.log(objects);
   /*
   largoInm = objects[0][0].data.features.length;
   largoRec = objects[1][0].data.features.length;

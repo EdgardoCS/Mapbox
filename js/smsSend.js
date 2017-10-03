@@ -20,6 +20,7 @@ exports.man = function(result) {
 
   var stringObject = JSON.stringify(jsonArray);
   sock.send(stringObject);
+  console.log(stringObject);
   console.log('mensaje enviado');
 }
 

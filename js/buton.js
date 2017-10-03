@@ -1,5 +1,7 @@
 var nextTo = require('../js/symButon.js');
-var prev = require('../js/tturf.js')
+var prev = require('../js/tturf.js');
+var addTo = require('../js/smsBuild.js');
+var black = require('../js/tturfSub.js');
 
 var addPostrado = false;
 var addRecordatorio = false;
@@ -37,7 +39,6 @@ document.getElementById('roundedThree').addEventListener('change', function(e) {
   }
 });
 
-
 function viewPrograma() {
 
   var add = [addPostrado, addRecordatorio, addAM];
@@ -45,4 +46,6 @@ function viewPrograma() {
 
   nextTo.symButonADD(add);
   prev.ToTurf(add);
+  addTo.toSms(add);
+  black.bird(add); 
 }

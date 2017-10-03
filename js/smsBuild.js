@@ -7,24 +7,34 @@ var innerArray = [];
 
 
 exports.build = function(objects) {
-  smsButton.onclick = function() {
+  exports.toSms = function(add) {
 
-    var dataArray = mapDraw.getAll();
-    if (dataArray.features.length > 0) {
-      innerArray = [];
+    var objectL = objects.length;
+    smsButton.onclick = function() {
 
-      var ptsWithin = turf.within(objects[2][0].data, dataArray);
-      for (i = 0; i < ptsWithin.features.length; i++) {
-        speakersArray = ptsWithin.features[i].properties.rut;
-        var key = "id";
-        innerArray.push({
-          [key]: speakersArray
-        });
+      var dataArray = mapDraw.getAll();
+      if (dataArray.features.length > 0) {
+
+        innerArray = [];
+        for (j = 0; j < objectL; j++) {
+
+          var ptsWithin = turf.within(objects[j][0].data, dataArray);
+          if (add[j] == true) {
+
+            for (i = 0; i < ptsWithin.features.length; i++) {
+              speakersArray = ptsWithin.features[i].properties.rut;
+              var key = "id";
+              innerArray.push({
+                [key]: speakersArray
+              });
+            }
+            promptWindow(speakersArray);
+          }
+        }
+      } else {
+        alert("Use la herramienta de dibujo");
       }
-    } else {
-      alert("Use la herramienta de dibujo");
     }
-    promptWindow(speakersArray);
   }
 }
 
@@ -40,8 +50,7 @@ function promptWindow() {
       });
       hillbilly.man(result);
     } else {
-      smalltalk.alert('Error: Mensaje no enviado', 'Mensaje excede cantidad de caracteres permitido!').then(function() {
-      });
+      smalltalk.alert('Error: Mensaje no enviado', 'Mensaje excede cantidad de caracteres permitido!').then(function() {});
     }
   }, function() {
     console.log('close');

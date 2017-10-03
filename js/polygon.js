@@ -51,4 +51,4 @@ const mapDraw = new MapboxDraw({
     }
   ]
 })
-map.addControl(mapDraw);
+map.addControl(mapDraw,'bottom-right');

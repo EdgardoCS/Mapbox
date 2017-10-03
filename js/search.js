@@ -17,6 +17,19 @@ function search() {
         var busqueda = [searchSource, searchLayer];
         map.addSource(busqueda[1].source, busqueda[0]);
         map.addLayer(busqueda[1]);
+
+        map.on('click', 'AdultoMayor', function(e) {
+          new mapboxgl.Popup()
+            .setLngLat(e.features[0].geometry.coordinates)
+            .setHTML(e.features[0].properties.description)
+            .addTo(map);
+        });
+        map.on('mouseenter', 'AdultoMayor', function() {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', 'AdultoMayor', function() {
+          map.getCanvas().style.cursor = '';
+        });
       }
       if (row.length < 1) {
         console.log("Rut No Encontrado");
@@ -26,8 +39,7 @@ function search() {
     }
   });
 }
-
-setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones) {
+setSearchFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones) {
   var pointFeatures;
 
   pointFeatures = {
@@ -38,28 +50,46 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Lati
     },
     "properties": {
       "title": "Adulto Mayor",
+      "rut": Rut,
       "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ SubSector: " + SubSector,
       "address": "Direccion: " + [Direccion],
-      "rut": Rut,
-      "programa": Programa,
-      "Estado": Estado,
+      "status": Estado,
+      "program": Programa,
+      "observations": Observaciones,
     }
   }
   return pointFeatures;
 };
 
 makeSearchLayer = function(features) {
-
+  var id;
+  var color;
+  var fuente;
+  if (features[0].properties.program == "Inmovilizado") {
+    color = "#F4511E"
+    id = "Inmovilizado"
+    fuente = "inmovilizadoMarkers"
+  }
+  if (features[0].properties.program == "Recordatorio") {
+    color = "#A0149D"
+    id = "Recordatorio"
+    fuente = "recordatorioMarkers"
+  }
+  if (features[0].properties.program == "Adulto Mayor") {
+    color = "#87ad2e"
+    id = "AdultoMayor"
+    fuente = "adultoMarkers"
+  }
   var geoLayer = {
-    "id": "Busqueda",
+    "id": id,
     "type": "circle",
-    "source": "searchMarkers",
+    "source": fuente,
     "layout": {
       'visibility': 'visible'
     },
     "paint": {
       "circle-radius": 5,
-      "circle-color": "#161412"
+      "circle-color": color
     },
   }
   return geoLayer;

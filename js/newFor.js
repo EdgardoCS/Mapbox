@@ -1,5 +1,6 @@
 var end = require('../js/symButon.js');
 var sms = require('../js/smsBuild.js');
+var sub = require('../js/tturfSub.js');
 var selection = require('../js/tturf.js');
 
 var objects = [];
@@ -15,7 +16,8 @@ exports.newFor = function(array) {
   }
   if (objects.length == 3) {
     end.symButon(objects);
-    selection.toturf(objects);
     sms.build(objects);
+    selection.toturf(objects);
+    sub.subturf(objects);
   }
 };

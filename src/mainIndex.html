@@ -34,7 +34,8 @@
   <link rel=stylesheet type="text/css" href="../css/checkbox_sector.css">
   <link rel=stylesheet type="text/css" href="../css/checkbox_ssector.css">
   <link rel=stylesheet type="text/css" href="../css/desplegable.css">
-
+  <link rel=stylesheet type="text/css" href="../css/subselector.css">
+  <link rel=stylesheet type="text/css" href="../css/deploy_sub.css">
   <style>
     body {
       margin: 0;
@@ -63,6 +64,23 @@
       </div>
     </div>
 
+    <div id="furyModal" class="modal">
+      <div class="furyModal-content">
+        <div class="furyModal-header">
+          <span class="furyclose">&times;</span>
+          <h2>Resultados Selección</h2>
+          <h3>Personas Seleccionadas : </h3>
+          <p id="viewQuant"></p>
+        </div>
+        <div class="furyModal-body">
+          <p id='viewVal'></p>
+        </div>
+        <div class="furyModal-footer">
+          <h3>CESFAM MENA</h3>
+        </div>
+      </div>
+    </div>
+
     <div class="icon-bar">
       <a class="active1" href="#"><i class="fa fa-home"></i></a>
       <a href="#"><i class="fa fa-globe" onclick="newWindow()"></i></a>
@@ -74,6 +92,7 @@
         <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
       </div>
     </div>
+
 
     <div class="sidecontainer">
       <div class="sidebar">
@@ -87,15 +106,15 @@
 
           <div class="roundedOne">
             <input type="checkbox" id="roundedOne" name="check">
-            <label for="roundedOne"><title>Programa Inmovilizado</title></label>
+            <label for="roundedOne"><title>Inmovilizado</title></label>
           </div>
           <div class="roundedTwo">
             <input type="checkbox" id="roundedTwo" name="check">
-            <label for="roundedTwo"><title>Recordatorio de Citas</title></label>
+            <label for="roundedTwo"><title>Recordatorio</title></label>
           </div>
           <div class="roundedThree">
             <input type="checkbox" id="roundedThree" name="check">
-            <label for="roundedThree"><title>Adulto Mayor Actualizada</title></label>
+            <label for="roundedThree"><title>Actualizada</title></label>
           </div>
 
         </div>
@@ -164,24 +183,28 @@
           <a href="#"><i class="fa fa-power-off"></i></a>
         </div>
 
+        <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
+
       </div>
     </div>
 
     <!-- ********************* JS SCRIPTS ******************************** -->
+    <!--
+  -->
     <script src="../js/main.js"></script>
-    <script src="../js/buton.js"></script>
     <script src="../js/newBorn.js"></script>
+    <script src="../js/buton.js"></script>
     <script src="../js/butonClear.js"></script>
     <script src="../js/butonHill.js"></script>
     <script src="../js/butonSector.js"></script>
-    <script src="../js/butonsubSector.js"></script>
-    <!--
-  -->
-    <script src="../js/search.js"></script>
+    <script src="../js/butonSubSector.js"></script>
     <script src="../js/polygon.js"></script>
     <script src="../js/newWindow.js"></script>
-
-
+    <script src="../js/search.js"></script>
+    <!-- ******************  GEOCODING JS SCRIPTS **************************** -->
+    <!--
+    <script src="../geocodingJs/database.js"></script>
+  -->
 
   </body>
 

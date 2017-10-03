@@ -5,7 +5,7 @@
 node_modules/
 db/
 xlsx/
-mainJs/
+Logs/
 src/*
 !src/mainIndex.html
 !src/auxIndex.html
