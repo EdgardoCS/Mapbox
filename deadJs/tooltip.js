@@ -1,4 +1,4 @@
-var power = require('../auxJs/dead.js');
+var power = require('../deadJs/dead.js');
 
 map.getCanvas().style.cursor = 'pointer';
 
