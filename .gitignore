@@ -9,3 +9,4 @@ Logs/
 src/*
 !src/mainIndex.html
 !src/auxIndex.html
+!src/importIndex.html
