@@ -22,7 +22,7 @@ app.on('ready', function() {
   });
   mainWindow.openDevTools();
   mainWindow.maximize()
-  mainWindow.loadURL('file://' + __dirname + '/src/importIndex.html');
+  mainWindow.loadURL('file://' + __dirname + '/src/mainIndex.html');
   //mainWindow.loadURL('http://127.0.0.1:5000')
   mainWindow.on('closed', function() {
     mainWindow = null;

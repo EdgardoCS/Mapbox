@@ -4,10 +4,11 @@ function search() {
 
   db.all("SELECT * FROM Users WHERE Rut=?", [RUT], function(err, row) {
     celda = row.length;
+
     if (row != null) {
 
       var searchArray = [];
-      if (celda = 1) {
+      if (celda == 1) {
         for (i = 0; i < celda; i++) {
           searchArray[i] = setSearchFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
         }
@@ -30,9 +31,8 @@ function search() {
         map.on('mouseleave', 'Busqueda', function() {
           map.getCanvas().style.cursor = '';
         });
-      }
-      if (row.length < 1) {
-        console.log("Rut No Encontrado");
+      } else if (celda < 1) {
+        smalltalk.alert('Error: Rut No Encontrado', 'Asegurese de ingresar un Rut válido!').then(function() {});
       }
     } else {
       console.log("Error: Celda Vacía");
@@ -63,7 +63,7 @@ setSearchFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud
 
 makeSearchLayer = function(features) {
   var id = "Busqueda";
-  var color = "#6d6760" ;
+  var color = "#6d6760";
   var fuente = "busquedaMarkers";
 
   /*
