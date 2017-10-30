@@ -38,7 +38,7 @@ exports.toturf = function(objects) {
               }
 
               modal.style.display = "block";
-              var speakers = mostrar[0].features[j].properties.description + "<hr>";
+              var speakers = mostrar[0].features[j].properties.contact + "<hr>";
               inner.unshift(speakers);
               document.getElementById('viewValue').innerHTML = inner.join('')
               document.getElementById("viewQuantities").innerHTML = "Inmovilizado: " + inmTotal + " Recordatorio: " + recTotal + " Usuarios: " + amTotal;

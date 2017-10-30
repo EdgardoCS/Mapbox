@@ -13,7 +13,9 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
-    width: 1920,
+    //width: 1200,
+    //height: 600,
+    width: 1600,
     height: 800,
     minWidth: 420,
     minHeight: 480,
@@ -21,8 +23,8 @@ app.on('ready', function() {
     fullscreen: false
   });
   mainWindow.openDevTools();
-  mainWindow.maximize()
   mainWindow.loadURL('file://' + __dirname + '/src/mainIndex.html');
+  //mainWindow.maximize()
   //mainWindow.loadURL('http://127.0.0.1:5000')
   mainWindow.on('closed', function() {
     mainWindow = null;

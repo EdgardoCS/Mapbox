@@ -1,27 +1,38 @@
 var power = require('../deadJs/dead.js');
 
 map.getCanvas().style.cursor = 'pointer';
-
 map.on('click', 'Busqueda', function(e) {
   var location;
-  location = e.features[0].geometry.coordinates;
-  rut = e.features[0].properties.rut
-  now_dead = e.features[0].properties.estado
+  var rut;
+  var tapeworm;
+  var silkworm;
 
-  promptEdit(rut);
+  location = e.features[0].geometry.coordinates;
+  rut = e.features[0].properties.rut;
+  silkworm = e.features[0].properties.description;
+  tapeworm = e.features[0].properties.status;
+
+  promptEdit(rut, tapeworm, silkworm);
 
 });
 
-function promptEdit() {
-  smalltalk.prompt('Herramienta de Edicion', 'Estado de usuario: Activa, Inactiva, Fallecida', '').then(function(value) {
-    estado = value;
-    textLargo = estado.length;
-    if (textLargo < 10) {
-      power.slave(rut, estado);
-    } else {
-      smalltalk.alert('Exceso en cantidad de caracteres permitido!', 'Introduzca una de las opciones: Activa, Inactiva, Fallecida').then(function() {});
-    }
-  }, function() {
-    console.log('close');
-  });
+function promptEdit(rut, tapeworm, silkworm) {
+  smalltalk.prompt('Herramienta de Edicion',  silkworm + '<br>' + 'Estado de usuario: ' + tapeworm + '<br>' + 'Opciones de edición: Activa, Inactiva, Fallecida', '').then(function(value) {
+      var estado = value;
+      var opciones = ["Activa", "Inactiva", "Fallecida"];
+      var textLargo = estado.length;
+
+      if (textLargo < 10) {
+        if (estado == "Activa" || estado == "Inactiva" || estado == "Fallecida") {
+          power.slave(rut, estado);
+        } else {
+          smalltalk.alert('Opcion Inválida!', 'Introduzca una de las opciones: Activa, Inactiva, Fallecida')
+        }
+      } else {
+        smalltalk.alert('Exceso en cantidad de caracteres permitido!', 'Introduzca una de las opciones: Activa, Inactiva, Fallecida').then(function() {});
+      }
+    },
+    function() {
+      console.log('close');
+    });
 };

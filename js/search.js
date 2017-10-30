@@ -32,7 +32,7 @@ function search() {
           map.getCanvas().style.cursor = '';
         });
       } else if (celda < 1) {
-        smalltalk.alert('Error: Rut No Encontrado', 'Asegurese de ingresar un Rut válido!').then(function() {});
+        smalltalk.alert('Error: Rut No Encontrado', 'Ingrese Rut válido!').then(function() {});
       }
     } else {
       console.log("Error: Celda Vacía");

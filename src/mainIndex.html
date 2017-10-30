@@ -21,7 +21,12 @@
   <script type="text/javascript"></script>
   <!--XLSX-->
   <script lang="javascript" src="../node_modules/xlsx/dist/xlsx.full.min.js"></script>
+  <!--JQuery-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--
 
+  <script src='../node_modules/jquery/dist/jquery.min.js'></script>
+-->
   <!-- *************************** CSS*********************************** -->
   <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel=stylesheet type="text/css" href="../css/map.css">
@@ -83,12 +88,12 @@
 
     <div class="icon-bar">
       <a class="active1" href="#"><i class="fa fa-home"></i></a>
-      <a href="#"><i class="fa fa-globe" onclick="newWindow()"></i></a>
-<!--
-      <a href="#"><i class="fa fa-address-book"></i></a>
+      <a href="#"><i class="fa fa-globe" onclick="editWindow()"></i></a>
+      <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
+      <!--
 -->
       <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
-      <a href="#"><i class="fa fa-id-badge" id="mapDraw"></i></a>
+      <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
       <div class="container-search">
         <input type="search" id="search" placeholder="Buscar..." />
         <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
@@ -133,6 +138,10 @@
         <div class="main3">
           <p>Seleccione Sector</p>
           <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+          <!--
+          <button onclick="SubSec" class= "icon"><i class= "fa fa-users" id="SubSec"></i></button>
+    -->
+          <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
           <div class="roundedS18">
             <input type="checkbox" value=1 id="rounded18" name="check">
             <label for="rounded18"><title>Sector18</title></label>
@@ -180,12 +189,11 @@
           <p>Limpiar Busqueda</p>
           <button onclick="viewclearSearch()" class="icon"><i class="fa fa-times" id="clearSearch"></i></button>
         </div>
-
+        <!--
         <div id="sidebarBottom">
           <a href="#"><i class="fa fa-power-off"></i></a>
         </div>
-
-        <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
+-->
 
       </div>
     </div>
@@ -193,6 +201,13 @@
     <!-- ********************* JS SCRIPTS ******************************** -->
     <!--
   -->
+    <script>
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+
     <script src="../js/main.js"></script>
     <script src="../js/newBorn.js"></script>
     <script src="../js/buton.js"></script>
@@ -201,8 +216,11 @@
     <script src="../js/butonSector.js"></script>
     <script src="../js/butonSubSector.js"></script>
     <script src="../js/polygon.js"></script>
-    <script src="../js/newWindow.js"></script>
+    <script src="../js/editWindow.js"></script>
+    <script src="../js/mapWindow.js"></script>
     <script src="../js/search.js"></script>
+
+
     <!-- ******************  GEOCODING JS SCRIPTS **************************** -->
     <!--
     <script src="../geocodingJs/database.js"></script>

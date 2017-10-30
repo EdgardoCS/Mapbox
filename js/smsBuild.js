@@ -7,6 +7,7 @@ var innerArray = [];
 
 
 exports.build = function(objects) {
+
   exports.toSms = function(add) {
 
     var objectL = objects.length;
@@ -16,10 +17,11 @@ exports.build = function(objects) {
       if (dataArray.features.length > 0) {
 
         innerArray = [];
-        for (j = 0; j < objectL; j++) {
+      //  for (j = 0; j < objectL; j++) {
 
-          var ptsWithin = turf.within(objects[j][0].data, dataArray);
-          if (add[j] == true) {
+          var ptsWithin = turf.within(objects[2][0].data, dataArray);
+          console.log(ptsWithin);
+          if (add[2] == true) {
 
             for (i = 0; i < ptsWithin.features.length; i++) {
               speakersArray = ptsWithin.features[i].properties.rut;
@@ -28,9 +30,10 @@ exports.build = function(objects) {
                 [key]: speakersArray
               });
             }
+            console.log("listo");
             promptWindow(speakersArray);
           }
-        }
+      //  }
       } else {
         alert("Use la herramienta de dibujo");
       }

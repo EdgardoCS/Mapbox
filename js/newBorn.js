@@ -1,5 +1,5 @@
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('./db/mydb.db');
+var db = new sqlite3.Database('./db/new.db');
 var next = require('../js/newFor.js');
 
 var Nombre;
@@ -13,6 +13,8 @@ var Programa;
 var Jefe_Equipo;
 var Estado;
 var Observaciones;
+var Telefono1;
+var Telefono2;
 
 var inmovilizadoLayer;
 var inmovilizadoSource;
@@ -76,7 +78,7 @@ db.all("SELECT * FROM Users", function(err, row) {
     var amLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
+        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones, row[i].Telefono1, row[i].Telefono2);
 
         if (amArray[i].properties.status != "Fallecida") {
           amArray.slice(i);
@@ -92,7 +94,7 @@ db.all("SELECT * FROM Users", function(err, row) {
   next.newFor(adulto);
 });
 
-setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones) {
+setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones, Telefono1, Telefono2) {
   var pointFeatures;
 
   pointFeatures = {
@@ -109,6 +111,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Lati
       "status": Estado,
       "program": Programa,
       "observations": Observaciones,
+      "contact": "Telefono1: " + Telefono1 + " Telefono2: " + Telefono2,
     }
   }
   return pointFeatures;

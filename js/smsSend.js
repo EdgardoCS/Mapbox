@@ -22,6 +22,7 @@ exports.man = function(result) {
   sock.send(stringObject);
   console.log(stringObject);
   console.log('mensaje enviado');
+    smalltalk.alert('Exito!', 'Su mensaje ha sido enviado correctamente!').then(function() {});
 }
 
 setPersonas = function(id, sms) {

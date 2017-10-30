@@ -10,7 +10,7 @@ function search() {
     if (row != null) {
 
       var searchArray = [];
-      if (celda = 1) {
+      if (celda == 1) {
         for (i = 0; i < celda; i++) {
           searchArray[i] = setSearchFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
         }
@@ -18,7 +18,7 @@ function search() {
         searchSource = makeSearchGeo(searchArray);
 
         var busqueda = [searchSource, searchLayer];
-        
+
         map.addSource(busqueda[1].source, busqueda[0]);
         map.addLayer(busqueda[1]);
         /*
@@ -35,9 +35,9 @@ function search() {
                   map.getCanvas().style.cursor = '';
                 });
         */
-      }
-      if (row.length < 1) {
-        console.log("Rut No Encontrado");
+
+      } else if (celda < 1) {
+        smalltalk.alert('Error: Rut No Encontrado', 'Ingrese Rut válido!').then(function() {});
       }
     } else {
       console.log("Error: Celda Vacía");
@@ -56,7 +56,7 @@ setSearchFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud
     "properties": {
       "title": "Adulto Mayor",
       "rut": Rut,
-      "description": "Programa: " + Programa + " " + "/ Nombre: " + Nombre + " " + "/ SubSector: " + SubSector,
+      "description": "RUT: " + Rut + ", " + "Nombre: " + Nombre,
       "address": "Direccion: " + [Direccion],
       "status": Estado,
       "program": Programa,

@@ -1,4 +1,4 @@
-function newWindow() {
+function mapWindow() {
   const remote = require('electron').remote;
   const BrowserWindow = remote.BrowserWindow;
 
@@ -12,7 +12,7 @@ function newWindow() {
   });
 
   auxWindow.openDevTools();
-  auxWindow.loadURL('file://' + __dirname + '/auxIndex.html');
+  auxWindow.loadURL('file://' + __dirname + '/mapIndex.html');
   auxWindow.on('closed', function() {
     auxWindow = null;
   });
