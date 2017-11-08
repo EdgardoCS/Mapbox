@@ -32,7 +32,6 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
         inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
-
         if (inmovilizadoArray[i].properties.status != "Fallecida") {
           inmovilizadoArray.slice(i);
           inmovilizadoLive.push(inmovilizadoArray[i])
@@ -45,6 +44,7 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
   inmovilizadoSource = makeGeo(inmovilizadoLive);
   var inmovilizado = [inmovilizadoSource, inmovilizadoLayer];
   next.newFor(inmovilizado);
+
 
 });
 
@@ -92,6 +92,7 @@ db.all("SELECT * FROM Users", function(err, row) {
   adultoSource = makeGeo(amLive);
   var adulto = [adultoSource, adultoLayer];
   next.newFor(adulto);
+
 });
 
 setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones, Telefono1, Telefono2) {
@@ -156,7 +157,7 @@ makeGeo = function(features) {
     "data": {
       "type": "FeatureCollection",
       "features": features
-    }
+    },
   }
   return geo;
 }
