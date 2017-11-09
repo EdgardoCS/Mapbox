@@ -2,6 +2,8 @@ var calcButton = document.getElementById('mapDraw');
 var fiveofive = [];
 var inner = [];
 var mostrar = [];
+var fromsubturf;
+
 
 exports.toturf = function(objects) {
   exports.ToTurf = function(add) {
@@ -38,7 +40,7 @@ exports.toturf = function(objects) {
               }
 
               modal.style.display = "block";
-              var speakers = mostrar[0].features[j].properties.contact + "<hr>";
+              var speakers = mostrar[0].features[j].properties.description + "<hr>";
               inner.unshift(speakers);
               document.getElementById('viewValue').innerHTML = inner.join('')
               document.getElementById("viewQuantities").innerHTML = "Inmovilizado: " + inmTotal + " Recordatorio: " + recTotal + " Usuarios: " + amTotal;

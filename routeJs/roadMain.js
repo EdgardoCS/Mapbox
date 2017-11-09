@@ -4,8 +4,6 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/edgardos/cj5v8e606669u2rocjpewesp4',
 
   zoom: 11.6,
-  //pitch: 90,
-  //bearing: -150,
   center: [-71.625, -33.047]
 });
 map.addControl(new mapboxgl.NavigationControl());

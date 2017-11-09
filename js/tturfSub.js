@@ -1,3 +1,7 @@
+var frame = require('../js/smsBuild.js');
+var billabong = require('../js/tturf.js');
+
+
 var polygonInm18A;
 var polygonRec18A;
 var polygonAm18A;
@@ -162,40 +166,51 @@ selecButton.onclick = function() {
 
   furyModal.style.display = "block"
 
-  iLargo = InmMostrar.length;
-  var setInm = [];
   var isum = 0;
+  var rsum = 0;
+  var asum = 0;
+  var setRec = [];
+  var setInm = [];
+  var setAdm = [];
+  iLargo = InmMostrar.length;
+  rLargo = RecMostrar.length;
+  aLargo = AdmMostrar.length;
+
   for (i = 0; i < iLargo; i++) {
     setInm[i] = InmMostrar[i].features.length;
     isum = isum + setInm[i];
   }
+
   if (isum > 0) {
-    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum;
-    //console.log("Usuarios Seleccionados programa Inmovilizado: " + isum);
+    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum + " Usuarios Seleccionados programa Inmovilizado: " + rsum + " Usuarios Seleccionados programa Inmovilizado: " + asum;
   }
 
-  rLargo = RecMostrar.length;
-  var setRec = [];
-  var rsum = 0;
   for (i = 0; i < rLargo; i++) {
     setRec[i] = RecMostrar[i].features.length;
     rsum = rsum + setRec[i];
   }
+
   if (rsum > 0) {
-    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados Recordatorio de Citas: " + rsum;
-    //console.log("Usuarios Seleccionados Recordatorio de Citas: " + rsum);
+    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum + " Usuarios Seleccionados programa Inmovilizado: " + rsum + " Usuarios Seleccionados programa Inmovilizado: " + asum;
   }
 
-  aLargo = AdmMostrar.length;
-  var setAdm = [];
-  var asum = 0;
   for (i = 0; i < aLargo; i++) {
     setAdm[i] = AdmMostrar[i].features.length;
     asum = asum + setAdm[i];
   }
+  /*
+  var melting = [];
+  melting.push(InmMostrar);
+  melting.push(RecMostrar);
+  melting.push(AdmMostrar);
+
+  billabong.valley(melting);
+  melting = [];
+  */
+  frame.byframe(AdmMostrar);
+
   if (asum > 0) {
-    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados pacientes Actualizados: " + asum;
-    //console.log("Usuarios Seleccionados pacientes Actualizados: " + asum);
+    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum + " Usuarios Seleccionados programa Inmovilizado: " + rsum + " Usuarios Seleccionados programa Inmovilizado: " + asum;
   }
 
   storm.onclick = function() {
