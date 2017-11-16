@@ -1,7 +1,7 @@
 var steps;
 var watlong;
 var waypoints = [
-  [-71.620333, -33.045072]
+  [-71.631153, -33.048997]
 ];
 
 
@@ -106,7 +106,7 @@ function getRoute() {
           "DIN Offc Pro Medium",
           "Arial Unicode MS Bold"
         ],
-        "text-size": 12
+        "text-size": 15
       }
     });
 
@@ -141,7 +141,7 @@ makeroute = function(trip) {
       },
     },
     "paint": {
-      "circle-radius": 10,
+      "circle-radius": 15,
       "circle-color": "#ffffff",
       "circle-stroke-width": 1.5,
       "circle-stroke-color": "#000000"

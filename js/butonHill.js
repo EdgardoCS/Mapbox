@@ -14,17 +14,17 @@ document.getElementById('roundedHill').addEventListener('change', function(e) {
 function viewHill() {
   if (addHill == true) {
     map.addLayer(cerroAlegre);
-    //map.addLayer(cerroMiraflores);
+    map.addLayer(cerroMiraflores);
     map.addLayer(cerroCarcel);
-    //map.addLayer(cerroPanteon);
-    //map.addLayer(cerroLaLoma);
+    map.addLayer(cerroPanteon);
+    map.addLayer(cerroLaLoma);
     map.addLayer(cerroJimenez);
-    //map.addLayer(cerroSanJuandeDios);
-    //map.addLayer(cerroYungay);
-    //map.addLayer(cerroBellavista);
-    //map.addLayer(cerroFlorida);
-    //map.addLayer(cerroMariposas);
-    //map.addLayer(cerroMonjas);
+    map.addLayer(cerroSanJuandeDios);
+    map.addLayer(cerroYungay);
+    map.addLayer(cerroBellavista);
+    map.addLayer(cerroFlorida);
+    map.addLayer(cerroMariposas);
+    map.addLayer(cerroMonjas);
   }
   if (removeHill == true) {
     if (map.getLayer("cerroAlegre")) {

@@ -1,44 +1,16 @@
-var frame = require('../js/smsBuild.js');
-var billabong = require('../js/tturf.js');
+exports.maker = function(coorArray, areaArray) {
+  console.log(coorArray);
+  console.log(areaArray);
+}
 
-var polygonInm18A;
-var polygonRec18A;
-var polygonAm18A;
-var polygonInm18B;
-var polygonRec18B;
-var polygonAm18B;
-var polygonInm18C;
-var polygonRec18C;
-var polygonAm18C;
-var polygonInm27A;
-var polygonRec27A;
-var polygonAm27A;
-var polygonInm27B;
-var polygonRec27B;
-var polygonAm27B;
-var polygonInm27C;
-var polygonRec27C;
-var polygonAm27C;
+exports.uchis = function(poblacion) {
+console.log(poblacion);
+}
 
-var polySeleccion;
-var polygono18A;
-var polygono18B;
-var polygono18C;
-var polygono27A;
-var polygono27B;
-var polygono27C;
 
-var newSubSector;
-var newAdd;
-
-var mostrarLargo;
-var individualLargo = [];
-
-var objArray;
-var selecButton = document.getElementById('SubSec');
-
-exports.habilitado = function(coorArray) {
-  exports.subturf = function(objects) {
+    /*
+    console.log()
+  }
     polygono18A = setPolygon18A(coorArray);
     polygono18B = setPolygon18B(coorArray);
     polygono18C = setPolygon18C(coorArray);
@@ -60,7 +32,7 @@ exports.bird = function(add) {
 var fury = document.getElementById('furyModal');
 var storm = document.getElementsByClassName('furyclose')[0];
 
-selecButton.onclick = function() {
+
   var InmMostrar = [];
   var RecMostrar = [];
   var AdmMostrar = [];
@@ -197,7 +169,11 @@ selecButton.onclick = function() {
     setAdm[i] = AdmMostrar[i].features.length;
     asum = asum + setAdm[i];
   }
-
+  var sober = [];
+  sober.push(isum);
+  sober.push(rsum);
+  sober.push(asum);
+  childish.gambino(sober);
   /*
   var melting = [];
   melting.push(InmMostrar);
@@ -206,7 +182,6 @@ selecButton.onclick = function() {
 
   billabong.valley(melting);
   melting = [];
-  */
   frame.byframe(AdmMostrar);
 
   if (asum > 0) {
@@ -222,6 +197,7 @@ selecButton.onclick = function() {
     }
   }
 }
+*/
 
 setPolygon18A = function(coorArray) {
   var polygon;
@@ -233,7 +209,9 @@ setPolygon18A = function(coorArray) {
         "type": "Polygon",
         "coordinates": [coorArray[0]]
       },
-      "properties": {},
+      "properties": {
+        "density": ""
+      },
       "id": "PolygonoSubSector",
     }]
   }
@@ -249,7 +227,9 @@ setPolygon18B = function(coorArray) {
         "type": "Polygon",
         "coordinates": [coorArray[1]]
       },
-      "properties": {},
+      "properties": {
+        "density": ""
+      },
       "id": "PolygonoSubSector",
     }]
   }
@@ -265,7 +245,9 @@ setPolygon18C = function(coorArray) {
         "type": "Polygon",
         "coordinates": [coorArray[2]]
       },
-      "properties": {},
+      "properties": {
+        "density": ""
+      },
       "id": "PolygonoSubSector",
     }]
   }
@@ -281,7 +263,9 @@ setPolygon27A = function(coorArray) {
         "type": "Polygon",
         "coordinates": [coorArray[3]]
       },
-      "properties": {},
+      "properties": {
+        "density": ""
+      },
       "id": "PolygonoSubSector",
     }]
   }
@@ -297,7 +281,9 @@ setPolygon27B = function(coorArray) {
         "type": "Polygon",
         "coordinates": [coorArray[4]]
       },
-      "properties": {},
+      "properties": {
+        "density": ""
+      },
       "id": "PolygonoSubSector",
     }]
   }
@@ -313,7 +299,9 @@ setPolygon27C = function(coorArray) {
         "type": "Polygon",
         "coordinates": [coorArray[5]]
       },
-      "properties": {},
+      "properties": {
+        "density": ""
+      },
       "id": "PolygonoSubSector",
     }]
   }

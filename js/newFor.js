@@ -3,6 +3,7 @@ var sms = require('../js/smsBuild.js');
 var sub = require('../js/tturfSub.js');
 var selection = require('../js/tturf.js');
 
+
 var objects = [];
 exports.newFor = function(array) {
   if (array[1].id == "Inmovilizado") {
@@ -19,5 +20,6 @@ exports.newFor = function(array) {
     sms.build(objects);
     selection.toturf(objects);
     sub.subturf(objects);
+
   }
 };
