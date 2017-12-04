@@ -1,106 +1,1571 @@
 {
-"type": "FeatureCollection",
-"name": "PRUEBAOKOK",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "Rut": "10998802-2", "Nombre": "Luis", "Direccion": "15,la ruda,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6191509, "Latitude": -33.060231 }, "geometry": { "type": "Point", "coordinates": [ -71.6191509, -33.060231 ] } },
-{ "type": "Feature", "properties": { "Rut": "11622194-2", "Nombre": "Lorenzo", "Direccion": "38,relinga,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "1164254-3", "Nombre": "Ma. Evangelina ", "Direccion": "620,la leona,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6289739, "Latitude": -33.0478091 }, "geometry": { "type": "Point", "coordinates": [ -71.6289739, -33.0478091 ] } },
-{ "type": "Feature", "properties": { "Rut": "13022578-0", "Nombre": "Ramon Ernesto", "Direccion": "161,mena,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6200949, "Latitude": -33.0501124 }, "geometry": { "type": "Point", "coordinates": [ -71.6200949, -33.0501124 ] } },
-{ "type": "Feature", "properties": { "Rut": "13707976-3", "Nombre": "Pablo", "Direccion": "563,lo venegas,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6326078, "Latitude": -33.0518622 }, "geometry": { "type": "Point", "coordinates": [ -71.6326078, -33.0518622 ] } },
-{ "type": "Feature", "properties": { "Rut": "13996982-0", "Nombre": "Francisco", "Direccion": "342,carlos lyon,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6327713, "Latitude": -33.0502811 }, "geometry": { "type": "Point", "coordinates": [ -71.6327713, -33.0502811 ] } },
-{ "type": "Feature", "properties": { "Rut": "1415282-2", "Nombre": "Aída", "Direccion": "5840,alemania,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6291973, "Latitude": -33.0512242 }, "geometry": { "type": "Point", "coordinates": [ -71.6291973, -33.0512242 ] } },
-{ "type": "Feature", "properties": { "Rut": "1435008-k", "Nombre": "Sergio", "Direccion": "13,pasaje purcell,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.631697, "Latitude": -33.0379702 }, "geometry": { "type": "Point", "coordinates": [ -71.631697, -33.0379702 ] } },
-{ "type": "Feature", "properties": { "Rut": "14551737-0", "Nombre": "Marcelo", "Direccion": "823,miguel angel,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6273484, "Latitude": -33.0589696 }, "geometry": { "type": "Point", "coordinates": [ -71.6273484, -33.0589696 ] } },
-{ "type": "Feature", "properties": { "Rut": "14616153-7", "Nombre": "Konstantia", "Direccion": "318,pasaje eden,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6240522, "Latitude": -33.048642 }, "geometry": { "type": "Point", "coordinates": [ -71.6240522, -33.048642 ] } },
-{ "type": "Feature", "properties": { "Rut": "1566734-6", "Nombre": "Enriqueta", "Direccion": "474,hospital doctor guillermo munnich,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "15751913-1", "Nombre": "Victor", "Direccion": "9,la ruda,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6198941, "Latitude": -33.0610023 }, "geometry": { "type": "Point", "coordinates": [ -71.6198941, -33.0610023 ] } },
-{ "type": "Feature", "properties": { "Rut": "16754493-2", "Nombre": "Claudia", "Direccion": "556,san juan de dios,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6271857, "Latitude": -33.0487325 }, "geometry": { "type": "Point", "coordinates": [ -71.6271857, -33.0487325 ] } },
-{ "type": "Feature", "properties": { "Rut": "1677027-2", "Nombre": "Maria", "Direccion": "416,almirante latorre,valparaiso,chile", "Sector": "27-C", "Jefe_Equipo_Cabecera": "Nauto", "Longitude": -71.6156022, "Latitude": -33.0523532 }, "geometry": { "type": "Point", "coordinates": [ -71.6156022, -33.0523532 ] } },
-{ "type": "Feature", "properties": { "Rut": "16777389-3", "Nombre": "Jorge", "Direccion": "13,santa rita,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6263479, "Latitude": -33.0543244 }, "geometry": { "type": "Point", "coordinates": [ -71.6263479, -33.0543244 ] } },
-{ "type": "Feature", "properties": { "Rut": "17142646-6", "Nombre": "Meilyn", "Direccion": "39,benigno posada,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "1767213-4", "Nombre": "Jose", "Direccion": "7770,alemania,valparaiso,chile", "Sector": "27-C", "Jefe_Equipo_Cabecera": "Nauto", "Longitude": -71.6172139, "Latitude": -33.0535516 }, "geometry": { "type": "Point", "coordinates": [ -71.6172139, -33.0535516 ] } },
-{ "type": "Feature", "properties": { "Rut": "18033631-1", "Nombre": "German", "Direccion": "47,general mackenna,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6242247, "Latitude": -33.0461357 }, "geometry": { "type": "Point", "coordinates": [ -71.6242247, -33.0461357 ] } },
-{ "type": "Feature", "properties": { "Rut": "1812419-k", "Nombre": "Irma", "Direccion": "837,parroquia,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6220057, "Latitude": -33.049337 }, "geometry": { "type": "Point", "coordinates": [ -71.622005700000017, -33.049337 ] } },
-{ "type": "Feature", "properties": { "Rut": "1902005-3", "Nombre": "Mario", "Direccion": "761,enrique budge,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6235678, "Latitude": -33.0505973 }, "geometry": { "type": "Point", "coordinates": [ -71.6235678, -33.0505973 ] } },
-{ "type": "Feature", "properties": { "Rut": "19021154-1", "Nombre": "Allan", "Direccion": "617,lorena,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6336125, "Latitude": -33.053665 }, "geometry": { "type": "Point", "coordinates": [ -71.6336125, -33.053665 ] } },
-{ "type": "Feature", "properties": { "Rut": "1965267-k", "Nombre": "German", "Direccion": "703,placilla,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6261303, "Latitude": -33.0489176 }, "geometry": { "type": "Point", "coordinates": [ -71.6261303, -33.0489176 ] } },
-{ "type": "Feature", "properties": { "Rut": "20946420-7", "Nombre": "Javiera", "Direccion": "155,santa rita,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6289892, "Latitude": -33.0579084 }, "geometry": { "type": "Point", "coordinates": [ -71.6289892, -33.0579084 ] } },
-{ "type": "Feature", "properties": { "Rut": "2097424-9", "Nombre": "Lucia", "Direccion": "560,hector calvo jofre,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "2099026-0", "Nombre": "Matilde", "Direccion": "222,bernardo ramos,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6214035, "Latitude": -33.0481622 }, "geometry": { "type": "Point", "coordinates": [ -71.6214035, -33.0481622 ] } },
-{ "type": "Feature", "properties": { "Rut": "2320923-3", "Nombre": "Lidia", "Direccion": "26,aquiles ramirez,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6293083, "Latitude": -33.0549945 }, "geometry": { "type": "Point", "coordinates": [ -71.6293083, -33.0549945 ] } },
-{ "type": "Feature", "properties": { "Rut": "2352893-2", "Nombre": "Jose", "Direccion": "8,pasaje palqui,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6390349, "Latitude": -33.0525738 }, "geometry": { "type": "Point", "coordinates": [ -71.6390349, -33.0525738 ] } },
-{ "type": "Feature", "properties": { "Rut": "2622717-8", "Nombre": "Alicia", "Direccion": "4930,alemania,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6327907, "Latitude": -33.0471827 }, "geometry": { "type": "Point", "coordinates": [ -71.6327907, -33.0471827 ] } },
-{ "type": "Feature", "properties": { "Rut": "2781763-7", "Nombre": "Elsa", "Direccion": "56,miguel angel,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6248057, "Latitude": -33.0535908 }, "geometry": { "type": "Point", "coordinates": [ -71.6248057, -33.0535908 ] } },
-{ "type": "Feature", "properties": { "Rut": "2825968-9", "Nombre": "Ilda", "Direccion": "5078,alemania,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6330699, "Latitude": -33.0484559 }, "geometry": { "type": "Point", "coordinates": [ -71.6330699, -33.0484559 ] } },
-{ "type": "Feature", "properties": { "Rut": "2839279-6", "Nombre": "Perez", "Direccion": "422,jenofonte,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6325111, "Latitude": -33.0510952 }, "geometry": { "type": "Point", "coordinates": [ -71.6325111, -33.0510952 ] } },
-{ "type": "Feature", "properties": { "Rut": "2919159-k", "Nombre": "Jaime", "Direccion": "563,lo venegas,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6326078, "Latitude": -33.0518622 }, "geometry": { "type": "Point", "coordinates": [ -71.6326078, -33.0518622 ] } },
-{ "type": "Feature", "properties": { "Rut": "2994382-6", "Nombre": "Maria", "Direccion": "298,yerbas buenas,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6234056, "Latitude": -33.0482213 }, "geometry": { "type": "Point", "coordinates": [ -71.6234056, -33.0482213 ] } },
-{ "type": "Feature", "properties": { "Rut": "3080827-4", "Nombre": "Miguel", "Direccion": "4930,alemania,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6327907, "Latitude": -33.0471827 }, "geometry": { "type": "Point", "coordinates": [ -71.6327907, -33.0471827 ] } },
-{ "type": "Feature", "properties": { "Rut": "3081786-9", "Nombre": "Violeta", "Direccion": "289,general mackenna,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6243986, "Latitude": -33.0480612 }, "geometry": { "type": "Point", "coordinates": [ -71.6243986, -33.0480612 ] } },
-{ "type": "Feature", "properties": { "Rut": "3095748-2", "Nombre": "Norma", "Direccion": "99,marco aurelio,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6354847, "Latitude": -33.0510593 }, "geometry": { "type": "Point", "coordinates": [ -71.6354847, -33.0510593 ] } },
-{ "type": "Feature", "properties": { "Rut": "3115022-1", "Nombre": "Graciela", "Direccion": "6392,alemania,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6267403, "Latitude": -33.0533812 }, "geometry": { "type": "Point", "coordinates": [ -71.6267403, -33.0533812 ] } },
-{ "type": "Feature", "properties": { "Rut": "3210758-3", "Nombre": "Raquel", "Direccion": "28,pasaje proyectada,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.3994637, "Latitude": -33.0550845 }, "geometry": { "type": "Point", "coordinates": [ -71.3994637, -33.0550845 ] } },
-{ "type": "Feature", "properties": { "Rut": "3250494-9", "Nombre": "Flor", "Direccion": "46,las chilcas,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6380247, "Latitude": -33.0509418 }, "geometry": { "type": "Point", "coordinates": [ -71.6380247, -33.0509418 ] } },
-{ "type": "Feature", "properties": { "Rut": "3298033-3", "Nombre": "Graciela", "Direccion": "168,gustavo julian,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6198309, "Latitude": -33.051487 }, "geometry": { "type": "Point", "coordinates": [ -71.6198309, -33.051487 ] } },
-{ "type": "Feature", "properties": { "Rut": "3321338-7", "Nombre": "Sergio", "Direccion": "284,florida,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6204274, "Latitude": -33.0494778 }, "geometry": { "type": "Point", "coordinates": [ -71.6204274, -33.0494778 ] } },
-{ "type": "Feature", "properties": { "Rut": "3324420-7", "Nombre": "Aurora", "Direccion": "344,pasaje eden,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6236962, "Latitude": -33.0485996 }, "geometry": { "type": "Point", "coordinates": [ -71.6236962, -33.0485996 ] } },
-{ "type": "Feature", "properties": { "Rut": "3331482-5", "Nombre": "Tomas", "Direccion": "444,miguel angel,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6262407, "Latitude": -33.0566495 }, "geometry": { "type": "Point", "coordinates": [ -71.6262407, -33.0566495 ] } },
-{ "type": "Feature", "properties": { "Rut": "3381179-9", "Nombre": "Osvaldo", "Direccion": "72,general mackenna,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6244734, "Latitude": -33.0462702 }, "geometry": { "type": "Point", "coordinates": [ -71.6244734, -33.0462702 ] } },
-{ "type": "Feature", "properties": { "Rut": "3461249-8", "Nombre": "Mario", "Direccion": "13,john kennedy,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6193283, "Latitude": -33.0592648 }, "geometry": { "type": "Point", "coordinates": [ -71.6193283, -33.0592648 ] } },
-{ "type": "Feature", "properties": { "Rut": "3501120-k", "Nombre": "Yolanda", "Direccion": "7865,alemania,valparaiso,chile", "Sector": "27-C", "Jefe_Equipo_Cabecera": "Nauto", "Longitude": -71.6167994, "Latitude": -33.0529088 }, "geometry": { "type": "Point", "coordinates": [ -71.6167994, -33.0529088 ] } },
-{ "type": "Feature", "properties": { "Rut": "3524800-5", "Nombre": "Alicia", "Direccion": "599,elias,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6279677, "Latitude": -33.0447546 }, "geometry": { "type": "Point", "coordinates": [ -71.6279677, -33.0447546 ] } },
-{ "type": "Feature", "properties": { "Rut": "3586027-4", "Nombre": "Julia", "Direccion": "360,cumming,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6266522, "Latitude": -33.0463004 }, "geometry": { "type": "Point", "coordinates": [ -71.6266522, -33.0463004 ] } },
-{ "type": "Feature", "properties": { "Rut": "3671344-5", "Nombre": "Jara", "Direccion": "563,lo venegas,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6326078, "Latitude": -33.0518622 }, "geometry": { "type": "Point", "coordinates": [ -71.6326078, -33.0518622 ] } },
-{ "type": "Feature", "properties": { "Rut": "3686798-1", "Nombre": "Sergio", "Direccion": "282,atahualpa,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6275643, "Latitude": -33.0447215 }, "geometry": { "type": "Point", "coordinates": [ -71.6275643, -33.0447215 ] } },
-{ "type": "Feature", "properties": { "Rut": "3824956-8", "Nombre": "Irma", "Direccion": "20,la ruda,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6219645, "Latitude": -33.0610965 }, "geometry": { "type": "Point", "coordinates": [ -71.6219645, -33.0610965 ] } },
-{ "type": "Feature", "properties": { "Rut": "3872253-0", "Nombre": "Gustavo", "Direccion": "113,benigno posada,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "3890829-4", "Nombre": "Carmen", "Direccion": "785,cumming,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6303197, "Latitude": -33.0479744 }, "geometry": { "type": "Point", "coordinates": [ -71.6303197, -33.0479744 ] } },
-{ "type": "Feature", "properties": { "Rut": "3944267-1", "Nombre": "Norma", "Direccion": "61,pasaje chileno,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6301042, "Latitude": -33.0466104 }, "geometry": { "type": "Point", "coordinates": [ -71.6301042, -33.0466104 ] } },
-{ "type": "Feature", "properties": { "Rut": "3971221-0", "Nombre": "Ana", "Direccion": "7404,alemania,valparaiso,chile", "Sector": "27-C", "Jefe_Equipo_Cabecera": "Nauto", "Longitude": -71.6196054, "Latitude": -33.054044 }, "geometry": { "type": "Point", "coordinates": [ -71.619605400000012, -33.054044 ] } },
-{ "type": "Feature", "properties": { "Rut": "4009981-6", "Nombre": "Graciela", "Direccion": "315,rodolfo philippi,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "4164311-0", "Nombre": "Luis", "Direccion": "456,miguel angel,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6261621, "Latitude": -33.0568588 }, "geometry": { "type": "Point", "coordinates": [ -71.6261621, -33.0568588 ] } },
-{ "type": "Feature", "properties": { "Rut": "4261850-0", "Nombre": "Emilia", "Direccion": "620,elias,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6282214, "Latitude": -33.0449667 }, "geometry": { "type": "Point", "coordinates": [ -71.6282214, -33.0449667 ] } },
-{ "type": "Feature", "properties": { "Rut": "4340907-7", "Nombre": "Hermina", "Direccion": "222,bernardo ramos,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6214035, "Latitude": -33.0481622 }, "geometry": { "type": "Point", "coordinates": [ -71.6214035, -33.0481622 ] } },
-{ "type": "Feature", "properties": { "Rut": "4357197-4", "Nombre": "Bernardo", "Direccion": "30,yerbas buenas,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.623661, "Latitude": -33.0459369 }, "geometry": { "type": "Point", "coordinates": [ -71.623661, -33.0459369 ] } },
-{ "type": "Feature", "properties": { "Rut": "4381772-8", "Nombre": "Sergio", "Direccion": "482,bernardo ramos,valparaiso,chile", "Sector": "27-C", "Jefe_Equipo_Cabecera": "Nauto", "Longitude": -71.6220584, "Latitude": -33.0501388 }, "geometry": { "type": "Point", "coordinates": [ -71.6220584, -33.0501388 ] } },
-{ "type": "Feature", "properties": { "Rut": "4491035-7", "Nombre": "Edith", "Direccion": "150,rita otaegui,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "4530282-2", "Nombre": "Luis", "Direccion": "1,la ruda,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6190043, "Latitude": -33.0598849 }, "geometry": { "type": "Point", "coordinates": [ -71.6190043, -33.0598849 ] } },
-{ "type": "Feature", "properties": { "Rut": "4587138-k", "Nombre": "Teresa", "Direccion": "173,luis pirard,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6291863, "Latitude": -33.0535169 }, "geometry": { "type": "Point", "coordinates": [ -71.6291863, -33.053516900000012 ] } },
-{ "type": "Feature", "properties": { "Rut": "4698859-0", "Nombre": "María", "Direccion": "122,pedro de ona,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6183638, "Latitude": -33.0628371 }, "geometry": { "type": "Point", "coordinates": [ -71.6183638, -33.0628371 ] } },
-{ "type": "Feature", "properties": { "Rut": "4857071-2", "Nombre": "Fresia Del Rosario", "Direccion": "332,pedro de ona,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6179629, "Latitude": -33.0558762 }, "geometry": { "type": "Point", "coordinates": [ -71.6179629, -33.0558762 ] } },
-{ "type": "Feature", "properties": { "Rut": "4861234-2", "Nombre": "Florencio", "Direccion": "12,rene lagos,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6180611, "Latitude": -33.0582797 }, "geometry": { "type": "Point", "coordinates": [ -71.6180611, -33.0582797 ] } },
-{ "type": "Feature", "properties": { "Rut": "4875295-0", "Nombre": "Vicente", "Direccion": "648,rene lagos,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6175292, "Latitude": -33.058504 }, "geometry": { "type": "Point", "coordinates": [ -71.6175292, -33.058504 ] } },
-{ "type": "Feature", "properties": { "Rut": "4966064-2", "Nombre": "Manuel", "Direccion": "2,lorena,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6332974, "Latitude": -33.0532817 }, "geometry": { "type": "Point", "coordinates": [ -71.6332974, -33.0532817 ] } },
-{ "type": "Feature", "properties": { "Rut": "4990582-3", "Nombre": "Laura", "Direccion": "282,bahia,valparaiso,chile", "Sector": "27-C", "Jefe_Equipo_Cabecera": "Nauto", "Longitude": -71.6216146, "Latitude": -33.0575352 }, "geometry": { "type": "Point", "coordinates": [ -71.6216146, -33.0575352 ] } },
-{ "type": "Feature", "properties": { "Rut": "5042540-1", "Nombre": "Violeta", "Direccion": "482,trece,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6221081, "Latitude": -33.0519469 }, "geometry": { "type": "Point", "coordinates": [ -71.6221081, -33.0519469 ] } },
-{ "type": "Feature", "properties": { "Rut": "5054835-k", "Nombre": "Manuel", "Direccion": "480,miguel angel,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6263405, "Latitude": -33.0572687 }, "geometry": { "type": "Point", "coordinates": [ -71.6263405, -33.0572687 ] } },
-{ "type": "Feature", "properties": { "Rut": "5057700-7", "Nombre": "Gaston", "Direccion": "172,miguel angel,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6251749, "Latitude": -33.0545666 }, "geometry": { "type": "Point", "coordinates": [ -71.6251749, -33.0545666 ] } },
-{ "type": "Feature", "properties": { "Rut": "5111727-1", "Nombre": "Sergio", "Direccion": "6797,aquiles ramirez,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6291434, "Latitude": -33.054733 }, "geometry": { "type": "Point", "coordinates": [ -71.6291434, -33.054733 ] } },
-{ "type": "Feature", "properties": { "Rut": "5451620-7", "Nombre": "Ángela", "Direccion": "483,ricardo de ferrari,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.6219018, "Latitude": -33.0517212 }, "geometry": { "type": "Point", "coordinates": [ -71.6219018, -33.0517212 ] } },
-{ "type": "Feature", "properties": { "Rut": "5491373-7", "Nombre": "Rojas Castro", "Direccion": "676,cumming,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6294145, "Latitude": -33.0474258 }, "geometry": { "type": "Point", "coordinates": [ -71.6294145, -33.0474258 ] } },
-{ "type": "Feature", "properties": { "Rut": "5505172-0", "Nombre": "Flora", "Direccion": "113,benigno posada,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": null, "Latitude": null }, "geometry": null },
-{ "type": "Feature", "properties": { "Rut": "5611846-2", "Nombre": "Jose", "Direccion": "855,vicente blasco ibanez,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6273119, "Latitude": -33.0506252 }, "geometry": { "type": "Point", "coordinates": [ -71.6273119, -33.0506252 ] } },
-{ "type": "Feature", "properties": { "Rut": "5706556-7", "Nombre": "Rosa", "Direccion": "505,miguel angel,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6265572, "Latitude": -33.0577404 }, "geometry": { "type": "Point", "coordinates": [ -71.6265572, -33.0577404 ] } },
-{ "type": "Feature", "properties": { "Rut": "5881295-1", "Nombre": "Aurora", "Direccion": "190,once,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6206998, "Latitude": -33.0522476 }, "geometry": { "type": "Point", "coordinates": [ -71.6206998, -33.0522476 ] } },
-{ "type": "Feature", "properties": { "Rut": "5984703-1", "Nombre": "Juliana", "Direccion": "986,esfuerzo,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6901463, "Latitude": -33.1105952 }, "geometry": { "type": "Point", "coordinates": [ -71.6901463, -33.1105952 ] } },
-{ "type": "Feature", "properties": { "Rut": "5999103-5", "Nombre": "Luisa", "Direccion": "62,adolfo ibanez,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6321096, "Latitude": -33.045431 }, "geometry": { "type": "Point", "coordinates": [ -71.6321096, -33.045431 ] } },
-{ "type": "Feature", "properties": { "Rut": "6112857-3", "Nombre": "Jorge", "Direccion": "337,jenofonte,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6322715, "Latitude": -33.050865 }, "geometry": { "type": "Point", "coordinates": [ -71.6322715, -33.050865 ] } },
-{ "type": "Feature", "properties": { "Rut": "6160682-3", "Nombre": "Ester", "Direccion": "974,esfuerzo,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6901463, "Latitude": -33.1105952 }, "geometry": { "type": "Point", "coordinates": [ -71.6901463, -33.1105952 ] } },
-{ "type": "Feature", "properties": { "Rut": "6397448-k", "Nombre": "Silvia", "Direccion": "13,cintura,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.634547, "Latitude": -33.0317678 }, "geometry": { "type": "Point", "coordinates": [ -71.634547, -33.0317678 ] } },
-{ "type": "Feature", "properties": { "Rut": "6559839-6", "Nombre": "Yolanda", "Direccion": "326,almagro,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.5666178, "Latitude": -33.0268136 }, "geometry": { "type": "Point", "coordinates": [ -71.5666178, -33.0268136 ] } },
-{ "type": "Feature", "properties": { "Rut": "6661897-8", "Nombre": "Celinda", "Direccion": "539,general mackenna,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.624173, "Latitude": -33.0502555 }, "geometry": { "type": "Point", "coordinates": [ -71.624173, -33.0502555 ] } },
-{ "type": "Feature", "properties": { "Rut": "7220175-2", "Nombre": "Fresia", "Direccion": "981,guillermo rivera,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6254252, "Latitude": -33.0534864 }, "geometry": { "type": "Point", "coordinates": [ -71.6254252, -33.0534864 ] } },
-{ "type": "Feature", "properties": { "Rut": "7661138-6", "Nombre": "Delia", "Direccion": "407,rene lagos,valparaiso,chile", "Sector": "27-B", "Jefe_Equipo_Cabecera": "Camilo Muñoz", "Longitude": -71.6175344, "Latitude": -33.0585051 }, "geometry": { "type": "Point", "coordinates": [ -71.6175344, -33.0585051 ] } },
-{ "type": "Feature", "properties": { "Rut": "7711848-9", "Nombre": "Monica", "Direccion": "7654,atahualpa,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6289913, "Latitude": -33.0461795 }, "geometry": { "type": "Point", "coordinates": [ -71.6289913, -33.0461795 ] } },
-{ "type": "Feature", "properties": { "Rut": "7879225-6", "Nombre": "Hector", "Direccion": "220,aquiles ramirez,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6284147, "Latitude": -33.0532782 }, "geometry": { "type": "Point", "coordinates": [ -71.6284147, -33.0532782 ] } },
-{ "type": "Feature", "properties": { "Rut": "8505502-k", "Nombre": "Rosa", "Direccion": "78,vista hermosa,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6365919, "Latitude": -33.0327712 }, "geometry": { "type": "Point", "coordinates": [ -71.6365919, -33.0327712 ] } },
-{ "type": "Feature", "properties": { "Rut": "8369441-6", "Nombre": "Danilo", "Direccion": "4930,alemania,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6327907, "Latitude": -33.0471827 }, "geometry": { "type": "Point", "coordinates": [ -71.6327907, -33.0471827 ] } },
-{ "type": "Feature", "properties": { "Rut": "8841426-8", "Nombre": "Patricio", "Direccion": "272,cangreja,valparaiso,chile", "Sector": null, "Jefe_Equipo_Cabecera": null, "Longitude": -71.6211922, "Latitude": -33.0590383 }, "geometry": { "type": "Point", "coordinates": [ -71.6211922, -33.0590383 ] } },
-{ "type": "Feature", "properties": { "Rut": "8885585-k", "Nombre": "Ricardo", "Direccion": "35,toribio loyola,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6268326, "Latitude": -33.0487128 }, "geometry": { "type": "Point", "coordinates": [ -71.6268326, -33.0487128 ] } },
-{ "type": "Feature", "properties": { "Rut": "897388-1", "Nombre": "Esperanza", "Direccion": "66,marinero fuentealba,valparaiso,chile", "Sector": "27-A", "Jefe_Equipo_Cabecera": "Aldo Solar", "Longitude": -71.408995, "Latitude": -33.0465229 }, "geometry": { "type": "Point", "coordinates": [ -71.408995, -33.0465229 ] } },
-{ "type": "Feature", "properties": { "Rut": "9103657-6", "Nombre": "Rómulo", "Direccion": "643,bernardo vera,valparaiso,chile", "Sector": "18-C", "Jefe_Equipo_Cabecera": "Andrea Donoso", "Longitude": -71.6257633, "Latitude": -33.048417 }, "geometry": { "type": "Point", "coordinates": [ -71.6257633, -33.048417 ] } },
-{ "type": "Feature", "properties": { "Rut": "940308-6", "Nombre": "Dominga", "Direccion": "578,atahualpa,valparaiso,chile", "Sector": "18-B", "Jefe_Equipo_Cabecera": "Ximena Escobar", "Longitude": -71.6294462, "Latitude": -33.0466014 }, "geometry": { "type": "Point", "coordinates": [ -71.6294462, -33.0466014 ] } },
-{ "type": "Feature", "properties": { "Rut": "9835832-3", "Nombre": "Maria", "Direccion": "636,aquiles ramirez,valparaiso,chile", "Sector": "18-A", "Jefe_Equipo_Cabecera": "Alejandra Peñaloza", "Longitude": -71.6285859, "Latitude": -33.0537612 }, "geometry": { "type": "Point", "coordinates": [ -71.6285859, -33.0537612 ] } }
-]
+  "type": "FeatureCollection",
+  "name": "PRUEBAOKOK",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [{
+      "type": "Feature",
+      "properties": {
+        "Rut": "10998802-2",
+        "Nombre": "Luis",
+        "Direccion": "15,la ruda,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6191509,
+        "Latitude": -33.060231
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6191509, -33.060231]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "11622194-2",
+        "Nombre": "Lorenzo",
+        "Direccion": "38,relinga,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1164254-3",
+        "Nombre": "Ma. Evangelina ",
+        "Direccion": "620,la leona,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6289739,
+        "Latitude": -33.0478091
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6289739, -33.0478091]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "13022578-0",
+        "Nombre": "Ramon Ernesto",
+        "Direccion": "161,mena,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6200949,
+        "Latitude": -33.0501124
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6200949, -33.0501124]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "13707976-3",
+        "Nombre": "Pablo",
+        "Direccion": "563,lo venegas,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6326078,
+        "Latitude": -33.0518622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6326078, -33.0518622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "13996982-0",
+        "Nombre": "Francisco",
+        "Direccion": "342,carlos lyon,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6327713,
+        "Latitude": -33.0502811
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6327713, -33.0502811]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1415282-2",
+        "Nombre": "Aída",
+        "Direccion": "5840,alemania,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6291973,
+        "Latitude": -33.0512242
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6291973, -33.0512242]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1435008-k",
+        "Nombre": "Sergio",
+        "Direccion": "13,pasaje purcell,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.631697,
+        "Latitude": -33.0379702
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.631697, -33.0379702]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "14551737-0",
+        "Nombre": "Marcelo",
+        "Direccion": "823,miguel angel,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6273484,
+        "Latitude": -33.0589696
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6273484, -33.0589696]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "14616153-7",
+        "Nombre": "Konstantia",
+        "Direccion": "318,pasaje eden,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6240522,
+        "Latitude": -33.048642
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6240522, -33.048642]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1566734-6",
+        "Nombre": "Enriqueta",
+        "Direccion": "474,hospital doctor guillermo munnich,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "15751913-1",
+        "Nombre": "Victor",
+        "Direccion": "9,la ruda,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6198941,
+        "Latitude": -33.0610023
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6198941, -33.0610023]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "16754493-2",
+        "Nombre": "Claudia",
+        "Direccion": "556,san juan de dios,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6271857,
+        "Latitude": -33.0487325
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6271857, -33.0487325]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1677027-2",
+        "Nombre": "Maria",
+        "Direccion": "416,almirante latorre,valparaiso,chile",
+        "Sector": "27-C",
+        "Jefe_Equipo_Cabecera": "Nauto",
+        "Longitude": -71.6156022,
+        "Latitude": -33.0523532
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6156022, -33.0523532]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "16777389-3",
+        "Nombre": "Jorge",
+        "Direccion": "13,santa rita,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6263479,
+        "Latitude": -33.0543244
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6263479, -33.0543244]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "17142646-6",
+        "Nombre": "Meilyn",
+        "Direccion": "39,benigno posada,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1767213-4",
+        "Nombre": "Jose",
+        "Direccion": "7770,alemania,valparaiso,chile",
+        "Sector": "27-C",
+        "Jefe_Equipo_Cabecera": "Nauto",
+        "Longitude": -71.6172139,
+        "Latitude": -33.0535516
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6172139, -33.0535516]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "18033631-1",
+        "Nombre": "German",
+        "Direccion": "47,general mackenna,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6242247,
+        "Latitude": -33.0461357
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6242247, -33.0461357]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1812419-k",
+        "Nombre": "Irma",
+        "Direccion": "837,parroquia,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6220057,
+        "Latitude": -33.049337
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.622005700000017, -33.049337]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1902005-3",
+        "Nombre": "Mario",
+        "Direccion": "761,enrique budge,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6235678,
+        "Latitude": -33.0505973
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6235678, -33.0505973]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "19021154-1",
+        "Nombre": "Allan",
+        "Direccion": "617,lorena,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6336125,
+        "Latitude": -33.053665
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6336125, -33.053665]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "1965267-k",
+        "Nombre": "German",
+        "Direccion": "703,placilla,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6261303,
+        "Latitude": -33.0489176
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6261303, -33.0489176]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "20946420-7",
+        "Nombre": "Javiera",
+        "Direccion": "155,santa rita,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6289892,
+        "Latitude": -33.0579084
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6289892, -33.0579084]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2097424-9",
+        "Nombre": "Lucia",
+        "Direccion": "560,hector calvo jofre,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2099026-0",
+        "Nombre": "Matilde",
+        "Direccion": "222,bernardo ramos,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6214035,
+        "Latitude": -33.0481622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6214035, -33.0481622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2320923-3",
+        "Nombre": "Lidia",
+        "Direccion": "26,aquiles ramirez,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6293083,
+        "Latitude": -33.0549945
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6293083, -33.0549945]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2352893-2",
+        "Nombre": "Jose",
+        "Direccion": "8,pasaje palqui,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6390349,
+        "Latitude": -33.0525738
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6390349, -33.0525738]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2622717-8",
+        "Nombre": "Alicia",
+        "Direccion": "4930,alemania,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6327907,
+        "Latitude": -33.0471827
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6327907, -33.0471827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2781763-7",
+        "Nombre": "Elsa",
+        "Direccion": "56,miguel angel,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6248057,
+        "Latitude": -33.0535908
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6248057, -33.0535908]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2825968-9",
+        "Nombre": "Ilda",
+        "Direccion": "5078,alemania,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6330699,
+        "Latitude": -33.0484559
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6330699, -33.0484559]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2839279-6",
+        "Nombre": "Perez",
+        "Direccion": "422,jenofonte,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6325111,
+        "Latitude": -33.0510952
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6325111, -33.0510952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2919159-k",
+        "Nombre": "Jaime",
+        "Direccion": "563,lo venegas,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6326078,
+        "Latitude": -33.0518622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6326078, -33.0518622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "2994382-6",
+        "Nombre": "Maria",
+        "Direccion": "298,yerbas buenas,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6234056,
+        "Latitude": -33.0482213
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6234056, -33.0482213]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3080827-4",
+        "Nombre": "Miguel",
+        "Direccion": "4930,alemania,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6327907,
+        "Latitude": -33.0471827
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6327907, -33.0471827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3081786-9",
+        "Nombre": "Violeta",
+        "Direccion": "289,general mackenna,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6243986,
+        "Latitude": -33.0480612
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6243986, -33.0480612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3095748-2",
+        "Nombre": "Norma",
+        "Direccion": "99,marco aurelio,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6354847,
+        "Latitude": -33.0510593
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6354847, -33.0510593]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3115022-1",
+        "Nombre": "Graciela",
+        "Direccion": "6392,alemania,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6267403,
+        "Latitude": -33.0533812
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6267403, -33.0533812]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3210758-3",
+        "Nombre": "Raquel",
+        "Direccion": "28,pasaje proyectada,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.3994637,
+        "Latitude": -33.0550845
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.3994637, -33.0550845]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3250494-9",
+        "Nombre": "Flor",
+        "Direccion": "46,las chilcas,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6380247,
+        "Latitude": -33.0509418
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6380247, -33.0509418]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3298033-3",
+        "Nombre": "Graciela",
+        "Direccion": "168,gustavo julian,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6198309,
+        "Latitude": -33.051487
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6198309, -33.051487]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3321338-7",
+        "Nombre": "Sergio",
+        "Direccion": "284,florida,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6204274,
+        "Latitude": -33.0494778
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6204274, -33.0494778]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3324420-7",
+        "Nombre": "Aurora",
+        "Direccion": "344,pasaje eden,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6236962,
+        "Latitude": -33.0485996
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6236962, -33.0485996]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3331482-5",
+        "Nombre": "Tomas",
+        "Direccion": "444,miguel angel,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6262407,
+        "Latitude": -33.0566495
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6262407, -33.0566495]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3381179-9",
+        "Nombre": "Osvaldo",
+        "Direccion": "72,general mackenna,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6244734,
+        "Latitude": -33.0462702
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6244734, -33.0462702]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3461249-8",
+        "Nombre": "Mario",
+        "Direccion": "13,john kennedy,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6193283,
+        "Latitude": -33.0592648
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6193283, -33.0592648]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3501120-k",
+        "Nombre": "Yolanda",
+        "Direccion": "7865,alemania,valparaiso,chile",
+        "Sector": "27-C",
+        "Jefe_Equipo_Cabecera": "Nauto",
+        "Longitude": -71.6167994,
+        "Latitude": -33.0529088
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6167994, -33.0529088]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3524800-5",
+        "Nombre": "Alicia",
+        "Direccion": "599,elias,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6279677,
+        "Latitude": -33.0447546
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6279677, -33.0447546]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3586027-4",
+        "Nombre": "Julia",
+        "Direccion": "360,cumming,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6266522,
+        "Latitude": -33.0463004
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6266522, -33.0463004]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3671344-5",
+        "Nombre": "Jara",
+        "Direccion": "563,lo venegas,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6326078,
+        "Latitude": -33.0518622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6326078, -33.0518622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3686798-1",
+        "Nombre": "Sergio",
+        "Direccion": "282,atahualpa,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6275643,
+        "Latitude": -33.0447215
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6275643, -33.0447215]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3824956-8",
+        "Nombre": "Irma",
+        "Direccion": "20,la ruda,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6219645,
+        "Latitude": -33.0610965
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6219645, -33.0610965]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3872253-0",
+        "Nombre": "Gustavo",
+        "Direccion": "113,benigno posada,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3890829-4",
+        "Nombre": "Carmen",
+        "Direccion": "785,cumming,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6303197,
+        "Latitude": -33.0479744
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6303197, -33.0479744]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3944267-1",
+        "Nombre": "Norma",
+        "Direccion": "61,pasaje chileno,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6301042,
+        "Latitude": -33.0466104
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6301042, -33.0466104]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "3971221-0",
+        "Nombre": "Ana",
+        "Direccion": "7404,alemania,valparaiso,chile",
+        "Sector": "27-C",
+        "Jefe_Equipo_Cabecera": "Nauto",
+        "Longitude": -71.6196054,
+        "Latitude": -33.054044
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.619605400000012, -33.054044]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4009981-6",
+        "Nombre": "Graciela",
+        "Direccion": "315,rodolfo philippi,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4164311-0",
+        "Nombre": "Luis",
+        "Direccion": "456,miguel angel,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6261621,
+        "Latitude": -33.0568588
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6261621, -33.0568588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4261850-0",
+        "Nombre": "Emilia",
+        "Direccion": "620,elias,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6282214,
+        "Latitude": -33.0449667
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6282214, -33.0449667]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4340907-7",
+        "Nombre": "Hermina",
+        "Direccion": "222,bernardo ramos,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6214035,
+        "Latitude": -33.0481622
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6214035, -33.0481622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4357197-4",
+        "Nombre": "Bernardo",
+        "Direccion": "30,yerbas buenas,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.623661,
+        "Latitude": -33.0459369
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.623661, -33.0459369]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4381772-8",
+        "Nombre": "Sergio",
+        "Direccion": "482,bernardo ramos,valparaiso,chile",
+        "Sector": "27-C",
+        "Jefe_Equipo_Cabecera": "Nauto",
+        "Longitude": -71.6220584,
+        "Latitude": -33.0501388
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6220584, -33.0501388]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4491035-7",
+        "Nombre": "Edith",
+        "Direccion": "150,rita otaegui,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4530282-2",
+        "Nombre": "Luis",
+        "Direccion": "1,la ruda,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6190043,
+        "Latitude": -33.0598849
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6190043, -33.0598849]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4587138-k",
+        "Nombre": "Teresa",
+        "Direccion": "173,luis pirard,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6291863,
+        "Latitude": -33.0535169
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6291863, -33.053516900000012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4698859-0",
+        "Nombre": "María",
+        "Direccion": "122,pedro de ona,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6183638,
+        "Latitude": -33.0628371
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6183638, -33.0628371]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4857071-2",
+        "Nombre": "Fresia Del Rosario",
+        "Direccion": "332,pedro de ona,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6179629,
+        "Latitude": -33.0558762
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6179629, -33.0558762]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4861234-2",
+        "Nombre": "Florencio",
+        "Direccion": "12,rene lagos,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6180611,
+        "Latitude": -33.0582797
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6180611, -33.0582797]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4875295-0",
+        "Nombre": "Vicente",
+        "Direccion": "648,rene lagos,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6175292,
+        "Latitude": -33.058504
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6175292, -33.058504]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4966064-2",
+        "Nombre": "Manuel",
+        "Direccion": "2,lorena,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6332974,
+        "Latitude": -33.0532817
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6332974, -33.0532817]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "4990582-3",
+        "Nombre": "Laura",
+        "Direccion": "282,bahia,valparaiso,chile",
+        "Sector": "27-C",
+        "Jefe_Equipo_Cabecera": "Nauto",
+        "Longitude": -71.6216146,
+        "Latitude": -33.0575352
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6216146, -33.0575352]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5042540-1",
+        "Nombre": "Violeta",
+        "Direccion": "482,trece,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6221081,
+        "Latitude": -33.0519469
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6221081, -33.0519469]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5054835-k",
+        "Nombre": "Manuel",
+        "Direccion": "480,miguel angel,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6263405,
+        "Latitude": -33.0572687
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6263405, -33.0572687]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5057700-7",
+        "Nombre": "Gaston",
+        "Direccion": "172,miguel angel,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6251749,
+        "Latitude": -33.0545666
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6251749, -33.0545666]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5111727-1",
+        "Nombre": "Sergio",
+        "Direccion": "6797,aquiles ramirez,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6291434,
+        "Latitude": -33.054733
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6291434, -33.054733]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5451620-7",
+        "Nombre": "Ángela",
+        "Direccion": "483,ricardo de ferrari,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.6219018,
+        "Latitude": -33.0517212
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6219018, -33.0517212]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5491373-7",
+        "Nombre": "Rojas Castro",
+        "Direccion": "676,cumming,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6294145,
+        "Latitude": -33.0474258
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6294145, -33.0474258]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5505172-0",
+        "Nombre": "Flora",
+        "Direccion": "113,benigno posada,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": null,
+        "Latitude": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5611846-2",
+        "Nombre": "Jose",
+        "Direccion": "855,vicente blasco ibanez,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6273119,
+        "Latitude": -33.0506252
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6273119, -33.0506252]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5706556-7",
+        "Nombre": "Rosa",
+        "Direccion": "505,miguel angel,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6265572,
+        "Latitude": -33.0577404
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6265572, -33.0577404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5881295-1",
+        "Nombre": "Aurora",
+        "Direccion": "190,once,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6206998,
+        "Latitude": -33.0522476
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6206998, -33.0522476]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5984703-1",
+        "Nombre": "Juliana",
+        "Direccion": "986,esfuerzo,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6901463,
+        "Latitude": -33.1105952
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6901463, -33.1105952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "5999103-5",
+        "Nombre": "Luisa",
+        "Direccion": "62,adolfo ibanez,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6321096,
+        "Latitude": -33.045431
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6321096, -33.045431]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "6112857-3",
+        "Nombre": "Jorge",
+        "Direccion": "337,jenofonte,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6322715,
+        "Latitude": -33.050865
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6322715, -33.050865]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "6160682-3",
+        "Nombre": "Ester",
+        "Direccion": "974,esfuerzo,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6901463,
+        "Latitude": -33.1105952
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6901463, -33.1105952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "6397448-k",
+        "Nombre": "Silvia",
+        "Direccion": "13,cintura,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.634547,
+        "Latitude": -33.0317678
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.634547, -33.0317678]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "6559839-6",
+        "Nombre": "Yolanda",
+        "Direccion": "326,almagro,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.5666178,
+        "Latitude": -33.0268136
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.5666178, -33.0268136]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "6661897-8",
+        "Nombre": "Celinda",
+        "Direccion": "539,general mackenna,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.624173,
+        "Latitude": -33.0502555
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.624173, -33.0502555]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "7220175-2",
+        "Nombre": "Fresia",
+        "Direccion": "981,guillermo rivera,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6254252,
+        "Latitude": -33.0534864
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6254252, -33.0534864]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "7661138-6",
+        "Nombre": "Delia",
+        "Direccion": "407,rene lagos,valparaiso,chile",
+        "Sector": "27-B",
+        "Jefe_Equipo_Cabecera": "Camilo Muñoz",
+        "Longitude": -71.6175344,
+        "Latitude": -33.0585051
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6175344, -33.0585051]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "7711848-9",
+        "Nombre": "Monica",
+        "Direccion": "7654,atahualpa,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6289913,
+        "Latitude": -33.0461795
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6289913, -33.0461795]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "7879225-6",
+        "Nombre": "Hector",
+        "Direccion": "220,aquiles ramirez,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6284147,
+        "Latitude": -33.0532782
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6284147, -33.0532782]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "8505502-k",
+        "Nombre": "Rosa",
+        "Direccion": "78,vista hermosa,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6365919,
+        "Latitude": -33.0327712
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6365919, -33.0327712]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "8369441-6",
+        "Nombre": "Danilo",
+        "Direccion": "4930,alemania,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6327907,
+        "Latitude": -33.0471827
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6327907, -33.0471827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "8841426-8",
+        "Nombre": "Patricio",
+        "Direccion": "272,cangreja,valparaiso,chile",
+        "Sector": null,
+        "Jefe_Equipo_Cabecera": null,
+        "Longitude": -71.6211922,
+        "Latitude": -33.0590383
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6211922, -33.0590383]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "8885585-k",
+        "Nombre": "Ricardo",
+        "Direccion": "35,toribio loyola,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6268326,
+        "Latitude": -33.0487128
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6268326, -33.0487128]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "897388-1",
+        "Nombre": "Esperanza",
+        "Direccion": "66,marinero fuentealba,valparaiso,chile",
+        "Sector": "27-A",
+        "Jefe_Equipo_Cabecera": "Aldo Solar",
+        "Longitude": -71.408995,
+        "Latitude": -33.0465229
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.408995, -33.0465229]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "9103657-6",
+        "Nombre": "Rómulo",
+        "Direccion": "643,bernardo vera,valparaiso,chile",
+        "Sector": "18-C",
+        "Jefe_Equipo_Cabecera": "Andrea Donoso",
+        "Longitude": -71.6257633,
+        "Latitude": -33.048417
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6257633, -33.048417]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "940308-6",
+        "Nombre": "Dominga",
+        "Direccion": "578,atahualpa,valparaiso,chile",
+        "Sector": "18-B",
+        "Jefe_Equipo_Cabecera": "Ximena Escobar",
+        "Longitude": -71.6294462,
+        "Latitude": -33.0466014
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6294462, -33.0466014]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Rut": "9835832-3",
+        "Nombre": "Maria",
+        "Direccion": "636,aquiles ramirez,valparaiso,chile",
+        "Sector": "18-A",
+        "Jefe_Equipo_Cabecera": "Alejandra Peñaloza",
+        "Longitude": -71.6285859,
+        "Latitude": -33.0537612
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.6285859, -33.0537612]
+      }
+    }
+  ]
 }
