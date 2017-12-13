@@ -1,0 +1,227 @@
+<head>
+  <meta charset='utf-8' />
+  <title> SISTAM CESFAM Mena</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!--*************************** SOURCE ************************************-->
+  <!--main-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+  <!--polygon-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
+  <!--turf-->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+  <!--smalltalk-->
+  <link rel="stylesheet" href="../../node_modules/smalltalk/dist/smalltalk.min.css">
+  <script src="../../node_modules/smalltalk/dist/smalltalk.poly.min.js"></script>
+  <!--GoogleMaps-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript"></script>
+  <!--XLSX-->
+  <script lang="javascript" src="../../node_modules/xlsx/dist/xlsx.full.min.js"></script>
+  <!--JQuery-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../../node_modules/jquery/dist/jquery.js"></script>
+  <!--project4-->
+  <script src="../../node_modules/proj4/dist/proj4.js"></script>
+  <!--***********************************************************************-->
+
+  <!-- *************************** CSS ************************************* -->
+  <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/map.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/checkbox_clear.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/mainTopbar.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/sidebar.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/search.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/checkbox_programa.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/checkbox_hill.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/checkbox_sector.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/checkbox_ssector.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/desplegable.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/subselector.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/deploy_sub.css">
+  <!--***********************************************************************-->
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <body>
+    <div id='map'></div>
+    <!-- ********************* HTML BUTTONS ******************************** -->
+    <div style="margin-left:50%"></div>
+
+    <div id="turfModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Resultados Selección</h2>
+          <h3>Personas Seleccionadas : </h3>
+          <p id="viewQuantities"></p>
+        </div>
+        <div class="modal-body">
+          <p id='viewValue'></p>
+        </div>
+        <div class="modal-footer">
+          <h3>CESFAM MENA</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="furyModal" class="modal">
+      <div class="furyModal-content">
+        <div class="furyModal-header">
+          <span class="furyclose">&times;</span>
+          <h2>Resultados Selección</h2>
+          <h3>Personas Seleccionadas : </h3>
+          <p id="viewQuant"></p>
+        </div>
+        <div class="furyModal-body">
+          <p id='viewVal'></p>
+        </div>
+        <div class="furyModal-footer">
+          <h3>CESFAM MENA</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-bar">
+      <a class="active1" href="#"><i class="fa fa-home"></i></a>
+      <a href="#"><i class="fa fa-globe" onclick="editWindow()"></i></a>
+      <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
+      <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
+      <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
+      <div class="container-search">
+        <input type="search" id="search" placeholder="Buscar..." />
+        <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+
+    <div class="sidecontainer">
+      <div class="sidebar">
+
+        <div class="photo">
+          <img src="../../extras/pictures/logoG.jpg" alt="samus" style="width:100%;height:50%px;">
+        </div>
+
+        <div class="main">
+          <p>Seleccione Programa</p>
+          <button onclick="viewPrograma()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+
+          <div class="roundedOne">
+            <input type="checkbox" id="roundedOne" name="check">
+            <label for="roundedOne"><title>Inmovilizado</title></label>
+          </div>
+          <div class="roundedTwo">
+            <input type="checkbox" id="roundedTwo" name="check">
+            <label for="roundedTwo"><title>Recordatorio</title></label>
+          </div>
+          <div class="roundedThree">
+            <input type="checkbox" id="roundedThree" name="check">
+            <label for="roundedThree"><title>Actualizada</title></label>
+          </div>
+
+        </div>
+
+        <div class="main2">
+          <p>Territorio MENA</p>
+          <button onclick="viewHill()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+          <div class="roundedHill">
+            <input type="checkbox" id="roundedHill" name="check">
+            <label for="roundedHill"><title>Cerros</title></label>
+          </div>test
+        </div>
+
+        <div class="main3">
+          <p>Seleccione Sector</p>
+          <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+          <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
+
+          <div class="roundedS18">
+            <input type="checkbox" value=1 id="rounded18" name="check">
+            <label for="rounded18"><title>Sector18</title></label>
+          </div>
+          <div class="roundedS27">
+            <input type="checkbox" value=1.1 id="rounded27" name="check">
+            <label for="rounded27"><title>Sector27</title></label>
+          </div>
+        </div>
+
+        <div class="main4">
+          <p>Seleccione SubSector</p>
+          <button onclick="viewSubSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+          <div class="rounded18A">
+            <input type="checkbox" id="rounded18A" name="check">
+            <label for="rounded18A"><title>Sector18A</title></label>
+          </div>
+          <div class="rounded18B">
+            <input type="checkbox" id="rounded18B" name="check">
+            <label for="rounded18B"><title>Sector18B</title></label>
+          </div>
+          <div class="rounded18C">
+            <input type="checkbox" id="rounded18C" name="check">
+            <label for="rounded18C"><title>Sector18C</title></label>
+          </div>
+          <div class="rounded27A">
+            <input type="checkbox" id="rounded27A" name="check">
+            <label for="rounded27A"><title>Sector27A</title></label>
+          </div>
+          <div class="rounded27B">
+            <input type="checkbox" id="rounded27B" name="check">
+            <label for="rounded27B"><title>Sector27B</title></label>
+          </div>
+          <div class="rounded27C">
+            <input type="checkbox" id="rounded27C" name="check">
+            <label for="rounded27C"><title>Sector27C</title></label>
+          </div>
+        </div>
+
+        <div class="main5">
+          <p>Limpiar Territorio</p>
+          <button onclick="viewclearAll()" class="icon"><i class="fa fa-times" id="clearAll"></i></button>
+        </div>
+
+        <div class="main6">
+          <p>Limpiar Busqueda</p>
+          <button onclick="viewclearSearch()" class="icon"><i class="fa fa-times" id="clearSearch"></i></button>
+        </div>
+      </div>
+    </div>
+    <!--*********************************************************************-->
+
+    <!-- ********************* JS SCRIPTS ******************************** -->
+    <script>
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+    <!--
+  -->
+
+    <script src="../../js/main/main.js"></script>
+    <script src="../../js/main/qbuton.js"></script>
+    <script src="../../js/main/firstLoad.js"></script>
+    <script src="../../js/main/polygon.js"></script>
+    <script src="../../js/main/butonSubSector.js"></script>
+    <script src="../../js/main/butonSector.js"></script>
+    <script src="../../js/main/butonHill.js"></script>
+    <script src="../../js/main/butonClear.js"></script>
+    <script src="../../js/main/editWindow.js"></script>
+    <script src="../../js/main/mapWindow.js"></script>
+    <script src="../../js/main/search.js"></script>
+    <!--
+-->
+    <!--*********************************************************************-->
+
+    <!-- ******************  GEOCODING JS SCRIPTS **************************** -->
+    <!--
+    <script src="../../js/route/walk.js"></script>
+    <script src="../../js/geocoding/database.js"></script>
+  -->
+
+  </body>
+
+  </html>

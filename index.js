@@ -21,10 +21,14 @@ app.on('ready', function() {
     autoHideMenuBar: true,
     fullscreen: false
   });
-  mainWindow.openDevTools();
-  mainWindow.loadURL('file://' + __dirname + '/src/mainIndex.html');
-  //mainWindow.loadURL('file://' + __dirname + '/src/test.html');
   //mainWindow.maximize()
+  mainWindow.openDevTools();
+
+  /*
+    mainWindow.loadURL('file://' + __dirname + '/src/html/test.html');
+  */
+
+  mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
 
   mainWindow.on('closed', function() {
     mainWindow = null;

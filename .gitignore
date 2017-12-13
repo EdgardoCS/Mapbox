@@ -3,10 +3,8 @@
 ###############
 
 node_modules/
-db/
-xlsx/
-User Manual/
-logs/
-pictures/
-oldJs/
-qml/
+extras/
+src/xlsx
+src/db
+src/geodata
+js/old
