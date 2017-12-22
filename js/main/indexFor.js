@@ -19,7 +19,7 @@ exports.newFor = function(array) {
 
     end.endbuton(objects);
     sms.build(objects);
-    //sub.subturf(objects);
+    sub.subturf(objects);
     selection.toUInfo(objects);
   }
 };

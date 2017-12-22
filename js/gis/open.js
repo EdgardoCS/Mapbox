@@ -1,3 +1,5 @@
+var parse = require('../../js/gis/parser.js')
+var sleep = require('../../js/gis/getcoord.js')
 const fs = require("fs");
 const {
   dialog
@@ -16,9 +18,16 @@ document.getElementById("bt-read").addEventListener("click", () => {
         console.log("cannot read", err);
         return;
       }
-      //console.log(data);
-      var a = JSON.parse(data);
-      console.log(a);
+
+      var incoming = JSON.parse(data);
+
+      if (incoming.name == "cerros_IMV") {
+
+        sleep.drifting(incoming);
+      } else {
+        parse.parser(incoming);
+      }
+
 
     });
   });

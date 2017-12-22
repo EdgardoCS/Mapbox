@@ -6,8 +6,8 @@ var fromsubturf;
 
 
 exports.toUInfo = function(objects) {
-
   exports.useri = function(add) {
+
     var modal = document.getElementById('turfModal');
     var span = document.getElementsByClassName("close")[0];
 

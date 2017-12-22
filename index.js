@@ -25,10 +25,10 @@ app.on('ready', function() {
   mainWindow.openDevTools();
 
   /*
-    mainWindow.loadURL('file://' + __dirname + '/src/html/test.html');
+    mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
   */
+  mainWindow.loadURL('file://' + __dirname + '/src/html/test.html');
 
-  mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
 
   mainWindow.on('closed', function() {
     mainWindow = null;

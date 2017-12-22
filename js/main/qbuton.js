@@ -1,7 +1,6 @@
 var nextTo = require('../../js/main/layerBt.js');
-//var nextUInfo = require('../../js/main/userInfo.js');
-//var add = require('../../js/main/smsBuild.js');
-//var nextZInfo = require('../../js/main/zoneInfo.js');
+var nextUInfo = require('../../js/main/userInfo.js');
+var nextZInfo = require('../../js/main/zoneInfo.js');
 
 var addPostrado = false;
 var addRecordatorio = false;
@@ -45,7 +44,6 @@ function viewPrograma() {
   var remove = [removePostrado, removeRecordatorio, removeAM];
 
   nextTo.option(add);
-  //nextUInfo.useri(add);
-  //add.toSms(add);
-  //nextZInfo.zonei(add);
+  nextUInfo.useri(add);
+  nextZInfo.zonei(add);
 }
