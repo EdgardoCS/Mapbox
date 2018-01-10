@@ -1,11 +1,11 @@
-var parse = require('../../js/gis/parser.js')
+var parse = require('../../js/gis/manager.js')
 var sleep = require('../../js/gis/getcoord.js')
 const fs = require("fs");
 const {
   dialog
 } = require("electron").remote;
 
-document.getElementById("bt-read").addEventListener("click", () => {
+document.getElementById("fit").addEventListener("click", () => {
 
   dialog.showOpenDialog((fileNames) => {
     if (fileNames === undefined) {
@@ -22,12 +22,10 @@ document.getElementById("bt-read").addEventListener("click", () => {
       var incoming = JSON.parse(data);
 
       if (incoming.name == "cerros_IMV") {
-
         sleep.drifting(incoming);
       } else {
         parse.parser(incoming);
       }
-
 
     });
   });

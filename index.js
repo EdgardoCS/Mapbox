@@ -14,20 +14,19 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
 
-    width: 1600,
-    height: 1000,
+    width: 1200,
+    height: 900,
     minWidth: 420,
     minHeight: 480,
     autoHideMenuBar: true,
     fullscreen: false
   });
-  //mainWindow.maximize()
-  mainWindow.openDevTools();
-
   /*
-    mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
+  mainWindow.maximize()
+  mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
   */
   mainWindow.loadURL('file://' + __dirname + '/src/html/test.html');
+  mainWindow.openDevTools();
 
 
   mainWindow.on('closed', function() {

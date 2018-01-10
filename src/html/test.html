@@ -27,6 +27,8 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="../../node_modules/jquery/dist/jquery.js"></script>
   <!--***********************************************************************-->
+  <link rel=stylesheet type="text/css" href="../../css/main/map.css">
+
 
 </head>
 
@@ -35,14 +37,30 @@
     margin: 0;
   }
 </style>
+<style>
+  #fit {
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #ee8a65;
+  }
+</style>
+<div id='map'></div>
+<input type="button" id="fit" value="Select a file" />
+<div style="margin-left:50%"></div>
 
 <body>
-  <div id='map'></div>
-  <input type="button" id="bt-read" value="Select a file" />
-  <div style="margin-left:50%"></div>
-
 
   <script src="../../js/gis/open.js"></script>
+  <script src="../../js/main/main.js"></script>
 
 </body>
 

@@ -35,13 +35,38 @@ function viewSector() {
   for (i = 0; i < 1; i++) {
     if (isSectorSelected[0] == true) {
       map.addLayer(sector18);
+      // map.addLayer(mena);
     }
     if (isSectorSelected[1] == true) {
       map.addLayer(sector27);
     }
   }
 }
-
+var mena = {
+  "id": "CESFAM MENA",
+  "type": "circle",
+  "source": {
+    "type": "geojson",
+    "data": {
+      "type": "FeatureCollection",
+      "features": [{
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-71.631230, -33.048942]
+        },
+        "properties": {},
+      }]
+    }
+  },
+  "layout": {
+    'visibility': 'visible'
+  },
+  "paint": {
+    "circle-radius": 8,
+    "circle-color": "#0fbfe2"
+  },
+};
 var sector18 = {
   "id": "sector18",
   "type": "fill",
@@ -329,10 +354,11 @@ var sector18 = {
   "layout": {},
   "paint": {
     "fill-color": "#d8d114",
-    "fill-opacity": 0.5,
+    "fill-opacity": 0.3,
     "fill-outline-color": "#D20C0C"
   }
 };
+console.log(sector18)
 var sector27 = {
   "id": "sector27",
   "type": "fill",
@@ -592,7 +618,7 @@ var sector27 = {
   "layout": {},
   "paint": {
     "fill-color": "#15d8b8",
-    "fill-opacity": 0.5,
+    "fill-opacity": 0.3,
     "fill-outline-color": "#D20C0C"
   }
 };

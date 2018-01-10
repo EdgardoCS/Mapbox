@@ -3,7 +3,6 @@ var sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const dbPath = path.resolve('src/db','new.db')
 var db = new sqlite3.Database(dbPath);
-
 //var db = new sqlite3.Database('../db/new.db');
 var next = require('../../js/main/indexFor.js');
 
