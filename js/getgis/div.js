@@ -1,7 +1,10 @@
+var wah = require('../../js/getgis/write.js');
+
 var nam;
 var typ;
 var coor;
 var desc;
+var paint;
 var div_layer;
 var div_source;
 var div_obj = [];
@@ -64,9 +67,8 @@ exports.luck = function(div_pol_adm, _l, clasification) {
     div_layer = make_tail(div_obj);
     div_source = tailgunner(clasification, nam, typ, div_layer);
   }
-  // console.log(div_source);
-  // console.log(div_layer);
-  map.addLayer(div_source);
+  wah.wah(div_source);
+  // map.addLayer(div_source);
 }
 
 make_gunner = function(nam, typ, coor, desc) {
@@ -102,33 +104,33 @@ tailgunner = function(clasification, nam, typ, div_layer) {
     color = "#ff7f00";
   }
   if (clasification == "Plazas") {
-    color = "#ffbb00";
+    color = "#648e00";
   }
   if (clasification == "Sectores_dideco") {
-    color = "#fff600";
+    color = "#6d0000";
   }
   if (clasification == "Unidades_vecinales") {
-    color = "#d0ff00";
+    color = "#728c01";
   }
 
 
   if (typ == "Polygon" || typ == "MultiPolygon") {
     var type = "fill";
-    var paint = {
+     paint = {
       "fill-color": color,
       "fill-opacity": 0.8
     };
   }
   if (typ == "Point") {
     var type = "circle";
-    var paint = {
+     paint = {
       "circle-radius": 5,
       "circle-color": color,
     };
   }
   if (typ == "LineString" || typ == "MultiLineString") {
     var type = "line";
-    var paint = {
+     paint = {
       "line-color": color,
       "line-width": 3
     }

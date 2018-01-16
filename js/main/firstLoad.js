@@ -1,10 +1,9 @@
 var sqlite3 = require('sqlite3').verbose();
 
-const path = require('path');
 const dbPath = path.resolve('src/db','new.db')
 var db = new sqlite3.Database(dbPath);
-//var db = new sqlite3.Database('../db/new.db');
-var next = require('../../js/main/indexFor.js');
+
+var next = require(path.resolve('js/submain', './indexFor.js'));
 
 var Nombre;
 var Rut;
@@ -73,6 +72,7 @@ db.all("SELECT * FROM Recordatorio", function(err, row) {
   var recordatorio = [recordatorioSource, recordatorioLayer];
   next.newFor(recordatorio);
 
+
 });
 db.all("SELECT * FROM Users", function(err, row) {
   celda = row.length;
@@ -135,7 +135,7 @@ makeLayer = function(features) {
     fuente = "recordatorioMarkers"
   }
   if (features[0].properties.program == "Adulto Mayor") {
-    color = "#87ad2e"
+    color = "#3ebc98"
     id = "AdultoMayor"
     fuente = "adultoMarkers"
   }

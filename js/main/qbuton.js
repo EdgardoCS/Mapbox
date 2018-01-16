@@ -1,6 +1,7 @@
-var nextTo = require('../../js/main/layerBt.js');
-var nextUInfo = require('../../js/main/userInfo.js');
-var nextZInfo = require('../../js/main/zoneInfo.js');
+
+var nextTo = require(path.resolve('js/submain', './layerBt.js'));
+var nextUInfo = require(path.resolve('js/submain', './userInfo.js'));
+var nextZInfo = require(path.resolve('js/submain', './zoneInfo.js'));
 
 var addPostrado = false;
 var addRecordatorio = false;

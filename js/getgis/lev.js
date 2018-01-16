@@ -1,3 +1,5 @@
+var mr = require('../../js/getgis/write.js');
+
 var nam;
 var typ;
 var coor;
@@ -5,6 +7,7 @@ var desc;
 var lev_layer;
 var lev_source;
 var lev_obj = [];
+var paint;
 
 exports.desert = function(lev_comp_cat, _l, clasification) {
 
@@ -25,7 +28,7 @@ exports.desert = function(lev_comp_cat, _l, clasification) {
     nam = lev_comp_cat.name;
     for (i = 0; i < _l; i++) {
       typ = lev_comp_cat.features[i].geometry.type;
-      coor = [lev_comp_cat.features[i].geometry.coordinates[0],lev_comp_cat.features[i].geometry.coordinates[1]];
+      coor = [lev_comp_cat.features[i].geometry.coordinates[0], lev_comp_cat.features[i].geometry.coordinates[1]];
       desc = lev_comp_cat.features[i].properties;
 
       lev_obj[i] = make_light(nam, typ, coor, desc);
@@ -34,9 +37,8 @@ exports.desert = function(lev_comp_cat, _l, clasification) {
     lev_source = whitelight(clasification, nam, typ, lev_layer);
 
   }
-  // console.log(lev_source);
-  // console.log(lev_layer);
-  map.addLayer(lev_source);
+  mr.beat(lev_source);
+  // map.addLayer(lev_source);
 }
 
 
@@ -76,21 +78,21 @@ whitelight = function(clasification, nam, typ, lev_layer) {
 
   if (typ == "Polygon" || typ == "MultiPolygon") {
     var type = "fill";
-    var paint = {
+    paint = {
       "fill-color": color,
       "fill-opacity": 0.8
     };
   }
   if (typ == "Point") {
     var type = "circle";
-    var paint = {
+    paint = {
       "circle-radius": 4,
       "circle-color": color,
     };
   }
   if (typ == "LineString" || typ == "MultiLineString") {
     var type = "line";
-    var paint = {
+    paint = {
       "line-color": color,
       "line-width": 3
     }

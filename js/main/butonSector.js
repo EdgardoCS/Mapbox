@@ -32,10 +32,13 @@ function viewSector() {
   if (map.getLayer("sector27")) {
     map.removeLayer("sector27");
   }
+  if(map.getLayer("CESFAM MENA")){
+    map.removeLayer("CESFAM MENA");
+  }
   for (i = 0; i < 1; i++) {
     if (isSectorSelected[0] == true) {
       map.addLayer(sector18);
-      // map.addLayer(mena);
+      map.addLayer(mena);
     }
     if (isSectorSelected[1] == true) {
       map.addLayer(sector27);
@@ -63,7 +66,7 @@ var mena = {
     'visibility': 'visible'
   },
   "paint": {
-    "circle-radius": 8,
+    "circle-radius": 5,
     "circle-color": "#0fbfe2"
   },
 };
@@ -358,7 +361,6 @@ var sector18 = {
     "fill-outline-color": "#D20C0C"
   }
 };
-console.log(sector18)
 var sector27 = {
   "id": "sector27",
   "type": "fill",

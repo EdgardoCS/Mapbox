@@ -1,5 +1,5 @@
-var check = require(path.resolve('js/main', './zoneInfo.js'));
-var subcheck = require(path.resolve('js/main', './zoneInfo.js'));
+var check = require(path.resolve('js/submain', './zoneInfo.js'));
+var subcheck = require(path.resolve('js/submain', './zoneInfo.js'));
 
 var addss18A;
 var addss18B;

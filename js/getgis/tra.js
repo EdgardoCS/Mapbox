@@ -1,13 +1,17 @@
+var road = require('../../js/getgis/write.js');
+
 var nam;
 var typ;
 var coor;
 var desc;
+var paint;
 var tra_layer;
 var tra_source;
 var tra_obj = [];
 var coordin = [];
+
 exports.thesink = function(transporte_geocoor, _l, clasification) {
-  console.log(transporte_geocoor);
+
   if (clasification == "ascensores") {
     nam = transporte_geocoor.name;
     for (i = 0; i < _l; i++) {
@@ -44,9 +48,8 @@ exports.thesink = function(transporte_geocoor, _l, clasification) {
     tra_layer = make_inner(tra_obj);
     tra_source = innercell(clasification, nam, typ, tra_layer);
   }
-  // console.log(tra_source);
-  console.log(tra_layer);
-  map.addLayer(tra_source);
+  road.train(tra_source)
+  // map.addLayer(tra_source);
 }
 make_cell = function(nam, typ, coor, desc) {
   var features;
@@ -81,26 +84,26 @@ innercell = function(clasification, nam, typ, div_layer) {
     color = "#07b0ff";
   }
   if (clasification == "recorridos_taxicolectivos") {
-    color = "#0761ff";
+    color = "#0250d8";
   }
 
   if (typ == "Polygon" || typ == "MultiPolygon") {
     var type = "fill";
-    var paint = {
+    paint = {
       "fill-color": color,
       "fill-opacity": 0.8
     };
   }
   if (typ == "Point") {
     var type = "circle";
-    var paint = {
+    paint = {
       "circle-radius": 5,
       "circle-color": color,
     };
   }
   if (typ == "LineString" || typ == "MultiLineString") {
     var type = "line";
-    var paint = {
+    paint = {
       "line-color": color,
       "line-width": 3
     }

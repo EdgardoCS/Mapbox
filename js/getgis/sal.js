@@ -1,7 +1,10 @@
+var hot = require('../../js/getgis/write.js');
+
 var nam;
 var typ;
 var coor;
 var desc;
+var paint;
 var sal_layer;
 var sal_source;
 var sal_obj = [];
@@ -56,9 +59,8 @@ exports.water = function(salud_geocoor, _l, clasification) {
     sal_layer = make_polygond(sal_obj);
     sal_source = polygondwanaland(clasification, nam, typ, sal_layer);
   }
-  // console.log(sal_source);
-  // console.log(sal_layer);
-  map.addLayer(sal_source);
+  hot.water(sal_source);
+  // map.addLayer(sal_source);
 }
 make_wanaland = function(nam, typ, coor, desc) {
   var features;
@@ -101,21 +103,21 @@ polygondwanaland = function(clasification, nam, typ, sal_layer) {
 
   if (typ == "Polygon" || typ == "MultiPolygon") {
     var type = "fill";
-    var paint = {
+    paint = {
       "fill-color": color,
       "fill-opacity": 0.8
     };
   }
   if (typ == "Point") {
     var type = "circle";
-    var paint = {
+    paint = {
       "circle-radius": 5,
       "circle-color": color,
     };
   }
   if (typ == "LineString" || typ == "MultiLineString") {
     var type = "line";
-    var paint = {
+    paint = {
       "line-color": color,
       "line-width": 3
     }

@@ -23,9 +23,9 @@ app.on('ready', function() {
   });
   /*
   mainWindow.maximize()
-  mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
-  */
   mainWindow.loadURL('file://' + __dirname + '/src/html/test.html');
+  */
+  mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
   mainWindow.openDevTools();
 
 

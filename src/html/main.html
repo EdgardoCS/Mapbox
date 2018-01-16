@@ -47,11 +47,11 @@
 
 <body>
 
-<style>
-body {
-  margin: 0;
-}
-</style>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
   <div id='map'></div>
   <div style="margin-left:50%"></div>
 
@@ -91,8 +91,11 @@ body {
   </div>
 
   <div class="icon-bar">
+    <!--
     <a class="active1" href="#"><i class="fa fa-home"></i></a>
+-->
     <a href="#"><i class="fa fa-globe" onclick="editWindow()"></i></a>
+    <a href="#"><i class="fa fa-cube" id="mapBuild"></i></a>
     <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
     <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
     <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
@@ -131,17 +134,23 @@ body {
       <div class="main2">
         <p>Territorio MENA</p>
         <button onclick="viewHill()" class="icon"><i class="fa fa-eye" id="view"></i></button>
+
         <div class="roundedHill">
           <input type="checkbox" id="roundedHill" name="check">
           <label for="roundedHill"><title>Cerros</title></label>
-        </div>test
+        </div>
+        <div class="roundedUnity">
+          <input type="checkbox" id="roundedUnity" name="check">
+          <label for="roundedUnity"><title>Unidades</title></label>
+        </div>
       </div>
 
       <div class="main3">
         <p>Seleccione Sector</p>
         <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
         <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
-
+<!--
+-->
         <div class="roundedS18">
           <input type="checkbox" value=1 id="rounded18" name="check">
           <label for="rounded18"><title>Sector18</title></label>
@@ -200,8 +209,8 @@ body {
       window.module = module;
       module = undefined;
     }
+    const path = require('path');
   </script>
-
   <script src="../../js/main/main.js"></script>
   <script src="../../js/main/qbuton.js"></script>
   <script src="../../js/main/firstLoad.js"></script>
@@ -213,6 +222,7 @@ body {
   <script src="../../js/main/editWindow.js"></script>
   <script src="../../js/main/mapWindow.js"></script>
   <script src="../../js/main/search.js"></script>
+  <script src="../../js/getgis/open.js"></script>
   <!--
 -->
   <!--*********************************************************************-->
