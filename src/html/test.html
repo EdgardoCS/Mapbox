@@ -37,6 +37,7 @@
     margin: 0;
   }
 </style>
+<!--
 <style>
   #fit {
     display: block;
@@ -53,13 +54,22 @@
     background: #ee8a65;
   }
 </style>
-<div id='map'></div>
 <input type="button" id="fit" value="Select a file" />
+-->
+<div id='map'></div>
 <div style="margin-left:50%"></div>
 
 <body>
-
-  <script src="../../js/gis/open.js"></script>
+  <script>
+    if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+    }
+    const path = require('path');
+  </script>
+  <script src="../../js/main/ams.js"></script>
+  <!--
+-->
   <script src="../../js/main/main.js"></script>
 
 </body>

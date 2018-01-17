@@ -10,9 +10,15 @@
 </head>
 
 <body>
-
-  <script type="text/javascript"></script>
-  <script src="../geocodingJs/database.js"></script>
+  <script>
+    if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+    }
+    const path = require('path');
+  </script>
+  <script src="../../js/geocoding/database.js"></script>
+  
 </body>
 
 </html>
