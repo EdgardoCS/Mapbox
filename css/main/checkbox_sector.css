@@ -1,27 +1,8 @@
-/*
-.check-boxSector {
-  width: 120px;
-  height: 90px;
-  position: absolute;
-  top: 325px;
-  left: 5px;
-  background: #2b303b;
-  border: none;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  text-align: justify;
-  display: inline-block;
-  color: #fff;
-  margin: 8px 0;
-}
-*/
-
 input[type=checkbox] {
   visibility: hidden;
 }
 
-.roundedS18 {
+.S18 {
   top: auto;
   width: 18px;
   height: 18px;
@@ -42,12 +23,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedS18 title {
+.S18 title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedS18 label {
+.S18 label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -68,7 +49,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedS18 label:after {
+.S18 label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -92,19 +73,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedS18 label:hover::after {
+.S18 label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedS18 input[type=checkbox]:checked+label:after {
+.S18 input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.roundedS27 {
+.S27 {
   top: auto;
   width: 18px;
   height: 18px;
@@ -125,12 +106,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedS27 title {
+.S27 title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedS27 label {
+.S27 label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -151,7 +132,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedS27 label:after {
+.S27 label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -175,19 +156,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedS27 label:hover::after {
+.S27 label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedS27 input[type=checkbox]:checked+label:after {
+.S27 input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.main3 button.icon {
+.checkSectores button.icon {
   position: absolute;
   height: 30px;
   width: 30px;

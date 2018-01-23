@@ -15,7 +15,7 @@ var removess27A;
 var removess27B;
 var removess27C;
 
-document.getElementById('rounded18A').addEventListener('change', function(e) {
+document.getElementById('ss18A').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addss18A = false;
     removess18A = true;
@@ -26,7 +26,7 @@ document.getElementById('rounded18A').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('rounded18B').addEventListener('change', function(e) {
+document.getElementById('ss18B').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addss18B = false;
     removess18B = true;
@@ -37,7 +37,7 @@ document.getElementById('rounded18B').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('rounded18C').addEventListener('change', function(e) {
+document.getElementById('ss18C').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addss18C = false;
     removess18C = true;
@@ -48,7 +48,7 @@ document.getElementById('rounded18C').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('rounded27A').addEventListener('change', function(e) {
+document.getElementById('ss27A').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addss27A = false;
     removess27A = true;
@@ -59,7 +59,7 @@ document.getElementById('rounded27A').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('rounded27B').addEventListener('change', function(e) {
+document.getElementById('ss27B').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addss27B = false;
     removess27B = true;
@@ -70,7 +70,7 @@ document.getElementById('rounded27B').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('rounded27C').addEventListener('change', function(e) {
+document.getElementById('ss27C').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addss27C = false;
     removess27C = true;

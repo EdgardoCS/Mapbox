@@ -34,11 +34,14 @@ var newAdd;
 var mostrarLargo;
 var individualLargo = [];
 
-var objArray;
+var inArray = [];
+var reArray = [];
+var amArray = [];
+
 var selecButton = document.getElementById('SubSec');
 
 exports.habilitado = function(coorArray) {
-    exports.subturf = function(objects) {
+  exports.subturf = function(objects) {
 
     polygono18A = setPolygon18A(coorArray);
     polygono18B = setPolygon18B(coorArray);
@@ -48,9 +51,12 @@ exports.habilitado = function(coorArray) {
     polygono27C = setPolygon27C(coorArray);
 
     objArray = objects;
+
+    inArray = objArray[0].source;
+    reArray = objArray[1].source;
+    amArray = objArray[2].source;
   }
 }
-
 exports.tosubturf = function(isSubSectorSelected) {
   newSubSector = isSubSectorSelected;
 }
@@ -62,16 +68,17 @@ var fury = document.getElementById('furyModal');
 var storm = document.getElementsByClassName('furyclose')[0];
 
 selecButton.onclick = function() {
-  var InmMostrar = [];
-  var RecMostrar = [];
-  var AdmMostrar = [];
+
+  var InmMostrar =[];
+  var RecMostrar =[];
+  var AdmMostrar =[];
 
   var objetoL = objArray.length;
 
   if (newSubSector[0] == true) {
-    polygonInm = turf.within(objArray[0][0].data, polygono18A);
-    polygonRec = turf.within(objArray[1][0].data, polygono18A);
-    polygonAm = turf.within(objArray[2][0].data, polygono18A);
+    polygonInm = turf.within(inArray.data, polygono18A);
+    polygonRec = turf.within(reArray.data, polygono18A);
+    polygonAm = turf.within(amArray.data, polygono18A);
 
     if (newAdd[0] == true) {
       InmMostrar.unshift(polygonInm)
@@ -85,9 +92,9 @@ selecButton.onclick = function() {
   }
 
   if (newSubSector[1] == true) {
-    polygonInm = turf.within(objArray[0][0].data, polygono18B);
-    polygonRec = turf.within(objArray[1][0].data, polygono18B);
-    polygonAm = turf.within(objArray[2][0].data, polygono18B);
+    polygonInm = turf.within(inArray.data, polygono18B);
+    polygonRec = turf.within(reArray.data, polygono18B);
+    polygonAm = turf.within(amArray.data, polygono18B);
 
     if (newAdd[0] == true) {
       InmMostrar.unshift(polygonInm)
@@ -101,9 +108,9 @@ selecButton.onclick = function() {
   }
 
   if (newSubSector[2] == true) {
-    polygonInm = turf.within(objArray[0][0].data, polygono18C);
-    polygonRec = turf.within(objArray[1][0].data, polygono18C);
-    polygonAm = turf.within(objArray[2][0].data, polygono18C);
+    polygonInm = turf.within(inArray.data, polygono18C);
+    polygonRec = turf.within(reArray.data, polygono18C);
+    polygonAm = turf.within(amArray.data, polygono18C);
 
     if (newAdd[0] == true) {
       InmMostrar.unshift(polygonInm)
@@ -117,9 +124,9 @@ selecButton.onclick = function() {
   }
 
   if (newSubSector[3] == true) {
-    polygonInm = turf.within(objArray[0][0].data, polygono27A);
-    polygonRec = turf.within(objArray[1][0].data, polygono27A);
-    polygonAm = turf.within(objArray[2][0].data, polygono27A);
+    polygonInm = turf.within(inArray.data, polygono27A);
+    polygonRec = turf.within(reArray.data, polygono27A);
+    polygonAm = turf.within(amArray.data, polygono27A);
 
     if (newAdd[0] == true) {
       InmMostrar.unshift(polygonInm)
@@ -133,9 +140,9 @@ selecButton.onclick = function() {
   }
 
   if (newSubSector[4] == true) {
-    polygonInm = turf.within(objArray[0][0].data, polygono27B);
-    polygonRec = turf.within(objArray[1][0].data, polygono27B);
-    polygonAm = turf.within(objArray[2][0].data, polygono27B);
+    polygonInm = turf.within(inArray.data, polygono27B);
+    polygonRec = turf.within(reArray.data, polygono27B);
+    polygonAm = turf.within(amArray.data, polygono27B);
 
     if (newAdd[0] == true) {
       InmMostrar.unshift(polygonInm)
@@ -149,9 +156,9 @@ selecButton.onclick = function() {
   }
 
   if (newSubSector[5] == true) {
-    polygonInm = turf.within(objArray[0][0].data, polygono27C);
-    polygonRec = turf.within(objArray[1][0].data, polygono27C);
-    polygonAm = turf.within(objArray[2][0].data, polygono27C);
+    polygonInm = turf.within(inArray.data, polygono27C);
+    polygonRec = turf.within(reArray.data, polygono27C);
+    polygonAm = turf.within(amArray.data, polygono27C);
 
     if (newAdd[0] == true) {
       InmMostrar.unshift(polygonInm)

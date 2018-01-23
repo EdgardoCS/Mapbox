@@ -4,7 +4,7 @@ var addUV;
 var removeUV;
 
 
-document.getElementById('roundedHill').addEventListener('change', function(e) {
+document.getElementById('Cerros').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addHill = false;
     removeHill = true;
@@ -15,7 +15,7 @@ document.getElementById('roundedHill').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('roundedUnity').addEventListener('change', function(e) {
+document.getElementById('UnidadesVecinales').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addUV = false;
     removeUV = true;

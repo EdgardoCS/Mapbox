@@ -2,7 +2,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-.roundedHill {
+.Cerros {
   top: auto;
   width: 18px;
   height: 18px;
@@ -23,12 +23,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedHill title {
+.Cerros title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedHill label {
+.Cerros label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -49,7 +49,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedHill label:after {
+.Cerros label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -73,19 +73,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedHill label:hover::after {
+.Cerros label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedHill input[type=checkbox]:checked+label:after {
+.Cerros input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.roundedUnity {
+.UnidadesVecinales {
   top: auto;
   width: 18px;
   height: 18px;
@@ -106,12 +106,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedUnity title {
+.UnidadesVecinales title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedUnity label {
+.UnidadesVecinales label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -132,7 +132,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedUnity label:after {
+.UnidadesVecinales label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -156,19 +156,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedUnity label:hover::after {
+.UnidadesVecinales label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedUnity input[type=checkbox]:checked+label:after {
+.UnidadesVecinales input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.main2 button.icon {
+.checkTerritorio button.icon {
   position: absolute;
   height: 30px;
   width: 30px;

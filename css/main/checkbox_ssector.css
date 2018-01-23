@@ -2,7 +2,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-.rounded18A {
+.ss18A {
   top: auto;
   width: 18px;
   height: 18px;
@@ -23,12 +23,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded18A title {
+.ss18A title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded18A label {
+.ss18A label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -49,7 +49,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded18A label:after {
+.ss18A label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -73,19 +73,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded18 label:hover::after {
+.ss18 label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded18A input[type=checkbox]:checked+label:after {
+.ss18A input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.rounded18B {
+.ss18B {
   top: auto;
   width: 18px;
   height: 18px;
@@ -106,12 +106,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded18B title {
+.ss18B title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded18B label {
+.ss18B label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -132,7 +132,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded18B label:after {
+.ss18B label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -156,19 +156,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded18B label:hover::after {
+.ss18B label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded18B input[type=checkbox]:checked+label:after {
+.ss18B input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.rounded18C {
+.ss18C {
   top: auto;
   width: 18px;
   height: 18px;
@@ -189,12 +189,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded18C title {
+.ss18C title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded18C label {
+.ss18C label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -215,7 +215,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded18C label:after {
+.ss18C label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -239,19 +239,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded18C label:hover::after {
+.ss18C label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded18C input[type=checkbox]:checked+label:after {
+.ss18C input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.rounded27A {
+.ss27A {
   top: auto;
   width: 18px;
   height: 18px;
@@ -272,12 +272,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded27A title {
+.ss27A title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded27A label {
+.ss27A label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -298,7 +298,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded27A label:after {
+.ss27A label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -322,19 +322,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded27A label:hover::after {
+.ss27A label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded27A input[type=checkbox]:checked+label:after {
+.ss27A input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.rounded27B {
+.ss27B {
   top: auto;
   width: 18px;
   height: 18px;
@@ -355,12 +355,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded27B title {
+.ss27B title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded27B label {
+.ss27B label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -381,7 +381,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded27B label:after {
+.ss27B label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -405,19 +405,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded27B label:hover::after {
+.ss27B label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded27B input[type=checkbox]:checked+label:after {
+.ss27B input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.rounded27C {
+.ss27C {
   top: auto;
   width: 18px;
   height: 18px;
@@ -438,12 +438,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.rounded27C title {
+.ss27C title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.rounded27C label {
+.ss27C label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -464,7 +464,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.rounded27C label:after {
+.ss27C label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -488,19 +488,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.rounded27C label:hover::after {
+.ss27C label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.rounded27C input[type=checkbox]:checked+label:after {
+.ss27C input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.main4 button.icon {
+.checkSubSectores button.icon {
   position: absolute;
   height: 30px;
   width: 30px;

@@ -1,27 +1,9 @@
-/*
-.check-box1 {
-  width: 120px;
-  height: 100px;
-  position: absolute;
-  top: 105px;
-  left: 5px;
-  background: #2b303b;
-  border: none;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  text-align: justify;
-  display: inline-block;
-  color: #fff;
-  margin: 8px 0;
-}
-*/
 
 input[type=checkbox] {
   visibility: hidden;
 }
 
-.roundedOne {
+.One {
   top: auto;
   width: 18px;
   height: 18px;
@@ -42,12 +24,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedOne title {
+.One title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedOne label {
+.One label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -68,7 +50,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedOne label:after {
+.One label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -92,19 +74,19 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedOne label:hover::after {
+.One label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedOne input[type=checkbox]:checked+label:after {
+.One input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-.roundedTwo {
+.Two {
   top: auto;
   width: 18px;
   height: 18px;
@@ -125,12 +107,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedTwo title {
+.Two title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedTwo label {
+.Two label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -151,7 +133,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedTwo label:after {
+.Two label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -175,18 +157,18 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedTwo label:hover::after {
+.Two label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedTwo input[type=checkbox]:checked+label:after {
+.Two input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
-.roundedThree {
+.Three {
   top: auto;
   width: 18px;
   height: 18px;
@@ -207,12 +189,12 @@ input[type=checkbox] {
   position: relative;
 }
 
-.roundedThree title {
+.Three title {
   display: inline-block;
   margin-left: 20px;
 }
 
-.roundedThree label {
+.Three label {
   cursor: pointer;
   position: absolute;
   width: 10px;
@@ -233,7 +215,7 @@ input[type=checkbox] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d', GradientType=0);
 }
 
-.roundedThree label:after {
+.Three label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -257,20 +239,20 @@ input[type=checkbox] {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.roundedThree label:hover::after {
+.Three label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-.roundedThree input[type=checkbox]:checked+label:after {
+.Three input[type=checkbox]:checked+label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
 
-.main button.icon {
+.checkPrograma button.icon {
   position: absolute;
   height: 30px;
   width: 30px;

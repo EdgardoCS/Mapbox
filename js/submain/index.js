@@ -1,25 +1,29 @@
-var end = require('./layerBt.js');
+var end = require('./stackLayer.js');
 var sms = require('./smsBuild.js');
 var sub = require('./zoneInfo.js');
 var selection = require('./userInfo.js');
 
 var objects = [];
+var condicion = 3;
 
 exports.newFor = function(array) {
-  if (array[1].id == "Inmovilizado") {
+
+  if (array.id == "Inmovilizado") {
     objects.splice(0, 0, array);
   }
-  if (array[1].id == "Recordatorio") {
+  if (array.id == "Recordatorio") {
     objects.splice(1, 0, array);
   }
-  if (array[1].id == "AdultoMayor") {
+  if (array.id == "AdultoMayor") {
     objects.splice(2, 0, array);
   }
-  if (objects.length == 3) {
+
+  if (objects.length == condicion) {
 
     end.endbuton(objects);
-    sms.build(objects);
+    sms.build(objects[2]);
     sub.subturf(objects);
     selection.toUInfo(objects);
   }
+
 };

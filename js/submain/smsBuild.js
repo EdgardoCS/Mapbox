@@ -9,46 +9,52 @@ var fromturf;
 exports.byframe = function(AdmMostrar) {
   fromturf = AdmMostrar;
 }
-
 exports.build = function(objects) {
+    var smsjson = objects.source.data;
+    var objectL = objects.length;
+    
+    exports.alowsms = function(add) {
+    smsButton.onclick = function() {
+      if (add[0] == false && add[1] == false && add[2] == true) {
 
-  var objectL = objects.length;
-  smsButton.onclick = function() {
+        var dataArray = mapDraw.getAll();
+        if (dataArray.features.length > 0) {
 
-    var dataArray = mapDraw.getAll();
-    if (dataArray.features.length > 0) {
+          innerArray = [];
 
-      innerArray = [];
+          var ptsWithin = turf.within(smsjson, dataArray);
+          console.log(ptsWithin);
 
-      var ptsWithin = turf.within(objects[2][0].data, dataArray);
-      console.log(ptsWithin);
+          for (i = 0; i < ptsWithin.features.length; i++) {
+            speakersArray = ptsWithin.features[i].properties.rut;
+            var key = "id";
+            innerArray.push({
+              [key]: speakersArray
+            });
+          }
+          console.log("listo");
+          promptWindow(speakersArray);
 
-      for (i = 0; i < ptsWithin.features.length; i++) {
-        speakersArray = ptsWithin.features[i].properties.rut;
-        var key = "id";
-        innerArray.push({
-          [key]: speakersArray
-        });
+        } else if (fromturf != undefined) {
+
+          var ptsWithin = fromturf[0];
+          console.log(ptsWithin);
+
+          for (i = 0; i < ptsWithin.features.length; i++) {
+            speakersArray = ptsWithin.features[i].properties.rut;
+            var key = "id";
+            innerArray.push({
+              [key]: speakersArray
+            });
+          }
+          console.log("listo");
+          promptWindow(speakersArray);
+        } else {
+          alert("Use la herramienta de dibujo");
+        }
+      } else {
+        alert("Seleccione solo los usuarios actualizados");
       }
-      console.log("listo");
-      promptWindow(speakersArray);
-
-    } else if (fromturf != undefined) {
-
-      var ptsWithin = fromturf[0];
-      console.log(ptsWithin);
-
-      for (i = 0; i < ptsWithin.features.length; i++) {
-        speakersArray = ptsWithin.features[i].properties.rut;
-        var key = "id";
-        innerArray.push({
-          [key]: speakersArray
-        });
-      }
-      console.log("listo");
-      promptWindow(speakersArray);
-    } else {
-      alert("Use la herramienta de dibujo");
     }
   }
 }

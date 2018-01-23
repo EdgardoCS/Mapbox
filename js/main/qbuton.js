@@ -1,7 +1,7 @@
-
-var nextTo = require(path.resolve('js/submain', './layerBt.js'));
+var nextTo = require(path.resolve('js/submain', './stackLayer.js'));
 var nextUInfo = require(path.resolve('js/submain', './userInfo.js'));
 var nextZInfo = require(path.resolve('js/submain', './zoneInfo.js'));
+var nextsms = require(path.resolve('js/submain', './smsBuild.js'));
 
 var addPostrado = false;
 var addRecordatorio = false;
@@ -10,7 +10,7 @@ var removeRecordatorio = false;
 var addAM = false;
 var removeAM = false;
 
-document.getElementById('roundedOne').addEventListener('change', function(e) {
+document.getElementById('One').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addPostrado = false;
     removePostrado = true;
@@ -20,7 +20,7 @@ document.getElementById('roundedOne').addEventListener('change', function(e) {
   }
 });
 
-document.getElementById('roundedTwo').addEventListener('change', function(e) {
+document.getElementById('Two').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addRecordatorio = false;
     removeRecordatorio = true;
@@ -29,7 +29,7 @@ document.getElementById('roundedTwo').addEventListener('change', function(e) {
     removeRecordatorio = false;
   }
 });
-document.getElementById('roundedThree').addEventListener('change', function(e) {
+document.getElementById('Three').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addAM = false;
     removeAM = true;
@@ -47,4 +47,5 @@ function viewPrograma() {
   nextTo.option(add);
   nextUInfo.useri(add);
   nextZInfo.zonei(add);
+  nextsms.alowsms(add);
 }

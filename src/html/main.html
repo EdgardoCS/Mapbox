@@ -41,7 +41,9 @@
   <link rel=stylesheet type="text/css" href="../../css/main/checkbox_ssector.css">
   <link rel=stylesheet type="text/css" href="../../css/main/desplegable.css">
   <link rel=stylesheet type="text/css" href="../../css/main/subselector.css">
+  <!--
   <link rel=stylesheet type="text/css" href="../../css/main/deploy_sub.css">
+-->
   <!--***********************************************************************-->
 </head>
 
@@ -99,10 +101,12 @@
     <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
     <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
     <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
+
     <div class="container-search">
       <input type="search" id="search" placeholder="Buscar..." />
       <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
     </div>
+
   </div>
 
   <div class="sidecontainer">
@@ -112,90 +116,89 @@
         <img src="../../extras/pictures/logoG.jpg" alt="samus" style="width:100%;height:50%px;">
       </div>
 
-      <div class="main">
+      <div class="checkPrograma">
         <p>Seleccione Programa</p>
         <button onclick="viewPrograma()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-
-        <div class="roundedOne">
-          <input type="checkbox" id="roundedOne" name="check">
-          <label for="roundedOne"><title>Inmovilizado</title></label>
+        <div class="One">
+          <input type="checkbox" id="One" name="check">
+          <label for="One"><title>Inmovilizado</title></label>
         </div>
-        <div class="roundedTwo">
-          <input type="checkbox" id="roundedTwo" name="check">
-          <label for="roundedTwo"><title>Recordatorio</title></label>
+        <div class="Two">
+          <input type="checkbox" id="Two" name="check">
+          <label for="Two"><title>Recordatorio</title></label>
         </div>
-        <div class="roundedThree">
-          <input type="checkbox" id="roundedThree" name="check">
-          <label for="roundedThree"><title>Actualizada</title></label>
+        <div class="Three">
+          <input type="checkbox" id="Three" name="check">
+          <label for="Three"><title>Actualizada</title></label>
         </div>
 
       </div>
 
-      <div class="main2">
+      <div class="checkTerritorio">
         <p>Territorio MENA</p>
         <button onclick="viewHill()" class="icon"><i class="fa fa-eye" id="view"></i></button>
 
-        <div class="roundedHill">
-          <input type="checkbox" id="roundedHill" name="check">
-          <label for="roundedHill"><title>Cerros</title></label>
+        <div class="Cerros">
+          <input type="checkbox" id="Cerros" name="check">
+          <label for="Cerros"><title>Cerros</title></label>
         </div>
-        <div class="roundedUnity">
-          <input type="checkbox" id="roundedUnity" name="check">
-          <label for="roundedUnity"><title>Unidades</title></label>
+        <div class="UnidadesVecinales">
+          <input type="checkbox" id="UnidadesVecinales" name="check">
+          <label for="UnidadesVecinales"><title>Unidades</title></label>
         </div>
       </div>
 
-      <div class="main3">
-        <p>Seleccione Sector</p>
+      <div class="checkSectores">
+        <p>Sector</p>
         <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
         <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
-<!--
+        <!--
 -->
-        <div class="roundedS18">
-          <input type="checkbox" value=1 id="rounded18" name="check">
-          <label for="rounded18"><title>Sector18</title></label>
+        <div class="S18">
+          <input type="checkbox" value=0 id="S18" name="check">
+          <label for="S18"><title>Sector18</title></label>
         </div>
-        <div class="roundedS27">
-          <input type="checkbox" value=1.1 id="rounded27" name="check">
-          <label for="rounded27"><title>Sector27</title></label>
+        <div class="S27">
+          <input type="checkbox" value=1 id="S27" name="check">
+          <label for="S27"><title>Sector27</title></label>
         </div>
       </div>
 
-      <div class="main4">
-        <p>Seleccione SubSector</p>
+      <div class="checkSubSectores">
+        <p>SubSector</p>
         <button onclick="viewSubSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-        <div class="rounded18A">
-          <input type="checkbox" id="rounded18A" name="check">
-          <label for="rounded18A"><title>Sector18A</title></label>
+        <div class="ss18A">
+          <input type="checkbox" id="ss18A" name="check">
+          <label for="ss18A"><title>Sector18A</title></label>
         </div>
-        <div class="rounded18B">
-          <input type="checkbox" id="rounded18B" name="check">
-          <label for="rounded18B"><title>Sector18B</title></label>
+        <div class="ss18B">
+          <input type="checkbox" id="ss18B" name="check">
+          <label for="ss18B"><title>Sector18B</title></label>
         </div>
-        <div class="rounded18C">
-          <input type="checkbox" id="rounded18C" name="check">
-          <label for="rounded18C"><title>Sector18C</title></label>
+        <div class="ss18C">
+          <input type="checkbox" id="ss18C" name="check">
+          <label for="ss18C"><title>Sector18C</title></label>
         </div>
-        <div class="rounded27A">
-          <input type="checkbox" id="rounded27A" name="check">
-          <label for="rounded27A"><title>Sector27A</title></label>
+        <div class="ss27A">
+          <input type="checkbox" id="ss27A" name="check">
+          <label for="ss27A"><title>Sector27A</title></label>
         </div>
-        <div class="rounded27B">
-          <input type="checkbox" id="rounded27B" name="check">
-          <label for="rounded27B"><title>Sector27B</title></label>
+        <div class="ss27B">
+          <input type="checkbox" id="ss27B" name="check">
+          <label for="ss27B"><title>Sector27B</title></label>
         </div>
-        <div class="rounded27C">
-          <input type="checkbox" id="rounded27C" name="check">
-          <label for="rounded27C"><title>Sector27C</title></label>
+        <div class="ss27C">
+          <input type="checkbox" id="ss27C" name="check">
+          <label for="ss27C"><title>Sector27C</title></label>
         </div>
       </div>
 
-      <div class="main5">
+      <div class="clearTerritorio">
         <p>Limpiar Territorio</p>
         <button onclick="viewclearAll()" class="icon"><i class="fa fa-times" id="clearAll"></i></button>
       </div>
 
-      <div class="main6">
+      <div class="clearBusqueda">
         <p>Limpiar Busqueda</p>
         <button onclick="viewclearSearch()" class="icon"><i class="fa fa-times" id="clearSearch"></i></button>
       </div>
@@ -211,9 +214,10 @@
     }
     const path = require('path');
   </script>
+
   <script src="../../js/main/main.js"></script>
   <script src="../../js/main/qbuton.js"></script>
-  <script src="../../js/main/firstLoad.js"></script>
+  <script src="../../js/main/load.js"></script>
   <script src="../../js/main/polygon.js"></script>
   <script src="../../js/main/butonSubSector.js"></script>
   <script src="../../js/main/butonSector.js"></script>

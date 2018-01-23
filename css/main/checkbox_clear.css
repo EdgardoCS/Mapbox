@@ -1,23 +1,4 @@
-/*
-.check-boxClear {
-  width: 120px;
-  height: 70px;
-  position: absolute;
-  top: 230px;
-  left: 5px;
-  background: #2b303b;
-  border: none;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  text-align: justify;
-  display: inline-block;
-  color: #fff;
-  margin: 8px 0;
-}
-*/
-
-.main5 button.icon {
+.clearTerritorio button.icon {
   position: absolute;
   height: 30px;
   width: 30px;
@@ -39,7 +20,7 @@
   margin-top: -40px;
   right: 10px;
 }
-.main6 button.icon {
+.clearBusqueda button.icon {
   position: absolute;
   height: 30px;
   width: 30px;

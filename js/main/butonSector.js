@@ -3,7 +3,7 @@ var removeSector18;
 var addSector27;
 var removeSector27;
 
-document.getElementById('rounded18').addEventListener('change', function(e) {
+document.getElementById('S18').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addSector18 = false;
     removeSector18 = true;
@@ -13,7 +13,7 @@ document.getElementById('rounded18').addEventListener('change', function(e) {
     removeSector18 = false;
   }
 });
-document.getElementById('rounded27').addEventListener('change', function(e) {
+document.getElementById('S27').addEventListener('change', function(e) {
   if (e.target.checked == false) {
     addSector27 = false;
     removeSector27 = true;
