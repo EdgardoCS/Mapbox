@@ -27,50 +27,59 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="../../node_modules/jquery/dist/jquery.js"></script>
   <!--***********************************************************************-->
+  <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel=stylesheet type="text/css" href="../../css/main/map.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/mainTopbar.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/search.css">
+
 
 
 </head>
+
+<body>
 
 <style>
   body {
     margin: 0;
   }
 </style>
-<!--
-<style>
-  #fit {
-    display: block;
-    position: relative;
-    margin: 0px auto;
-    width: 50%;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    font-size: 12px;
-    text-align: center;
-    color: #fff;
-    background: #ee8a65;
-  }
-</style>
-<input type="button" id="fit" value="Select a file" />
--->
 <div id='map'></div>
 <div style="margin-left:50%"></div>
 
-<body>
-  <script>
-    if (typeof module === 'object') {
-      window.module = module;
-      module = undefined;
-    }
-    const path = require('path');
-  </script>
-  <script src="../../js/main/firstLoad.js"></script>
+<!-- ********************* HTML BUTTONS ******************************** -->
+
+<div class="icon-bar">
+  <!--
+  <a class="active1" href="#"><i class="fa fa-home"></i></a>
+-->
+  <a href="#"><i class="fa fa-globe" onclick="editWindow()"></i></a>
+  <a href="#"><i class="fa fa-cube" id="mapBuild"></i></a>
+  <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
+  <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
+  <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
+
+  <div class="container-search">
+    <input type="search" id="search" placeholder="Buscar..." />
+    <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
+  </div>
+
+</div>
+
+****************************************************************-->
+
+<!-- ********************* JS SCRIPTS ******************************** -->
+<script>
+  if (typeof module === 'object') {
+    window.module = module;
+    module = undefined;
+  }
+  const path = require('path');
+</script>
+
   <!--
 -->
   <script src="../../js/main/main.js"></script>
+  <script src="../../js/gis/gisopen.js"></script>
 
 </body>
 

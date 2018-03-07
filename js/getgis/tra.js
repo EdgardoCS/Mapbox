@@ -1,4 +1,4 @@
-var road = require('../../js/getgis/write.js');
+// var road = require('../../js/getgis/write.js');
 
 var nam;
 var typ;
@@ -48,8 +48,8 @@ exports.thesink = function(transporte_geocoor, _l, clasification) {
     tra_layer = make_inner(tra_obj);
     tra_source = innercell(clasification, nam, typ, tra_layer);
   }
-  road.train(tra_source)
-  // map.addLayer(tra_source);
+  // road.train(tra_source)
+  map.addLayer(tra_source);
 }
 make_cell = function(nam, typ, coor, desc) {
   var features;

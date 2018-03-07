@@ -1,4 +1,4 @@
-var mr = require('../../js/getgis/write.js');
+// var mr = require('../../js/getgis/write.js');
 
 var nam;
 var typ;
@@ -37,8 +37,8 @@ exports.desert = function(lev_comp_cat, _l, clasification) {
     lev_source = whitelight(clasification, nam, typ, lev_layer);
 
   }
-  mr.beat(lev_source);
-  // map.addLayer(lev_source);
+  // mr.beat(lev_source);
+  map.addLayer(lev_source);
 }
 
 

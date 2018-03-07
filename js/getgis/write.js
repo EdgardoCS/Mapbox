@@ -86,5 +86,4 @@ mojopin = function(object, table, column) {
     statement.run(object);
     statement.finalize();
   });
-  // db.close();
 }

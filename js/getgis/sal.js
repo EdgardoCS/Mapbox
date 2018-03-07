@@ -1,4 +1,4 @@
-var hot = require('../../js/getgis/write.js');
+// var hot = require('../../js/getgis/write.js');
 
 var nam;
 var typ;
@@ -59,8 +59,8 @@ exports.water = function(salud_geocoor, _l, clasification) {
     sal_layer = make_polygond(sal_obj);
     sal_source = polygondwanaland(clasification, nam, typ, sal_layer);
   }
-  hot.water(sal_source);
-  // map.addLayer(sal_source);
+  // hot.water(sal_source);
+  map.addLayer(sal_source);
 }
 make_wanaland = function(nam, typ, coor, desc) {
   var features;
