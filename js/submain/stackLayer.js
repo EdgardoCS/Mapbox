@@ -18,6 +18,7 @@ exports.endbuton = function(objects) {
     }
     if (add[2] == true) {
       map.addLayer(objects[2]);
+      // console.log(objects[2]); 
     }
 
   }

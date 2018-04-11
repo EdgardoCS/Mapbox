@@ -3,7 +3,7 @@ var sqlite3 = require('sqlite3').verbose();
 const dbPath = path.resolve('src/db', 'new.db')
 var db = new sqlite3.Database(dbPath);
 
-var next = require(path.resolve('js/submain', './index.js'));
+var next = require(path.resolve('js/submain', './indice.js'));
 
 var Nombre;
 var Rut;
@@ -18,6 +18,7 @@ var Estado;
 var Observaciones;
 var Telefono1;
 var Telefono2;
+var Validado;
 
 var inmovilizadoLayer;
 var inmovilizadoSource;
@@ -34,7 +35,7 @@ db.all("SELECT * FROM Inmovilizado", function(err, row) {
     var inmovilizadoLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
+        inmovilizadoArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones, row[i].Telefono1, row[i].Telefono2, row[i].Validado);
         if (inmovilizadoArray[i].properties.status != "Fallecida") {
           inmovilizadoArray.slice(i);
           inmovilizadoLive.push(inmovilizadoArray[i])
@@ -56,7 +57,7 @@ db.all("SELECT * FROM Recordatorio", function(err, row) {
     var recordatorioLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        recordatorioArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones);
+        recordatorioArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones, row[i].Telefono1, row[i].Telefono2, row[i].Validado);
 
         if (recordatorioArray[i].properties.status != "Fallecida") {
           recordatorioArray.slice(i);
@@ -69,6 +70,7 @@ db.all("SELECT * FROM Recordatorio", function(err, row) {
   recordatorioLayer = makeGeo(recordatorioLive);
   recordatorioSource = makeLayer(recordatorioLayer);
   next.newFor(recordatorioSource);
+
 });
 
 db.all("SELECT * FROM Users", function(err, row) {
@@ -78,7 +80,7 @@ db.all("SELECT * FROM Users", function(err, row) {
     var amLive = [];
     if (celda > 1) {
       for (i = 0; i < celda; i++) {
-        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones, row[i].Telefono1, row[i].Telefono2);
+        amArray[i] = setFeatures(row[i].Rut, row[i].Nombre, row[i].Direccion, row[i].Sector, row[i].SubSector, row[i].Latitud, row[i].Longitud, row[i].Programa, row[i].Jefe_Equipo, row[i].Estado, row[i].Observaciones, row[i].Telefono1, row[i].Telefono2, row[i].Validado);
 
         if (amArray[i].properties.status != "Fallecida") {
           amArray.slice(i);
@@ -90,10 +92,12 @@ db.all("SELECT * FROM Users", function(err, row) {
   }
   adultoLayer = makeGeo(amLive);
   adultoSource = makeLayer(adultoLayer);
+  // console.log(adultoLayer);
   next.newFor(adultoSource);
+
 });
 
-setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones, Telefono1, Telefono2) {
+setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Latitud, Programa, Jefe_Equipo, Estado, Observaciones, Telefono1, Telefono2, Validado) {
   var pointFeatures;
 
   pointFeatures = {
@@ -111,6 +115,7 @@ setFeatures = function(Rut, Nombre, Direccion, Sector, SubSector, Longitud, Lati
       "program": Programa,
       "observations": Observaciones,
       "contact": "Telefono1: " + Telefono1 + " Telefono2: " + Telefono2,
+      "valid": Validado,
     }
   }
   return pointFeatures;
@@ -143,7 +148,7 @@ makeLayer = function(features) {
     fuente = "recordatorioMarkers"
   }
   if (features.data.features[0].properties.program == "Adulto Mayor") {
-    color = "#3ebc98"
+    color = "#ff0000"
     id = "AdultoMayor"
     fuente = "adultoMarkers"
   }

@@ -189,7 +189,7 @@ selecButton.onclick = function() {
   }
 
   if (isum > 0) {
-    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum + " Usuarios Seleccionados programa Inmovilizado: " + rsum + " Usuarios Seleccionados programa Inmovilizado: " + asum;
+    document.getElementById('viewVal').innerHTML = "Usuarios programa Dismovilizado: " + " Usuarios programa Recordatorio de Citas: " + rsum + " Usuarios Seleccionados Adulto Mayor: " + asum;
   }
 
   for (i = 0; i < rLargo; i++) {
@@ -198,7 +198,7 @@ selecButton.onclick = function() {
   }
 
   if (rsum > 0) {
-    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum + " Usuarios Seleccionados programa Inmovilizado: " + rsum + " Usuarios Seleccionados programa Inmovilizado: " + asum;
+    document.getElementById('viewVal').innerHTML = "Usuarios programa Dismovilizado: " + isum + " Usuarios programa Recordatorio de Citas: " + rsum + " Usuarios Seleccionados Adulto Mayor: " + asum;
   }
 
   for (i = 0; i < aLargo; i++) {
@@ -218,7 +218,7 @@ selecButton.onclick = function() {
   frame.byframe(AdmMostrar);
 
   if (asum > 0) {
-    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Inmovilizado: " + isum + " Usuarios Seleccionados programa Inmovilizado: " + rsum + " Usuarios Seleccionados programa Inmovilizado: " + asum;
+    document.getElementById('viewVal').innerHTML = "Usuarios Seleccionados programa Dismovilizado: "  + " Usuarios programa Recordatorio de Citas: " + rsum + " Usuarios Seleccionados Adulto Mayor: " + asum;
   }
 
   storm.onclick = function() {

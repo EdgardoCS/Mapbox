@@ -41,6 +41,7 @@
   <link rel=stylesheet type="text/css" href="../../css/main/checkbox_ssector.css">
   <link rel=stylesheet type="text/css" href="../../css/main/desplegable.css">
   <link rel=stylesheet type="text/css" href="../../css/main/subselector.css">
+  <link rel=stylesheet type="text/css" href="../../css/main/box.css">
   <!--
   <link rel=stylesheet type="text/css" href="../../css/main/deploy_sub.css">
 -->
@@ -121,20 +122,21 @@
         <button onclick="viewPrograma()" class="icon"><i class="fa fa-eye" id="view"></i></button>
         <div class="One">
           <input type="checkbox" id="One" name="check">
-          <label for="One"><title>Inmovilizado</title></label>
+          <label for="One"><title>Dismovilizado</title></label>
         </div>
         <div class="Two">
           <input type="checkbox" id="Two" name="check">
-          <label for="Two"><title>Recordatorio</title></label>
+          <label for="Two"><title>Recordatorio de citas</title></label>
         </div>
+        <div class=box_inter></div>
         <div class="Three">
           <input type="checkbox" id="Three" name="check">
-          <label for="Three"><title>Actualizada</title></label>
+          <label for="Three"><title>Adultos Mayores</title></label>
         </div>
-
       </div>
 
       <div class="checkTerritorio">
+        <div class="box_program"></div>
         <p>Territorio MENA</p>
         <button onclick="viewHill()" class="icon"><i class="fa fa-eye" id="view"></i></button>
 
@@ -151,7 +153,7 @@
       <div class="checkSectores">
         <p>Sector</p>
         <button onclick="viewSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
-        <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
+
         <!--
 -->
         <div class="S18">
@@ -165,6 +167,7 @@
       </div>
 
       <div class="checkSubSectores">
+        <a href='#' id='SubSec'><i class="fa fa-users"></i></a>
         <p>SubSector</p>
         <button onclick="viewSubSector()" class="icon"><i class="fa fa-eye" id="view"></i></button>
         <div class="ss18A">
@@ -194,6 +197,7 @@
       </div>
 
       <div class="clearTerritorio">
+        <div class="box_clear"></div>
         <p>Limpiar Territorio</p>
         <button onclick="viewclearAll()" class="icon"><i class="fa fa-times" id="clearAll"></i></button>
       </div>
@@ -216,8 +220,8 @@
   </script>
 
   <script src="../../js/main/main.js"></script>
-  <script src="../../js/main/qbuton.js"></script>
   <script src="../../js/main/load.js"></script>
+  <script src="../../js/main/qbuton.js"></script>
   <script src="../../js/main/polygon.js"></script>
   <script src="../../js/main/butonSubSector.js"></script>
   <script src="../../js/main/butonSector.js"></script>
@@ -227,6 +231,7 @@
   <script src="../../js/main/mapWindow.js"></script>
   <script src="../../js/main/search.js"></script>
   <script src="../../js/getgis/open.js"></script>
+  <!-- <script src="../../js/submain/tooltip.js"></script> -->
   <!--
 -->
   <!--*********************************************************************-->

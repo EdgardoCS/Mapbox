@@ -3,8 +3,8 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/edgardos/cj4syqwvc4bjc2rmy9gna1h42',
 
-  zoom: 13.0,
-  pitch: 90,
+  zoom: 13.5,
+  pitch: 30,
   bearing: -140,
-  center: [-71.615,-33.047]
+  center: [-71.625,-33.047]
 });

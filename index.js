@@ -4,6 +4,8 @@ const {
   crashReporter
 } = require('electron');
 
+const shell = require('electron').shell;
+
 var mainWindow = null;
 
 app.on('window-all-closed', function() {
@@ -14,23 +16,27 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
 
-    width: 1200,
-    height: 900,
+    width: 2000,
+    height: 1000,
     minWidth: 420,
     minHeight: 480,
     autoHideMenuBar: true,
-    fullscreen: false
+    fullscreen: true
   });
 
   /*
   mainWindow.maximize()
   mainWindow.loadURL('file://' + __dirname + '/src/html/geocoding.html');
   mainWindow.loadURL('file://' + __dirname + '/src/html/test2.html');
+  mainWindow.openDevTools();
   */
   mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
 
-  mainWindow.openDevTools();
 
+  mainWindow.webContents.on('will-navigate', (event, url) => {
+    event.preventDefault()
+    shell.openExternal(url)
+  })
 
   mainWindow.on('closed', function() {
     mainWindow = null;

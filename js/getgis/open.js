@@ -10,7 +10,6 @@ const {
 } = require("electron").remote;
 
 document.getElementById("mapBuild").addEventListener("click", () => {
-
   dialog.showOpenDialog((fileNames) => {
     if (fileNames === undefined) {
       console.log("no file selected");

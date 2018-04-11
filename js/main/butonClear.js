@@ -6,6 +6,8 @@ function viewclearAll() {
   UnidadesArray = ["unidad21", "unidad22", "unidad23", "unidad24", "unidad25", "unidad26", "unidad27", "unidad66", "unidad67", "unidad68",
     "unidad69", "unidad70", "unidad71", "unidad72", "unidad76", "unidad77", "unidad78", "unidad125", "unidad126", "unidad142", "unidad166", "unidad194", "unidad195"
   ];
+  GeoArray = ["Limite_Comunal", "Limite_Urbano", "Plazas", "Sectores_dideco", "Unidades_vecinales", "juntas_vecinos", "levantamiento_completo", "establecimientos_hospitalarios", "establecimientos_salud", "seremi_salud", "servicios_salud", "ascensores", "recorridos_microbuses", "recorridos_taxicolectivos"];
+
   for (i = 0; i < LayersArray.length; i++) {
     if (map.getLayer(LayersArray[i])) {
       map.removeLayer(LayersArray[i]);
@@ -16,8 +18,13 @@ function viewclearAll() {
       map.removeLayer(UnidadesArray[i]);
     }
   }
-
+  for (i = 0; i < GeoArray.length; i++) {
+    if (map.getLayer(GeoArray[i])) {
+      map.removeLayer(GeoArray[i]);
+    }
+  }
 }
+
 
 function viewclearSearch() {
   SearchArray = ["Busqueda"];

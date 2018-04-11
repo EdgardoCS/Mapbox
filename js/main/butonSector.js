@@ -66,8 +66,8 @@ var mena = {
     'visibility': 'visible'
   },
   "paint": {
-    "circle-radius": 5,
-    "circle-color": "#0fbfe2"
+    "circle-radius": 10,
+    "circle-color": "#727272"
   },
 };
 var sector18 = {

@@ -39,10 +39,13 @@ exports.toUInfo = function(objects) {
                 amTotal = amTotal + 1;
               }
               modal.style.display = "block";
-              var speakers = mostrar[0].features[j].properties.description + "<hr>";
+
+              // var speakers = mostrar[0].features[j].properties.rut + "" + mostrar[0].features[j].properties.valid + "<hr>";
+              var speakers = mostrar[0].features[j].properties.description+ "<hr>";
+
               inner.unshift(speakers);
               document.getElementById('viewValue').innerHTML = inner.join('')
-              document.getElementById("viewQuantities").innerHTML = "Inmovilizado: " + inmTotal + " Recordatorio: " + recTotal + " Usuarios: " + amTotal;
+              document.getElementById("viewQuantities").innerHTML = "Dismovilizado: " + inmTotal + " Recordatorio de Citas: " + recTotal + " Usuarios Adulto Mayor: " + amTotal;
             }
             mostrar = [];
           }
