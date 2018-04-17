@@ -4,6 +4,7 @@ var nam;
 var typ;
 var coor;
 var desc;
+var stipo;
 var lev_layer;
 var lev_source;
 var lev_obj = [];
@@ -32,7 +33,6 @@ exports.desert = function(lev_comp_cat, _l, clasification) {
       desc = lev_comp_cat.features[i].properties;
 
       lev_obj[i] = make_light(nam, typ, coor, desc);
-      // console.log(desc);
     }
     lev_layer = make_white(lev_obj);
     lev_source = whitelight(clasification, nam, typ, lev_layer);
@@ -44,14 +44,15 @@ exports.desert = function(lev_comp_cat, _l, clasification) {
       typ = lev_comp_cat.features[i].geometry.type;
       coor = [lev_comp_cat.features[i].geometry.coordinates[0], lev_comp_cat.features[i].geometry.coordinates[1]];
       desc = lev_comp_cat.features[i].properties;
+      stipo = lev_comp_cat.features[i].properties.SUB_TIPO;
 
-      lev_obj[i] = make_light(nam, typ, coor, desc);
-      // console.log(desc);
+      lev_obj[i] = make_light(nam, typ, coor, desc, stipo);
     }
     lev_layer = make_white(lev_obj);
-    lev_source = whitelight(clasification, nam, typ, lev_layer);
+    lev_source = whitelight(clasification, nam, typ, stipo, lev_layer);
 
   }
+  console.log(desc);
   // mr.beat(lev_source);
   map.addLayer(lev_source);
   var id = lev_source.id;
@@ -61,7 +62,7 @@ exports.desert = function(lev_comp_cat, _l, clasification) {
   }
 }
 
-make_light = function(nam, typ, coor, desc) {
+make_light = function(nam, typ, coor, desc, stipo) {
   var features;
   features = {
     "type": "Feature",
@@ -72,11 +73,13 @@ make_light = function(nam, typ, coor, desc) {
     "properties": {
       "nombre": nam,
       "descripcion": desc,
+      "subtipo": stipo,
     },
   }
   return features;
 }
 make_white = function(features) {
+  nam
   var tail = {
     "type": "geojson",
     "data": {
@@ -86,36 +89,26 @@ make_white = function(features) {
   }
   return tail;
 }
-whitelight = function(clasification, nam, typ, lev_layer) {
+whitelight = function(clasification, nam, typ, stipo, lev_layer) {
   if (clasification == "juntas_vecinos") {
     color = "#1481a0";
   }
   if (clasification == "levantamiento_completo") {
     color = "#2614a0";
+    // console.log(lev_layer);
   }
-
-
-  if (typ == "Polygon" || typ == "MultiPolygon") {
-    var type = "fill";
-    paint = {
-      "fill-color": color,
-      "fill-opacity": 0.8
-    };
-  }
-  if (typ == "Point") {
-    var type = "circle";
-    paint = {
-      "circle-radius": 4,
-      "circle-color": color,
-    };
-  }
-  if (typ == "LineString" || typ == "MultiLineString") {
-    var type = "line";
-    paint = {
-      "line-color": color,
-      "line-width": 3
+  for (i = 0; i < lev_layer.data.features.length; i++) {
+    if (lev_layer.data.features[i].properties.subtipo == "BASURAL") {
+      color = "#d68422";
     }
   }
+
+  var type = "circle";
+  paint = {
+    "circle-radius": 4,
+    "circle-color": color,
+  };
+
   weather = {
     "id": clasification,
     "type": type,
@@ -127,6 +120,7 @@ whitelight = function(clasification, nam, typ, lev_layer) {
   }
   return weather
 }
+
 tooltip = function(id) {
 
   var popup = new mapboxgl.Popup({

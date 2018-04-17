@@ -13,6 +13,8 @@
     "@turf/center-of-mass": "^4.5.2",
     "@turf/meta": "^4.5.2",
     "@turf/turf": "^4.5.2",
+    "angular": "^1.6.9",
+    "express": "^4.16.3",
     "remote": "^0.2.6",
     "simple-excel-js": "^1.0.0",
     "smalltalk": "^2.4.1",
