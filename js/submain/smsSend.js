@@ -12,7 +12,7 @@ exports.man = function(result) {
 
   var jsonArray = setHeader(text, sendArray);
 
-  sock.connect('tcp://10.140.25.22:3000')
+  sock.connect('tcp://10.100.25.37:3000')
   console.log('Enviando a puerto 3000');
 
   sock.on('message', function(msg) {
