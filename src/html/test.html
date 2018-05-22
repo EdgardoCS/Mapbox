@@ -5,81 +5,44 @@
   <meta charset='utf-8' />
   <title> SISTAM CESFAM Mena</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-
-  <!--*************************** SOURCE ************************************-->
-  <!--main-->
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-  <!--polygon-->
-  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.js'></script>
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v0.18.0/mapbox-gl-draw.css' type='text/css' />
-  <!--turf-->
-  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
-  <!--smalltalk-->
-  <link rel="stylesheet" href="../../node_modules/smalltalk/dist/smalltalk.min.css">
-  <script src="../../node_modules/smalltalk/dist/smalltalk.poly.min.js"></script>
-  <!--GoogleMaps-->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-  <script type="text/javascript"></script>
-  <!--XLSX-->
-  <script lang="javascript" src="../../node_modules/xlsx/dist/xlsx.full.min.js"></script>
-  <!--JQuery-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="../../node_modules/jquery/dist/jquery.js"></script>
-  <!--***********************************************************************-->
-  <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel=stylesheet type="text/css" href="../../css/main/map.css">
-  <link rel=stylesheet type="text/css" href="../../css/main/mainTopbar.css">
-  <link rel=stylesheet type="text/css" href="../../css/main/search.css">
-
-
-
+  <!-- <script src="../../node_modules/jquery/dist/jquery.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app='userControl' ng-controller='maincontrol'>
 
-<style>
-  body {
-    margin: 0;
-  }
-</style>
-<div id='map'></div>
-<div style="margin-left:50%"></div>
+  <form ng-submit="checkUser()">
 
-<!-- ********************* HTML BUTTONS ******************************** -->
+    <input type="{{inputType}}" placeholder="Put your password" ng-model="user" />
 
-<div class="icon-bar">
-  <!--
-  <a class="active1" href="#"><i class="fa fa-home"></i></a>
--->
-  <a href="#"><i class="fa fa-globe" onclick="editWindow()"></i></a>
-  <a href="#"><i class="fa fa-cube" id="mapBuild"></i></a>
-  <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
-  <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
-  <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
+    <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPassword()" />
+    <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+    <label for="checkbox" ng-if="!passwordCheckbox">Show password</label>
+    <!-- <input type="text " placeholder="User" ng-model="user"></input> -->
+    <button type "submit">Log</button>
+  </form>
 
-  <div class="container-search">
-    <input type="search" id="search" placeholder="Buscar..." />
-    <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
-  </div>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
 
-</div>
+  <div id='map'></div>
+  <div style="margin-left:50%"></div>
 
-****************************************************************-->
+  <!-- ********************* JS SCRIPTS ******************************** -->
+  <script>
+    if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+    }
+    const path = require('path');
+  </script>
 
-<!-- ********************* JS SCRIPTS ******************************** -->
-<script>
-  if (typeof module === 'object') {
-    window.module = module;
-    module = undefined;
-  }
-  const path = require('path');
-</script>
-
-  <!--
--->
-  <script src="../../js/main/main.js"></script>
-  <script src="../../js/gis/gisopen.js"></script>
+  <script src="../../js/ucontrol/control.js"></script>
+    <!-- <script src="../../js//ucontrol/control.js"></script> -->
 
 </body>
 

@@ -2,86 +2,51 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+  <meta charset='utf-8' />
+  <title> SISTAM CESFAM Mena</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="../../node_modules/jquery/dist/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel=stylesheet type="text/css" href="../../css/main/mainTopbar.css">
-  <link rel=stylesheet type="text/css" href="../../css/main/dropdown.css">
-  <link rel=stylesheet type="text/css" href="../../css/main/search.css">
-  <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
 </head>
 
 <body>
+  <section ng-app='userControl' ng-controller='maincontrol'>
 
-  <div class="icon-bar">
+    <form ng-submit="checkUser()">
 
-    <div class="icon-bar">
-      <a href="#"><i class="fa fa-globe" onclick="editWindow()"></i></a>
+      <input type="{{inputType}}" placeholder="Put your password" />
 
-      <div class="dropdown">
-        <a class="fa fa-cube" id="mapBuild" data-toggle="dropdown"></a>
-        <ul class="dropdown-menu">
+      <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPassword()" />
+      <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+      <label for="checkbox" ng-if="!passwordCheckbox">Show password</label>
+    </form>
+  </section>
+  <div class="container-login100-form-btn">
+  						<button class="login100-form-btn">
+  							Login
+  						</button>
+  					</div>
 
-          <li class="dropdown-submenu">
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
 
-            <a class="test" tabindex="-1" href="#">Politico Administrativa <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="#">Limite Comunal</a></li>
-              <li><a tabindex="-1" href="#">Limite Urbano</a></li>
-              <li><a tabindex="-1" href="#">Plazas</a></li>
-              <li><a tabindex="-1" href="#">Sectores Dideco</a></li>
-              <li><a tabindex="-1" href="#">Unidades Vecinales</a></li>
-            </ul>
+  <div id='map'></div>
+  <div style="margin-left:50%"></div>
 
-            <a class="test" tabindex="-1" href="#">Levantamiento categorias <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="#">Juntas de Vecinos</a></li>
-              <li><a tabindex="-1" href="#">Levantamiento Calles</a></li>
-            </ul>
+  <!-- ********************* JS SCRIPTS ******************************** -->
+  <script>
+    if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+    }
+    const path = require('path');
+  </script>
 
-            <a class="test" tabindex="-1" href="#">Levantamiento Salud <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="#">Hospitales</a></li>
-              <li><a tabindex="-1" href="#">APS</a></li>
-              <li><a tabindex="-1" href="#">Seremis</a></li>
-              <li><a tabindex="-1" href="#">Servicios de Salud</a></li>
-            </ul>
-
-            <a class="test" tabindex="-1" href="#">Levantamiento Transporte <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="#">Ascensores</a></li>
-              <li><a tabindex="-1" href="#">Microbuses</a></li>
-              <li><a tabindex="-1" href="#">Taxicolectivos</a></li>
-            </ul>
-
-          </li>
-        </ul>
-
-      </div>
-
-      <a href="#"><i class="fa fa-map-o" onclick="mapWindow()"></i></a>
-      <a href="#"><i class="fa fa-envelope" id="mapSMS"></i></a>
-      <a href="#"><i class="fa fa-info-circle " id="mapDraw"></i></a>
-
-      <!-- <div class="container-search">
-      <input type="search" id="search" placeholder="Buscar..." />
-      <button onclick="search()" class="icon"><i class="fa fa-search"></i></button>
-    </div> -->
-
-    </div>
-
-    <script>
-      $(document).ready(function() {
-        $('.dropdown-submenu a.test').on("click", function(e) {
-          $(this).next('ul').toggle();
-          e.stopPropagation();
-          // e.preventDefault();
-        });
-      });
-    </script>
+  <script src="../../js//ucontrol/control.js"></script>
 
 </body>
 

@@ -16,20 +16,17 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
 
-    width: 2200,
-    height: 1200,
+    width: 1400,
+    height: 600,
     minWidth: 420,
     minHeight: 480,
     autoHideMenuBar: false,
     fullscreen: false
   });
-  /*
-  mainWindow.maximize()
-  mainWindow.loadURL('file://' + __dirname + '/src/html/geocoding.html');
-  mainWindow.loadURL('file://' + __dirname + '/src/html/test2.html');
-  */
+
+
   mainWindow.openDevTools();
-  mainWindow.loadURL('file://' + __dirname + '/src/html/main.html');
+  mainWindow.loadURL('file://' + __dirname + '/src/html/welcome.html');
 
   mainWindow.webContents.on('will-navigate', (event, url) => {
     event.preventDefault()
